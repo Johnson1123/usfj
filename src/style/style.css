@@ -1,0 +1,5 @@
+.textStyle {
+  @media (max-width: 768px) and (orientation: landscape) {
+    font-size: 2vw;
+  }
+}
