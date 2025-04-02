@@ -44,10 +44,10 @@ const Main = () => {
   return (
     <div className="py-24 md:min-h-[100vh] xl:flex items-center">
       <Container>
-        <div className="xl:w-[75%] 2k:w-[70%] mx-auto">
+        <div className="xl:w-[90%] 2k:w-[70%] mx-auto">
           <div className="grid grid-cols-10  gap-5 items-center">
             <h3
-              className={`${sectionTitleTextStyle} font-bold col-span-8 md:col-span-6 `}
+              className={`4k:text-[3.5vw] 3k:text-[3.5vw] mobile-landscape:text-[clamp(20px,_5vw,_35px)] md:portrait:text-[clamp(3.5vw,_30px)] 2xl:text-[clamp(20px,_3.75vw_60px)] xl:text-[clamp(20px,_3vw,_56px)] lg:text-[clamp(20px,_4vw,_48px)] md:text-[clamp(20px,_5vw,_40px)] text-[6vw] font-bold col-span-8 md:col-span-6 `}
             >
               Insights and Inspiration for a{" "}
               <span className="text-bgOrange">Better World</span>

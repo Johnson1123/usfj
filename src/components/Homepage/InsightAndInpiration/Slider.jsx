@@ -48,7 +48,7 @@ export default function Slider({ swiperRef }) {
                     alt="Insight and Inspiration"
                     height={150}
                     width={150}
-                    className="aspect-square w-full object-cover rounded-2xl"
+                    className="aspect-square mobile-landscape:aspect-square md:aspect-video w-full object-cover rounded-2xl"
                   />
                 </div>
                 <div className="mt-4">
