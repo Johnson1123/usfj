@@ -45,13 +45,13 @@ export const Donationsection = () => {
           alt="section-bg-image"
         />
       </div>
-      <div className="relative 2xl:w-[80%] xl:w-[80%] lg:w-[85%] 4k:w-[80%] 3k:w-[80%] md:portrait:w-[90%] w-[90%]">
+      <div className="relative 2xl:w-[80%] xl:w-[80%] lg:w-[85%] 4k:w-[75%] 3k:w-[75%] md:portrait:w-[90%] w-[90%]">
         <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 4k:grid-cols-2 3k:grid-cols-2 md:portrait:grid-cols-1 2xl:gap-4 xl:gap-4 lg:gap-4 4k:gap-4 3k:gap-4 md:portrait:gap-2">
           <div className="2xl:p-5 xl:p-5 lg:p-5 4k:p-5 3k:p-5 md:portrait:p-2.5 2.5">
-            <h3 className="2xl:text-[5vw] xl:text-[5vw] lg:text-[5vw] 4k:text-[5vw] 3k:text-[5vw] md:portrait:text-[7vw] text-[10vw] leading-[12vw] font-[700] 2xl:leading-[6vw] xl:leading-[6vw] lg:leading-[6vw] 4k:leading-[6vw] 3k:leading-[6vw] md:portrait:leading-[8vw] text-bgBlue">
+            <h2 className="2xl:text-[3.5vw] xl:text-[4vw] lg:text-[3vw] 4k:text-[3.5vw] 3k:text-[vw] md:portrait:text-[7vw] text-[10vw] leading-[12vw] font-[700] 2xl:leading-[4.5vw] xl:leading-[6vw] lg:leading-[6vw] 4k:leading-[6vw] 3k:leading-[6vw] md:portrait:leading-[8vw] text-bgBlue">
               Transforming Lives With Your Kind{" "}
               <span className="text-bgOrange">Generosity</span>
-            </h3>
+            </h2>
           </div>
           <div className="2xl:p-5 xl:p-5 lg:p-5 4k:p-5 3k:p-5 md:portrait:p-2.5 p-2.5 flex flex-col gap-16">
             <div className="bg-[#F7F9FF] p-6 rounded-lg flex flex-col justify-center items-center gap-5">

@@ -69,9 +69,9 @@ export const WhatWeOffersection = () => {
         {/* header start */}
         <div className="flex justify-between items-center">
           <div>
-            <h3 className="2xl:text-[4vw] xl:text-[4vw] lg:text-[4vw] 4k:text-[4vw] 3k:text-[4vw] md:portrait:text-[7vw] text-[7vw] leading-[8vw] font-[700] 2xl:leading-[6vw] xl:leading-[6vw] lg:leading-[6vw] 4k:leading-[6vw] 3k:leading-[6vw] md:portrait:leading-[8vw] text-bgBlue">
+            <h2 className="2xl:text-[4vw] xl:text-[4vw] lg:text-[4vw] 4k:text-[4vw] 3k:text-[4vw] md:portrait:text-[7vw] text-[7vw] leading-[8vw] font-[700] 2xl:leading-[6vw] xl:leading-[6vw] lg:leading-[6vw] 4k:leading-[6vw] 3k:leading-[6vw] md:portrait:leading-[8vw] text-bgBlue">
               What we <span className="text-bgOrange">Offer</span>
-            </h3>
+            </h2>
           </div>
           <div className="flex justify-center items-center gap-5">
             <button
