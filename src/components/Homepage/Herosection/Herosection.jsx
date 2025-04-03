@@ -18,17 +18,19 @@ export const Herosection = () => {
           alt="section-bg-image"
         />
       </div>
-      <div className=" relative z-10 w-[90%] flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col 4k:flex-row 3k:flex-row justify-center 2xl:gap-5 xl:gap-5 lg:gap-5 4k:gap-10 3k:gap-10 md:portrait:gap-5 gap-2.5 2xl:h-[60dvh] xl:h-[60dvh] lg:h-[60dvh] 4k:h-[60dvh] 3k:h-[60dvh] md:portrait:h-[70dvh] h-[85dvh] 2xl:-mb-[10dvh] xl:-mb-[10dvh] 4k:-mb-[10dvh] 3k:-mb-[10dvh] lg:-mb-[10dvh] md:portrait:-mb-[5dvh] -mb-[12dvh]">
-        <div className="flex-1 2xl:h-full xl:h-full lg:h-full 4k:h-full 3k:h-full md:portrait:h-[60%] h-[65%] flex justify-center 2xl:gap-5 xl:gap-5 lg:gap-5 4k:gap-10 3k:gap-10 md:portrait:gap-5 gap-2">
+      <div className=" relative z-10 w-[90%] flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col 4k:flex-row 3k:flex-row justify-center 2xl:gap-5 xl:gap-5 lg:gap-5 4k:gap-10 3k:gap-10 md:portrait:gap-5 gap-2.5 2xl:h-[60dvh] xl:h-[60dvh] lg:h-[60dvh] 4k:h-[60dvh] 3k:h-[60dvh] md:portrait:h-[70dvh] h-[75dvh] 2xl:-mb-[10dvh] xl:-mb-[10dvh] 4k:-mb-[10dvh] 3k:-mb-[10dvh] lg:-mb-[10dvh] md:portrait:-mb-[5dvh] -mb-[12dvh]">
+        {/* Slider inner container */}
+        <div className="flex-1 2xl:h-full xl:h-full lg:h-full 4k:h-full 3k:h-full md:portrait:h-[60%] h-[65%] flex flex-col md:flex-row justify-center 2xl:gap-5 xl:gap-5 lg:gap-5 4k:gap-10 3k:gap-10 md:portrait:gap-5 gap-2">
+          {/* Item one */}
           <motion.div
             id="box_frame1"
             onClick={() => setCurrentActiveBox("box_frame1")}
             className={`  ${
               currentActiveBox === "box_frame1"
                 ? "flex-1 rounded-3xl"
-                : "w-[7%] rounded-full"
+                : "h-[7%] rounded-full"
             }          
-             relative overflow-hidden  2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
+             relative overflow-hidden w-full  2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
           >
             <Image
               fill
@@ -85,17 +87,19 @@ export const Herosection = () => {
               </div>
             </motion.div>
           </motion.div>
+
+          {/* Item two */}
           <motion.div
             onClick={() => setCurrentActiveBox("box_frame2")}
             className={`
             ${
               currentActiveBox === "box_frame2"
                 ? "flex-1 rounded-3xl"
-                : "w-[7%] rounded-full"
+                : "h-[7%] rounded-full"
             }
-             bg-[#6D93A5] h-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
+             bg-[#6D93A5] w-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
           >
-            <p className="text-bgWhite font-secondaryFont font-[600] 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] 4k:text-[1.2vw] 3k:text-[1.2vw] md:portrait:text-[2vw] text-[3vw] changeWrittingMode2 rotate-180">
+            <p className="text-bgWhite font-secondaryFont font-[600] 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] 4k:text-[1.2vw] 3k:text-[1.2vw] md:portrait:text-[2vw] text-[3vw] md:changeWrittingMode2 md:rotate-180">
               Our Core Values
             </p>
             <div className="2xl:h-[3vw] xl:h-[3vw] lg:h-[3vw] 4k:h-[3vw] 3k:h-[3vw] md:portrait:h-[4.5vw] 2xl:w-[3vw] xl:w-[3vw] lg:w-[3vw] 4k:w-[3vw] 3k:w-[3vw] md:portrait:w-[4.5vw] w-[5vw] h-[5vw] rounded-full flex justify-center items-center bg-bgWhite my-4">
@@ -104,17 +108,19 @@ export const Herosection = () => {
               </h4>
             </div>
           </motion.div>
+
+          {/* item three */}
           <motion.div
             onClick={() => setCurrentActiveBox("box_frame3")}
             className={`
               ${
                 currentActiveBox === "box_frame3"
                   ? "flex-1 rounded-3xl"
-                  : "w-[7%] rounded-full"
+                  : "h-[7%] rounded-full"
               }
-              bg-[#A8B9C0] h-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
+              bg-[#A8B9C0] w-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
           >
-            <p className="text-bgWhite font-secondaryFont font-[600] 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] 4k:text-[1.2vw] 3k:text-[1.2vw] md:portrait:text-[2vw] text-[3vw] changeWrittingMode2 rotate-180">
+            <p className="text-bgWhite font-secondaryFont font-[600] 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] 4k:text-[1.2vw] 3k:text-[1.2vw] md:portrait:text-[2vw] text-[3vw] md:changeWrittingMode2 md:rotate-180">
               Our Vision
             </p>
             <div className="2xl:h-[3vw] xl:h-[3vw] lg:h-[3vw] 4k:h-[3vw] 3k:h-[3vw] md:portrait:h-[4.5vw] 2xl:w-[3vw] xl:w-[3vw] lg:w-[3vw] 4k:w-[3vw] 3k:w-[3vw] md:portrait:w-[4.5vw] w-[5vw] h-[5vw] rounded-full flex justify-center items-center bg-bgWhite my-4">
@@ -123,8 +129,31 @@ export const Herosection = () => {
               </h4>
             </div>
           </motion.div>
+
+          {/* Item four */}
+          <motion.div
+            onClick={() => setCurrentActiveBox("box_frame4")}
+            className={`
+            ${
+              currentActiveBox === "box_frame4"
+                ? "flex-1 rounded-3xl"
+                : "h-[7%] rounded-full"
+            }
+             bg-[#6D93A5] w-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
+          >
+            <p className="text-bgWhite font-secondaryFont font-[600] 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] 4k:text-[1.2vw] 3k:text-[1.2vw] md:portrait:text-[2vw] text-[3vw] md:changeWrittingMode2 md:rotate-180">
+              Our Core Values
+            </p>
+            <div className="2xl:h-[3vw] xl:h-[3vw] lg:h-[3vw] 4k:h-[3vw] 3k:h-[3vw] md:portrait:h-[4.5vw] 2xl:w-[3vw] xl:w-[3vw] lg:w-[3vw] 4k:w-[3vw] 3k:w-[3vw] md:portrait:w-[4.5vw] w-[7vw] h-[7vw] rounded-full flex justify-center items-center bg-bgWhite my-3">
+              <h4 className="font-[500] font-secondaryFont text-black 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] 4k:text-[1vw] 3k:text-[1vw] md:portrait:text-[1.7vw] text-[4vw]">
+                02
+              </h4>
+            </div>
+          </motion.div>
         </div>
-        <div className="2xl:w-[20%] xl:w-[20%] lg:w-[20%] lg:landscape:w-[25%] md:portrait:w-full  2xl:h-full xl:h-full lg:h-full md:portrait:h-[40%] h-[35%] relative rounded-3xl overflow-hidden flex-shrink-0 2xl:p-4 xl:p-4 lg:p-4 4k:p-4 3k:p-4 md:portrait:p-4 p-2 flex justify-center items-center">
+
+        {/*  */}
+        <div className=" hidden 2xl:w-[20%] xl:w-[20%] lg:w-[20%] lg:landscape:w-[25%] md:portrait:w-full  2xl:h-full xl:h-full lg:h-full md:portrait:h-[40%] h-[35%] relative rounded-3xl overflow-hidden flex-shrink-0 2xl:p-4 xl:p-4 lg:p-4 4k:p-4 3k:p-4 md:portrait:p-4 p-2 md:flex justify-center items-center">
           <Image
             fill
             priority
