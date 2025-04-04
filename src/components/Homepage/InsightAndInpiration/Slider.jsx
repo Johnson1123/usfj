@@ -1,13 +1,12 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect, useState } from "react";
 
 import "swiper/css";
 
-import { Autoplay, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { insightData } from "@/constant/data";
 import Image from "next/image";
-import { mediumTitleTextStyle, subTitleStyle, textStyle } from "@/style/common";
+import { pTextStyle } from "@/style/common";
 import { ArrowIconWhite } from "../../../../public/SVGs/AllSvgs";
 
 export default function Slider({ swiperRef }) {
@@ -36,6 +35,10 @@ export default function Slider({ swiperRef }) {
             slidesPerView: 3,
             spaceBetween: 40,
           },
+          2200: {
+            slidesPerView: 3,
+            spaceBetween: 100,
+          },
         }}
       >
         {insightData.map((item, i) => {
@@ -52,11 +55,9 @@ export default function Slider({ swiperRef }) {
                   />
                 </div>
                 <div className="mt-4">
-                  <p className={`${subTitleStyle} font-semibold`}>
-                    {item.title}
-                  </p>
+                  <p className={`${pTextStyle} font-[600]`}>{item.title}</p>
                   <div className="mt-5 flex justify-between items-center">
-                    <span className={`${textStyle} font-thin texxt-[8vw]`}>
+                    <span className={`${pTextStyle} font-thin texxt-[8vw]`}>
                       {item.date} -{" "}
                       <span className="font-normal">{item.team}</span>
                     </span>

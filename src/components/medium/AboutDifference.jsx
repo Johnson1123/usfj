@@ -2,7 +2,12 @@
 import React from "react";
 import PrimaryButton from "../small/PrimaryBtn";
 import Image from "next/image";
-import { sectionTitleTextStyle, textStyle } from "@/style/common";
+import {
+  headingStyle,
+  pTextStyle,
+  sectionTitleTextStyle,
+  textStyle,
+} from "@/style/common";
 import Container from "../layout/Container";
 import Link from "next/link";
 
@@ -13,20 +18,20 @@ function AboutDifference() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[5vw] md:gap-[10vw] mobile-landscape:grid-cols-2">
           <div className="col-span-1 md:col-start-1 md:col-end-2 flex flex-col gap-10 md:gap-[2rem] 2xl:gap-[4rem]">
             <h3
-              className={`font-bold text-bgBlue ${sectionTitleTextStyle} mobile-landscape:text-[5vw]`}
+              className={`font-bold ${headingStyle} mobile-landscape:text-[5vw]`}
             >
               Join Us in Making a{" "}
               <span className="text-primary">Difference</span>
             </h3>
             <p
-              className={`text-textColor font-secondaryFont ${textStyle} mobile-landscape:text-[3vw]`}
+              className={`text-textColor font-secondaryFont ${pTextStyle} mobile-landscape:text-[3vw]`}
             >
               Through mentorship, community engagement, and spiritual guidance,
               we strive to create lasting change in the lives of those we serve.
             </p>
             <Link
               href="/"
-              className="hover:bg-bgWhite bg-bgBlue text-white transition-all duration-200 ease-linear border border-bgBlue 2xl:rounded-3xl xl:rounded-3xl lg:rounded-3xl lg:landscape:rounded-3xl 4k:rounded-3xl 3k:rounded-3xl md:portrait:rounded-3xl rounded-full font-[700] px-10 2xl:py-2 xl:py-2 lg:py-2 lg:landscape:py-2 4k:py-2 3k:py-2 md:portrait:py-2 py-3 hover:text-bgBlue 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] 4k:text-[1vw] 3k:text-[1vw] md:portrait:text-[2vw] text-[4vw] w-max flex justify-center items-center"
+              className={`hover:bg-bgWhite bg-bgBlue text-white transition-all duration-200 ease-linear border border-bgBlue 2xl:rounded-3xl xl:rounded-3xl lg:rounded-3xl lg:landscape:rounded-3xl 4k:rounded-3xl 3k:rounded-3xl md:portrait:rounded-3xl rounded-full font-[700] px-10 2xl:py-2 xl:py-2 lg:py-2 lg:landscape:py-2 4k:py-2 3k:py-2 md:portrait:py-2 py-3 hover:text-bgBlue w-max flex justify-center items-center`}
             >
               Join USFJ
             </Link>

@@ -1,5 +1,10 @@
 "use client";
-import { subTitleStyle, textStyle } from "@/style/common";
+import {
+  h3HeadingStyle,
+  pTextStyle,
+  subTitleStyle,
+  textStyle,
+} from "@/style/common";
 
 import OtherButton from "@/components/small/OtherButton";
 
@@ -22,22 +27,23 @@ function ContactForm() {
           <input type="text" className={`${inputStyle}`} />
         </div>
       </div>
+
       <div className="grid grid-cols-1 gap-2 mobile-landscape:grid-cols-2 mobile-landscape:gap-10 md:grid-cols-2 md:gap-10 xl:my-[1vw]">
         <div className={`${inputContainerStyle}`}>
-          <label htmlFor="" className={`font-bold ${subTitleStyle}`}>
+          <label htmlFor="" className={`font-bold ${pTextStyle}`}>
             Email
           </label>
           <input type="text" className={`${inputStyle}`} />
         </div>
         <div className={`${inputContainerStyle}`}>
-          <label htmlFor="" className={`font-bold ${subTitleStyle}`}>
+          <label htmlFor="" className={`font-bold ${pTextStyle}`}>
             Phone Number
           </label>
           <input type="text" className={`${inputStyle}`} />
         </div>
       </div>
       <div className="mt-7 xl:my-[2vw]">
-        <p className={`${subTitleStyle} font-bold`}>Select Subject</p>
+        <p className={`${pTextStyle} font-bold`}>Select Subject</p>
         <div className="my-3 flex flex-col gap-4 mt-5 mobile-landscape:flex-row mobile-landscape:gap-10 md:flex-row md:gap-10">
           <div className="flex gap-3 items-center">
             <input type="radio" size={30} />

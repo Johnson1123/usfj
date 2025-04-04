@@ -1,4 +1,9 @@
-import { sectionTitleTextStyle, textStyle } from "@/style/common";
+import {
+  h3HeadingStyle,
+  pTextStyle,
+  sectionTitleTextStyle,
+  textStyle,
+} from "@/style/common";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
@@ -8,10 +13,12 @@ import React from "react";
 function ContactFormCard() {
   return (
     <div className="bg-bgBlue rounded-xl min-h-[80vh] mobile-landscape:min-h-[600px] md:min-h-[50vh] px-5 3k:px-10 py-10 3k:py-16 relative overflow-hidden xl:col-span-2 lg:h-[60vh] xl:h-[75vh] 2xl:h-[75vh] 3k:h-[70vh]">
-      <h3 className={`${textStyle} text-white font-bold`}>
-        Get in Touch with Us Today!
+      <h3 className={`${h3HeadingStyle} text-white font-bold`}>
+        Get in Touch With Us Today!
       </h3>
-      <p className={`${textStyle} text-white mt-10 xl:mt-8 font-secondaryFont`}>
+      <p
+        className={`${pTextStyle} text-white mt-10 xl:mt-8 font-secondaryFont`}
+      >
         Feel free to reach out using the contact information below or by filling
         out our contact form. We’ll get back to you as soon as possible!
       </p>

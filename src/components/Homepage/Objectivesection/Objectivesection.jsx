@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowIconWhite } from "../../../../public/SVGs/AllSvgs";
 import { ArrowRight } from "lucide-react";
+import { headingStyle, pTextStyle } from "@/style/common";
 
 export const Objectivesection = () => {
   return (
-    <div className="ojectiveSection__mainOutterWrapper relative min-h-[100dvh] flex justify-center items-center py-16">
+    <div className="relative min-h-[100dvh] flex justify-center items-center py-16 xl:py-[9rem] 3k:py-[20rem]">
       <div className="absolute top-0 left-0 w-full h-full opacity-60">
         <Image
           fill={true}
@@ -21,10 +22,10 @@ export const Objectivesection = () => {
       <div className="2xl:w-[70%] xl:w-[70%] lg:w-[75%] 4k:w-[70%] 3k:w-[70%] md:portrait:w-[90%] w-[90%] flex justify-center items-center flex-col gap-8 relative opacity-100 z-20">
         <div className="w-full p-4 grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 4k:grid-cols-2 3k:grid-cols-2 md:portrait:grid-cols-1 grid-cols-1 gap-8">
           <div>
-            <h3 className="text-bgBlue font-manFont font-[700] 2xl:text-[3vw] xl:text-[3vw] lg:text-[3vw] 4k:text-[3vw] 3k:text-[3vw] md:portrait:text-[5.5vw] text-[7vw] 2xl:leading-[4vw] xl:leading-[4vw] lg:leading-[4vw] 4k:leading-[4vw] 3k:leading-[4vw] md:portrait:leading-[7vw] leading-[8vw]">
+            <h2 className={headingStyle}>
               Building a Better World Through{" "}
               <span className="text-primary">Unity and Compassion</span>
-            </h3>
+            </h2>
           </div>
           <div className="flex 2xl:flex-col xl:flex-col lg:flex-col 4k:flex-col 3k:flex-col md:portrait:flex-row flex-col gap-6 w-full">
             <div className="relative 2xl:h-[14dvw] xl:h-[14dvw] lg:h-[14dvw] 4k:h-[14dvw] 3k:h-[14dvw] md:portrait:h-[20dvw] h-[60dvw] 2xl:w-[24dvw] xl:w-[24dvw] lg:w-[24dvw] 4k:w-[24dvw] 3k:w-[24dvw] md:portrait:w-[34dvw] w-[70dvw] rounded-lg overflow-hidden 2xl:ml-auto xl:ml-auto lg:ml-auto 4k:ml-auto 3k:ml-auto md:portrait:mx-auto mx-auto">
@@ -37,7 +38,9 @@ export const Objectivesection = () => {
               />
             </div>
             <div className="2xl:max-w-[24dvw] xl:max-w-[24dvw] lg:max-w-[24dvw] 4k:max-w-[24dvw] 3k:max-w-[24dvw] md:portrait:max-w-[40dvw] 2xl:ml-auto xl:ml-auto lg:ml-auto 4k:ml-auto 3k:ml-auto md:portrait:mx-auto mx-auto px-4 py-1.5">
-              <p className="font-secondaryFont font-[500] text-bgBlack/70 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] 4k:text-[1.1vw] 3k:text-[1.1vw] md:portrait:text-[2vw] text-[3.4vw] 2xl:text-right xl:text-right lg:text-right lg:landscape:text-right md:portrait:text-right text-start">
+              <p
+                className={`font-secondaryFont font-[500] text-bgBlack/70  2xl:text-right xl:text-right lg:text-right lg:landscape:text-right md:portrait:text-right text-start ${pTextStyle}`}
+              >
                 Through practical service, our goal is to create a community
                 where everyone has the opportunity to thrive and grow, both
                 personally and spiritually
@@ -80,13 +83,15 @@ export const Objectivesection = () => {
         <div className="w-full p-4 grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 4k:grid-cols-2 3k:grid-cols-2 md:portrait:grid-cols-2 grid-cols-1 gap-8 ">
           <div className="flex flex-col gap-6 ">
             <div>
-              <h3 className="text-bgBlue font-manFont font-[700] 2xl:text-[3vw] xl:text-[3vw] lg:text-[3vw] 4k:text-[3vw] 3k:text-[3vw] md:portrait:text-[5vw] text-[7vw] 2xl:leading-[4vw] xl:leading-[4vw] lg:leading-[4vw] 4k:leading-[4vw] 3k:leading-[4vw] md:portrait:leading-[7vw] leading-[8vw]">
+              <h2 className={headingStyle}>
                 Driven by Hope, Committed to{" "}
                 <span className="text-primary">Humanity</span>
-              </h3>
+              </h2>
             </div>
             <div className="md:portrait:hidden hidden 2xl:flex lg:flex xl:flex 4k:flex 3k:flex lg:landscape:flex">
-              <p className="font-secondaryFont font-[500] text-bgBlack/70 2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] 4k:text-[1.1vw] 3k:text-[1.1vw] md:portrait:text-[2vw] text-[3.2vw] text-left">
+              <p
+                className={`font-secondaryFont font-[500] text-bgBlack/70 no-scrollbar  text-left ${pTextStyle}`}
+              >
                 We believe that every individual has the potential to live a
                 fulfilling life, grounded in faith and equipped with the tools
                 needed for independence and personal growth.
@@ -108,10 +113,10 @@ export const Objectivesection = () => {
 
         <div className="w-full flex flex-col gap-6 justify-center items-center">
           <div className="flex justify-between items-center w-[90%]">
-            <h3 className="2xl:text-[3dvw] xl:text-[3dvw] lg:text-[3dvw] lg:landscape:text-[3dvw] 4k:text-[3dvw] 3k:text-[3dvw] md:portrait:text-[4dvw] text-[6.5dvw] font-[700] font-manFont text-bgBlue">
+            <h2 className={headingStyle}>
               Championing Causes that{" "}
               <span className="text-primary">Matter</span>
-            </h3>
+            </h2>
             <button className="bg-bgBlue flex-shrink-0 rounded-full 2xl:h-[3dvw] xl:h-[3dvw] lg:h-[3dvw] lg:landscape:h-[3dvw] 4k:h-[3dvw] 3k:h-[3dvw] md:portrait:h-[6dvw] h-[8dvw] 2xl:w-[3dvw] xl:w-[3dvw] lg:w-[3dvw] lg:landscape:w-[3dvw] 4k:w-[3dvw] 3k:w-[3dvw] md:portrait:w-[6dvw] w-[8dvw] flex justify-center items-center">
               <ArrowIconWhite />
             </button>
@@ -127,7 +132,9 @@ export const Objectivesection = () => {
                 />
               </div>
               <div className="absolute bottom-0 w-full left-0 p-6">
-                <h4 className="font-[500] font-manFont 2xl:text-[1.5dvw] xl:text-[1.5dvw] lg:landscape:text-[1.5dvw] 4k:text-[1.5dvw] 3k:text-[1.5dvw] md:portrait:text-[3dvw] text-[4.5dvw] text-white">
+                <h4
+                  className={`font-[500] font-manFont  text-white ${pTextStyle}`}
+                >
                   Monthly Administrative Support
                 </h4>
               </div>
@@ -142,7 +149,9 @@ export const Objectivesection = () => {
                 />
               </div>
               <div className="absolute bottom-0 w-full left-0 p-6 flex justify-between items-center">
-                <h4 className="font-[500] font-manFont 2xl:text-[1.5dvw] xl:text-[1.5dvw] lg:landscape:text-[1.5dvw] 4k:text-[1.5dvw] 3k:text-[1.5dvw] md:portrait:text-[3dvw] text-[4.5dvw] text-white">
+                <h4
+                  className={`font-[500] font-manFont  text-white ${pTextStyle}`}
+                >
                   Purchase of Housing Facilities
                 </h4>
 

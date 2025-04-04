@@ -1,8 +1,7 @@
 import {
-  mediumTitleTextStyle,
+  h3HeadingStyle,
+  pTextStyle,
   sectionTitleTextStyle,
-  subTitleStyle,
-  textStyle,
 } from "@/style/common";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -40,9 +39,7 @@ const AccordionItem = ({ title, content, isOpen, index, onClick, image }) => {
           )}
         </div>
 
-        <h3
-          className={`col-span-6 lg:col-span-6 text-left  4k:text-[3vw] 3k:text-[clamp(20px,_3vw,_40px)] mobile-landscape:text-[clamp(18px,_3vw,_30px)] md:portrait:text-[clamp(20px,_2vw,_38px)]  2xl:text-[clamp(18px,_1.5vw,_30px)] xl:text-[clamp(20px,_2vw,_36px)] lg:text-[clamp(16px,_2.2vw,_40px)] text-[clamp(18px,_3vw,_38px)]`}
-        >
+        <h3 className={`col-span-6 lg:col-span-6 text-left ${h3HeadingStyle}`}>
           {title}
         </h3>
         <div className="col-span-2 lg:col-span-1 justify-items-end">
@@ -67,7 +64,7 @@ const AccordionItem = ({ title, content, isOpen, index, onClick, image }) => {
                 className="overflow-hidden"
               >
                 <div className="py-6 bg-white space-y-4">
-                  <p className={`${textStyle}`}>{content}</p>
+                  <p className={`${pTextStyle}`}>{content}</p>
                 </div>
                 <Image
                   src={image}

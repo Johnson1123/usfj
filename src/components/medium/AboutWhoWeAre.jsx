@@ -4,7 +4,7 @@ import AboutWhoWeAreBtn from "../small/AboutWhoWeAreBtn";
 import AboutMissionContainer from "./AboutMissionContainer";
 import { mission } from "@/constant/data";
 import Container from "../layout/Container";
-import { sectionTitleTextStyle } from "@/style/common";
+import { headingStyle, sectionTitleTextStyle } from "@/style/common";
 
 function AboutWhoWeAre() {
   const [steps, setSteps] = useState(1);
@@ -15,7 +15,7 @@ function AboutWhoWeAre() {
       >
         <div className="col-start-1 col-end-2 w-full">
           <h3
-            className={`${sectionTitleTextStyle} font-bold mobile-landscape:text-[5vw] text-bgBlue`}
+            className={`${headingStyle} font-bold mobile-landscape:text-[5vw] `}
           >
             Who we <span className={`text-primary`}>are</span>
           </h3>

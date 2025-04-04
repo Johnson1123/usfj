@@ -30,18 +30,22 @@ export default {
         blackColor: "#000",
       },
       screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
         "mobile-landscape": {
           raw: "(max-width:800px) and (orientation:landscape)",
         },
-
+        "md:portrait": {
+          raw: "(min-width:768px) and (orientation:portrait)",
+        },
         "3k": {
           raw: "(min-width:1920px)",
         },
         "4k": {
-          raw: "(min-width:2560px)",
-        },
-        "5k": {
-          raw: "(min-width:3200px)",
+          raw: "(min-width:2568px)",
         },
       },
     },

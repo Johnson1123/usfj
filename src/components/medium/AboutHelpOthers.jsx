@@ -1,5 +1,10 @@
 import { helpOthers } from "@/constant/data";
-import { sectionTitleTextStyle, textStyle } from "@/style/common";
+import {
+  headingStyle,
+  pTextStyle,
+  sectionTitleTextStyle,
+  textStyle,
+} from "@/style/common";
 import React from "react";
 import AboutHelpBox from "../small/AboutHelpBox";
 import Container from "../layout/Container";
@@ -10,13 +15,13 @@ function AboutHelpOthers() {
       <div className=" py-16 3k:py-[15vh] xl:w-[75%] mx-auto">
         <div className="grid lg:grid-cols-2 lg:gap-[7vw]">
           <h3
-            className={`${sectionTitleTextStyle} mobile-landscape:text-[5vw] text-bgBlue`}
+            className={`${headingStyle} mobile-landscape:text-[5vw] text-bgBlue`}
           >
             Help others with your{" "}
             <span className="text-primary">Substance</span>
           </h3>
           <p
-            className={`font-secondaryFont ${textStyle} my-8 mobile-landscape:text-[3vw]`}
+            className={`font-secondaryFont ${pTextStyle} my-8 mobile-landscape:text-[3vw]`}
           >
             There are many ways you can get involved with United Servants for
             Jesus and help us make a lasting impact in the lives of young adults

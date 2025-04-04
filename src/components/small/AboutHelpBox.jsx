@@ -1,16 +1,15 @@
 import React from "react";
-import { MedicalIcon } from "../../../public/SVGs/AllSvgs";
-import { textStyle } from "@/style/common";
+import { pTextStyle, textStyle } from "@/style/common";
 
 function AboutHelpBox({ Icon, title, text }) {
   return (
     <div className="flex flex-col gap-5 bg-[#F7F9FF] rounded-[20px] py-7 px-2 3k:px-5 md:col-span-1">
       <Icon />
-      <h4 className={`font-semibold ${textStyle} mobile-landscape:text-[3vw]`}>
+      <h4 className={`font-semibold ${pTextStyle} mobile-landscape:text-[3vw]`}>
         {title}
       </h4>
       <p
-        className={`${textStyle} font-secondaryFont mobile-landscape:text-[3vw]`}
+        className={`${pTextStyle} font-secondaryFont mobile-landscape:text-[3vw]`}
       >
         {text}
       </p>

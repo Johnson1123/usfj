@@ -9,7 +9,7 @@ import ContactFormCard from "./ContactFormCard";
 function ContactFormSection() {
   return (
     <Container>
-      <div className="py-10 xl:py-16 lg:grid lg:grid-cols-2 gap-10 xl:gap-[5vw] xl:min-h-[100vh] 2xl:items-center  mx-auto xl:grid-cols-5 items-center">
+      <div className="xl:w-[80%] py-10 xl:py-16 lg:grid lg:grid-cols-2 gap-10 xl:gap-[5vw] xl:min-h-[100vh] 2xl:items-center  mx-auto xl:grid-cols-5 items-center">
         <ContactForm />
         <ContactFormCard />
       </div>

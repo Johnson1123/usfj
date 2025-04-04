@@ -7,6 +7,7 @@ import {
   PrayerGroupsIcon,
 } from "../../../../public/SVGs/AllSvgs";
 import Link from "next/link";
+import { headingStyle, pTextStyle } from "@/style/common";
 
 const fakeData = [
   {
@@ -64,12 +65,12 @@ export const WhatWeOffersection = () => {
     setCurrentIndex((curr) => (curr === fakeData.length - 1 ? 0 : curr + 1));
   };
   return (
-    <div className="2xl:min-h-[80dvh] xl:min-h-[80dvh] lg:min-h-[80dvh] 4k:min-h-[70dvh] 3k:min-h-[70dvh] md:portrait:min-h-[70dvh] min-h-[90dvh] bg-[#F7F9FF] flex justify-center items-center py-16">
+    <div className=" bg-[#F7F9FF] flex justify-center items-center py-16 xl:py-[5rem] 3k:py-[20rem]">
       <div className="2xl:w-[80%] xl:w-[80%] lg:w-[85%] 4k:w-[80%] 3k:w-[80%] md:portrait:w-[90%] w-[90%] overflow-hidden">
         {/* header start */}
         <div className="flex justify-between items-center">
           <div>
-            <h2 className="2xl:text-[4vw] xl:text-[4vw] lg:text-[4vw] 4k:text-[4vw] 3k:text-[4vw] md:portrait:text-[7vw] text-[7vw] leading-[8vw] font-[700] 2xl:leading-[6vw] xl:leading-[6vw] lg:leading-[6vw] 4k:leading-[6vw] 3k:leading-[6vw] md:portrait:leading-[8vw] text-bgBlue">
+            <h2 className={headingStyle}>
               What we <span className="text-bgOrange">Offer</span>
             </h2>
           </div>
@@ -92,7 +93,7 @@ export const WhatWeOffersection = () => {
 
         {/* slider wrapper start */}
         <div className="flex flex-col justify-center items-center gap-4 my-6 w-full">
-          <div className="flex justify-start 2xl:gap-10 xl:gap-10 lg:gap-7 4k:gap-10 3k:gap-10 md:portrait:gap-7 gap-5 p-6 overflow-x-auto">
+          <div className="flex justify-start 2xl:gap-10 xl:gap-10 lg:gap-7 4k:gap-10 3k:gap-10 md:portrait:gap-7 gap-5 p-6 overflow-x-auto no-scrollbar ">
             {fakeData.map((cur, id) => (
               <div
                 className="2xl:max-w-[23vw] 4k:max-w-[23vw] 3k:max-w-[23vw] xl:max-w-[23vw] lg:max-w-[23vw] md:portrait:max-w-[40vw] max-w-[95vw] flex-shrink-0 bg-bgWhite 2xl:p-8 xl:p-8 lg:p-6 4k:p-8 3k:p-8 md:portrait:p-6 p-8 flex justify-center items-center flex-col gap-4 rounded-lg  overflow-hidden transition-all  duration-700 ease-in-out "
@@ -110,7 +111,9 @@ export const WhatWeOffersection = () => {
                   </h3>
                 </div>
                 <div>
-                  <p className="font-secondaryFont font-[500] 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] 4k:text-[1vw] 3k:text-[1vw] md:portrait:text-[2vw] text-[3.5vw] text-[#323232]/65 text-center">
+                  <p
+                    className={`font-secondaryFont font-[500] ${pTextStyle} text-[#323232]/65 text-center`}
+                  >
                     {cur?.smallInfo}
                   </p>
                 </div>

@@ -1,3 +1,4 @@
+import { h3HeadingStyle, headingStyle, pTextStyle } from "@/style/common";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -25,14 +26,14 @@ const dummyData = [
 
 export const SupportiveHousing = () => {
   return (
-    <div className="2xl:min-h-[80dvh] xl:min-h-[80dvh] lg:min-h-[80dvh] 4k:min-h-[70dvh] 3k:min-h-[70dvh] md:portrait:min-h-[70dvh] min-h-[90dvh] bg-[#F7F9FF] flex justify-center items-center py-16">
-      <div className="2xl:w-[80%] xl:w-[80%] lg:w-[85%] 4k:w-[80%] 3k:w-[80%] md:portrait:w-[90%] w-[90%] overflow-hidden">
+    <div className=" bg-[#F7F9FF] flex justify-center items-center py-16 xl:py-[8rem] 3k:py-[20rem] xl:min-h-[100vh]">
+      <div className="2xl:w-[80%] xl:w-[80%] lg:w-[85%] 4k:w-[70%] 3k:w-[70%] md:portrait:w-[90%] w-[90%] overflow-hidden">
         {/* header start */}
         <div className="flex justify-between items-center">
           <div>
-            <h3 className="2xl:text-[4vw] xl:text-[4vw] lg:text-[4vw] 4k:text-[4vw] 3k:text-[4vw] md:portrait:text-[6vw] text-[7vw] leading-[8vw] font-[700] 2xl:leading-[6vw] xl:leading-[6vw] lg:leading-[6vw] 4k:leading-[6vw] 3k:leading-[6vw] md:portrait:leading-[8vw] text-bgBlue">
+            <h2 className={headingStyle}>
               Supportive <span className="text-bgOrange">Housing</span>
-            </h3>
+            </h2>
           </div>
           <div className="flex justify-center items-center gap-5">
             <button
@@ -51,7 +52,7 @@ export const SupportiveHousing = () => {
         </div>
         {/* header end */}
 
-        <div className="mt-8 grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:portrait:grid-cols-1 4k:grid-cols-2 3k:grid-cols-2 2xl:gap-20 xl:gap-20 lg:gap-20 4k:gap-20 3k:gap-20 md:portrait:gap-10">
+        <div className="mt-8 grid  lg:grid-cols-2 md:grid-cols-1  2xl:gap-20 xl:gap-20 lg:gap-20 4k:gap-20 3k:gap-20 md:gap-10">
           <div className="flex flex-col gap-4">
             <div className="relative w-full 2xl:h-[20dvw] xl:h-[20dvw] lg:h-[20dvw] 4k:h-[20dvw] 3k:h-[20dvw] md:portrait:h-[45dvw] h-[55dvw] rounded-xl overflow-hidden">
               <Image
@@ -63,15 +64,21 @@ export const SupportiveHousing = () => {
             </div>
             <div className="flex flex-col justify-start items-start gap-4">
               <div className="bg-primary px-4 py-1 rounded-full">
-                <h4 className="font-manFont text-white 2xl:text-[.9dvw] xl:text-[.9dvw] lg:text-[.9dvw] 4k:text-[.9dvw] 3k:text-[.9dvw] md:portrait:text-[1.4dvw] text-[3dvw] font-[500]">
+                <p
+                  className={`font-manFont ${pTextStyle} text-white  font-[500]`}
+                >
                   $5,000 Raised
-                </h4>
+                </p>
               </div>
               <div className="flex flex-col gap-4">
-                <h2 className="font-manFont font-[700] text-black 2xl:text-[1.8dvw] xl:text-[1.8dvw] lg:text-[1.8dvw] 4k:text-[1.8dvw] 3k:text-[1.8dvw] md:portrait:text-[4dvw] text-[6dvw]">
+                <h3
+                  className={`font-manFont font-[700] text-black ${h3HeadingStyle}`}
+                >
                   Safe and Stable Environment
-                </h2>
-                <p className="text-[#4D4D4D] font-secondaryFont font-[400] 2xl:text-[1.1dvw] xl:text-[1.1dvw] lg:text-[1.1dvw] 4k:text-[1.1dvw] 3k:text-[1.1dvw] md:portrait:text-[2.5dvw] text-[4dvw]">
+                </h3>
+                <p
+                  className={`text-[#4D4D4D] font-secondaryFont font-[400] ${pTextStyle}`}
+                >
                   Our Supportive Housing Program will offer a safe, stable
                   living environment for young adults who need temporary housing
                   while they build a foundation for their future.
@@ -81,12 +88,16 @@ export const SupportiveHousing = () => {
                     <div className="absolute top-0 left-0 rounded-full bg-primary w-[10%] h-full" />
                   </div>
                   <div className="w-full flex justify-between items-center mt-1">
-                    <h3 className="text-[#142560] font-manFont 2xl:text-[1.3dvw] xl:text-[1.3dvw] lg:text-[1.3dvw] 4k:text-[1.3dvw] 3k:text-[1.3dvw] md:portrait:text-[2.1dvw] text-[3.5dvw]  font-[600]">
+                    <p
+                      className={`text-[#142560] font-manFont ${pTextStyle}  font-[600]`}
+                    >
                       10 Donors{" "}
-                    </h3>
-                    <h3 className="text-[#142560] font-manFont 2xl:text-[1.3dvw] xl:text-[1.3dvw] lg:text-[1.3dvw] 4k:text-[1.3dvw] 3k:text-[1.3dvw] md:portrait:text-[2.1dvw] text-[3.5dvw] font-[600]">
+                    </p>
+                    <p
+                      className={`text-[#142560] font-manFont ${pTextStyle} font-[600]`}
+                    >
                       20%
-                    </h3>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -113,11 +124,13 @@ export const SupportiveHousing = () => {
                 <div className="flex-1 flex justify-start items-center">
                   <div className="flex flex-col gap-3">
                     <div className="bg-primary px-4 py-1 rounded-full max-w-max">
-                      <h4 className="font-manFont text-white 2xl:text-[.9dvw] xl:text-[.9dvw] lg:text-[.9dvw] 4k:text-[.9dvw] 3k:text-[.9dvw] md:portrait:text-[1.4dvw] text-[3dvw] font-[500]">
+                      <p
+                        className={`font-manFont text-white ${pTextStyle} font-[500]`}
+                      >
                         ${item.raisedAmount} Raised
-                      </h4>
+                      </p>
                     </div>
-                    <h3 className="font-manFont font-[700] 2xl:text-[1.8dvw] xl:text-[1.8dvw] lg:text-[1.8dvw] 4k:text-[1.8dvw] 3k:text-[1.8dvw] md:portrait:text-[2.4dvw] text-[6dvw]">
+                    <h3 className={`font-manFont ${h3HeadingStyle}`}>
                       {item.title}
                     </h3>
                   </div>

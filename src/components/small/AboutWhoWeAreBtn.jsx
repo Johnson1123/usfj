@@ -1,11 +1,11 @@
-import { textStyle } from "@/style/common";
+import { h3HeadingStyle, pTextStyle, textStyle } from "@/style/common";
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 function AboutWhoWeAreBtn({ label, active, steps, setSteps }) {
   return (
     <button
-      className={`font-semibold flex justify-between items-center w-full my-10 ${textStyle} mobile-landscape:text-[3vw]`}
+      className={`font-semibold flex justify-between items-center w-full my-10 ${pTextStyle}`}
       onClick={() => setSteps(active)}
     >
       <p className={`${active == steps ? "text-primary" : "text-textColor"}`}>

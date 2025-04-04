@@ -80,7 +80,7 @@ function Header() {
           <div
             className={`${
               isOpen
-                ? "fixed left-0 top-0 h-[100vh] w-full bg-white opacity-90"
+                ? "fixed left-0 top-0 h-[100vh] w-full bg-white"
                 : " md:portrait:hidden hidden"
             } 2xl:flex xl:flex lg:flex lg:landscape:flex 4k:flex 3k:flex 5k:flex`}
           >
@@ -101,20 +101,18 @@ function Header() {
                       className="flex flex-col gap-3 relative left-0 top-0"
                     >
                       <div className="flex  items-center gap-3">
-                        <Link
-                          href={item.link}
-                          className="flex  items-center gap-3"
-                        >
-                          <span className="text-white text-[4vw] md:text-[2.5vw] lg:text-[1vw]">
-                            {item.label}
-                          </span>
-                        </Link>
-                        <i
+                        <p
+                          className="flex  items-center gap-3 cursor-pointer"
                           onClick={(e) => {
                             e.stopPropagation();
                             handleDropdown();
                           }}
                         >
+                          <span className="text-white text-[4vw] md:text-[2.5vw] lg:text-[1vw]">
+                            {item.label}
+                          </span>
+                        </p>
+                        <i>
                           <TfiAngleDown
                             color="white"
                             className={`${dropdown && "rotate-180"}`}
@@ -122,7 +120,7 @@ function Header() {
                         </i>
                       </div>
                       <ul
-                        className={`absolute left-0 top-8 flex-col gap-5 mt-1 w-max py-5 px-10 bg-gray-100 rounded-md transition-all duration-300 h-4 ${
+                        className={`absolute left-0 top-8 3k:top-14 flex-col gap-5 mt-1 w-max py-5 px-10 bg-gray-100 rounded-md transition-all duration-300 h-4 ${
                           dropdown ? "flex h-max" : "hidden"
                         }`}
                       >
@@ -155,10 +153,10 @@ function Header() {
               </ul>
             </nav>
             <div
-              className="absolute top-0 right-3 lg:hidden rounded-full h-10 w-10 flex justify-center items-center bg-bgBlue"
+              className="absolute top-12 right-7 lg:hidden rounded-full h-10 w-10 flex justify-center items-center "
               onClick={() => setIsOpen()}
             >
-              <MdClose className="text-2xl text-white" />
+              <MdClose className="text-2xl text-bgBlue" />
             </div>
           </div>
 
