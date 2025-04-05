@@ -47,12 +47,12 @@ export const Herosection = () => {
                 zIndex: currentActiveBox === "box_frame1" ? 10 : -10,
               }}
               transition={{
-                duration: 3,
+                duration: 1,
                 ease: "linear",
               }}
-              className="relative bg-bgWhite/10 backdrop-blur-sm rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-4 3k:p-7 md:portrait:p-5 p-3 w-full"
+              className="relative bg-gray-500 bg-opacity-50 backdrop-blur-sm rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-4 3k:p-7 md:portrait:p-5 p-3 w-full"
             >
-              <div className="mediumCircle bg-bgWhite my-4">
+              <div className="mediumCircle bg-bgWhite">
                 <h4 className="font-[500] font-secondaryFont text-textColor mediumCircleText">
                   01
                 </h4>
@@ -99,7 +99,7 @@ export const Herosection = () => {
                   ? "flex-1 rounded-3xl"
                   : "w-[10%] md:w-[7%] mobile-landscape:w-[6%] xl:w-[5%] 3k:w-[4%] rounded-full"
               }
-              relative overflow-hidden bg-[#A8B9C0] h-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
+             relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
           >
             <Image
               fill
@@ -117,7 +117,7 @@ export const Herosection = () => {
                 duration: 0.6,
                 ease: "linear",
               }}
-              className="relative bg-bgWhite/10 backdrop-blur-sm  rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-7 3k:p-7 md:portrait:p-5 p-3 w-full"
+              className="relative bg-gray-500 bg-opacity-50 backdrop-blur-sm  rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-7 3k:p-7 md:portrait:p-5 p-3 w-full"
             >
               <div className="mediumCircle bg-bgWhite my-4">
                 <h4 className="font-[500] font-secondaryFont text-blackColor mediumCircleText">
@@ -169,7 +169,7 @@ export const Herosection = () => {
                   ? "flex-1 rounded-3xl"
                   : "w-[10%] md:w-[7%] xl:w-[5%] 3k:w-[4%] mobile-landscape:w-[6%] rounded-full"
               }
-              relative overflow-hidden bg-[#A8B9C0] h-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
+             relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
           >
             <Image
               fill
@@ -187,7 +187,7 @@ export const Herosection = () => {
                 duration: 0.6,
                 ease: "linear",
               }}
-              className="relative bg-bgWhite/10 backdrop-blur-sm  rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-7 3k:p-7 md:portrait:p-5 p-3 w-full"
+              className="relative bg-gray-500 bg-opacity-50 backdrop-blur-sm  rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-7 3k:p-7 md:portrait:p-5 p-3 w-full"
             >
               <div className="mediumCircle rounded-full flex justify-center items-center bg-bgWhite my-4">
                 <h4 className="font-[500] font-secondaryFont text-blackColor mediumCircleText">
@@ -238,7 +238,7 @@ export const Herosection = () => {
                   ? "flex-1 rounded-3xl"
                   : "w-[10%] md:w-[7%] mobile-landscape:w-[6%] rounded-full"
               }
-              relative lg:hidden overflow-hidden bg-[#A8B9C0] h-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
+             relative overflow-hidden lg:hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
           >
             <Image
               fill
@@ -253,10 +253,10 @@ export const Herosection = () => {
                 zIndex: currentActiveBox === "box_frame4" ? 10 : -10,
               }}
               transition={{
-                duration: 0.6,
+                duration: 1.2,
                 ease: "linear",
               }}
-              className="relative bg-bgWhite/10 backdrop-blur-sm  rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-7 3k:p-7 md:portrait:p-5 p-3 w-full"
+              className="relative bg-gray-500 bg-opacity-50 backdrop-blur-sm  rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-7 3k:p-7 md:portrait:p-5 p-3 w-full"
             >
               <div className="mediumCircle rounded-full flex justify-center items-center bg-bgWhite my-4">
                 <h4 className="font-[500] font-secondaryFont text-blackColor 2xl:text-[1.4vw] xl:text-[1.4vw] lg:text-[1.4vw] 4k:text-[1.4vw] 3k:text-[1.4vw] md:portrait:text-[2vw] mediumCircleText">
@@ -281,7 +281,7 @@ export const Herosection = () => {
                 zIndex: currentActiveBox === "box_frame4" ? -10 : 0,
               }}
               transition={{
-                duration: 0.6,
+                duration: 1.2,
                 ease: "backInOut",
                 delay: 0.3,
               }}

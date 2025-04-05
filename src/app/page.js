@@ -23,7 +23,7 @@ export default function Home() {
       <SupportiveHousing />
       <InsightSection />
       <ContactSectionMain />*/}
-      <FAQQuestion />
+      {/* <FAQQuestion /> */}
       <Footer />
     </>
   );
