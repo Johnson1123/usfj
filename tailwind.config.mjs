@@ -38,8 +38,11 @@ export default {
         "mobile-landscape": {
           raw: "(max-width:800px) and (orientation:landscape)",
         },
+        "md-landscape": {
+          raw: "(min-width:768px) and (max-width:1023px) and (orientation:landscape)",
+        },
         "md:portrait": {
-          raw: "(min-width:768px) and (orientation:portrait)",
+          raw: "(min-width:768px) and (max-width:1023px) and (orientation:portrait)",
         },
         "3k": {
           raw: "(min-width:1920px)",

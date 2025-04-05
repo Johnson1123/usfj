@@ -9,7 +9,7 @@ export const Herosection = () => {
   const [currentActiveBox, setCurrentActiveBox] = useState("box_frame1");
 
   return (
-    <div className="h-[100dvh] mobile-landscape:min-h-[500px]  flex justify-center items-center relative">
+    <div className="h-[100dvh] mobile-landscape:min-h-[550px] md-landscape:min-h-[580px]  flex justify-center items-center relative">
       {/* Hero section background */}
       <div className="absolute top-0 left-0 w-full h-full  opacity-30">
         <Image
@@ -22,7 +22,7 @@ export const Herosection = () => {
       </div>
       {/* End of Hero section background */}
 
-      <div className="relative z-10 w-[90%] 4k:w-[75%] h-[calc(100vh_-_35vh)] mb-[3rem] md:h-[calc(100vh_-_35vh)] md:mb-[5vh] 2xl:h-[calc(100vh_-_34vh)] 2xl:mb-[11vh] 3k:h-[calc(100vh_- 40vh)] mt-[10rem] md:mt-[15vh] 2xl:mt-[11rem] 3k:mt-[19rem] mobile-landscape:h-[70%] flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col 4k:flex-row 3k:flex-row justify-center 2xl:gap-5 xl:gap-5 lg:gap-5 4k:gap-10 3k:gap-10 md:portrait:gap-5 gap-2.5">
+      <div className="relative z-10 w-[90%] 4k:w-[75%] h-[calc(100vh_-_35vh)] mb-[3rem] md:h-[calc(100vh_-_35vh)] md:mb-[5vh] 2xl:h-[calc(100vh_-_34vh)] 2xl:mb-[11vh] 3k:h-[calc(100vh_- 40vh)] mt-[10rem] md:mt-[15vh] 2xl:mt-[11rem] 3k:mt-[19rem] mobile-landscape:h-[70%] md-landscape:h-[60%] flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:portrait:flex-col 4k:flex-row 3k:flex-row justify-center 2xl:gap-5 xl:gap-5 lg:gap-5 4k:gap-10 3k:gap-10 md:portrait:gap-5 gap-2.5">
         <div className="flex-1 h-full flex justify-center xl:gap-5 3k:gap-10 md:gap-5 gap-3">
           <motion.div
             id="box_frame1"
@@ -30,7 +30,7 @@ export const Herosection = () => {
             className={`${
               currentActiveBox === "box_frame1"
                 ? "flex-1 rounded-3xl"
-                : "w-[10%] md:w-[7%] xl:w-[5%] 3k:w-[4%] rounded-full"
+                : "w-[10%] md:w-[7%] mobile-landscape:w-[6%] xl:w-[5%] 3k:w-[4%] rounded-full"
             }          
              relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
           >
@@ -97,7 +97,7 @@ export const Herosection = () => {
               ${
                 currentActiveBox === "box_frame2"
                   ? "flex-1 rounded-3xl"
-                  : "w-[10%] md:w-[7%] xl:w-[5%] 3k:w-[4%] rounded-full"
+                  : "w-[10%] md:w-[7%] mobile-landscape:w-[6%] xl:w-[5%] 3k:w-[4%] rounded-full"
               }
               relative overflow-hidden bg-[#A8B9C0] h-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
           >
@@ -167,7 +167,7 @@ export const Herosection = () => {
               ${
                 currentActiveBox === "box_frame3"
                   ? "flex-1 rounded-3xl"
-                  : "w-[10%] md:w-[7%] xl:w-[5%] 3k:w-[4%] rounded-full"
+                  : "w-[10%] md:w-[7%] xl:w-[5%] 3k:w-[4%] mobile-landscape:w-[6%] rounded-full"
               }
               relative overflow-hidden bg-[#A8B9C0] h-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
           >
@@ -236,7 +236,7 @@ export const Herosection = () => {
               ${
                 currentActiveBox === "box_frame4"
                   ? "flex-1 rounded-3xl"
-                  : "w-[10%] md:w-[7%] rounded-full"
+                  : "w-[10%] md:w-[7%] mobile-landscape:w-[6%] rounded-full"
               }
               relative lg:hidden overflow-hidden bg-[#A8B9C0] h-full flex flex-col justify-end items-center gap-5 transition-all  duration-700 ease-in-out`}
           >
