@@ -111,7 +111,7 @@ function Header() {
                             handleDropdown();
                           }}
                         >
-                          <span className="!text-white pTextStyle">
+                          <span className="!text-white linkText">
                             {item.label}
                           </span>
                         </p>
@@ -139,7 +139,7 @@ function Header() {
                             >
                               <Link
                                 href={item.link}
-                                className={`!text-blueColor  hover:opacity-50 pTextStyle`}
+                                className={`!text-blueColor  hover:opacity-50 linkText`}
                               >
                                 {item.label}
                               </Link>
@@ -151,7 +151,7 @@ function Header() {
                   ) : (
                     <li
                       key={i}
-                      className="text-white lg:px-[10px] hover:opacity-50 pTextStyle"
+                      className="text-white lg:px-[10px] hover:opacity-50 linkText"
                     >
                       <Link href={item.link} className="!text-white ">
                         {item.label}
@@ -168,7 +168,7 @@ function Header() {
                 <div className="">
                   <button
                     onClick={handleLogin}
-                    className="text-center rounded-full px-10 py-2 text-bgBlack bg-bgWhite cursor-pointer font-manFont transition-all duration-300 ease-in-out hover:text-blueColor hover:bg-transparent border hover:border-white hover:text-bgWhite !font-semibold pTextStyle"
+                    className="text-center rounded-full px-10 py-2 text-bgBlack bg-bgWhite cursor-pointer font-manFont transition-all duration-300 ease-in-out hover:text-blueColor hover:bg-transparent border hover:border-white hover:text-bgWhite !font-semibold linkText"
                   >
                     Sign you
                   </button>
