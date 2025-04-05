@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Header />
       <Herosection />
-      <Donationsection />
+      {/* <Donationsection /> */}
       {/* <WhatWeOffersection />
       <Objectivesection />
       <Whatwedosection />
