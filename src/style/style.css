@@ -281,3 +281,8 @@ export const pTextStyle = `text-[clamp(.75rem,_1.25vw,_1.75rem)]  3k:text-[clamp
     font-size: clamp(0.8rem, 1vw, 1rem);
   }
 }
+@media (min-width: 2200px) {
+  .herosectionControlText {
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
+  }
+}

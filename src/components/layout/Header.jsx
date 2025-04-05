@@ -56,7 +56,7 @@ function Header() {
       <header
         className={`w-full fixed ${
           scrollPositionY >= 5
-            ? "top-[0%] py-0 bg-[#fff]/50 backdrop-blur-md  "
+            ? "top-[0%] py-0 bg-[#fff]/50 backdrop-blur-md"
             : "top-[2%] py-2"
         }  left-0 flex justify-center items-center  z-50  transition-all  duration-300 ease-linear`}
       >
@@ -83,14 +83,16 @@ function Header() {
           <div
             className={`${
               isOpen
-                ? "fixed left-0 top-0 h-[100vh] w-full bg-white"
+                ? "fixed left-0 top-0 h-[100vh] w-full bg-white mobile-landscape:overflow-y-scroll md-landscape:overflow-y-scroll no-scrollbar"
                 : " md:portrait:hidden hidden"
             } 2xl:flex xl:flex lg:flex lg:landscape:flex 4k:flex 3k:flex 5k:flex`}
           >
             <nav
               className={`bg-bgBlue ${
-                isOpen ? "h-full w-[80%] rounded-none" : ""
-              } px-4 py-2.5 md-landscape:py-0.5 mobile-landscape:py-0.5 lg:py-2.5 xl:py2.5 rounded-full border-none`}
+                isOpen
+                  ? "h-full w-[80%] rounded-none md-landscape:h-[125%] mobile-landscape:h-[125%]"
+                  : ""
+              } px-4 py-2.5 lg:py-2.5 xl:py2.5 rounded-full border-none`}
             >
               <ul
                 className={`${
@@ -164,7 +166,7 @@ function Header() {
               </ul>
               <div
                 className={
-                  "lg:hidden flex justify-center flex-col mt-16 gap-7 ml-5 md-landscape:mt-10 mobile-landscape:mt-10 md-landscape:gap-5 mobile-landscape:gap-5 "
+                  "lg:hidden flex justify-center flex-col mt-16 gap-7 ml-5 md-landscape:mt-10 mobile-landscape:mt-10 md-landscape:gap-7 mobile-landscape:gap-7 "
                 }
               >
                 <div className="">
