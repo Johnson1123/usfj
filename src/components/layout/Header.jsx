@@ -170,7 +170,7 @@ function Header() {
                     onClick={handleLogin}
                     className="text-center rounded-full px-10 py-2 text-bgBlack bg-bgWhite cursor-pointer font-manFont transition-all duration-300 ease-in-out hover:text-blueColor hover:bg-transparent border hover:border-white hover:text-bgWhite !font-semibold linkText"
                   >
-                    Sign you
+                    Sign In
                   </button>
                 </div>
                 <div className="">
