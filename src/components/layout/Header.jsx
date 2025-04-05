@@ -13,7 +13,7 @@ import { MdClose } from "react-icons/md";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(0);
+  const [setActiveItem] = useState(0);
   const [dropdown, setDropdown] = useState(false);
   const router = useRouter();
   const [scrollPositionY, setScrollPositionY] = useState(0);
@@ -47,22 +47,25 @@ function Header() {
   const handleLogin = () => {
     router.push("/auth/login");
   };
+  const handleRegister = () => {
+    router.push("/auth/register");
+  };
 
   return (
     <>
       <header
         className={`w-full fixed ${
           scrollPositionY >= 5
-            ? "top-[0%] py-0 bg-[#fff]/50 backdrop-blur-md"
+            ? "top-[0%] py-0 bg-[#fff]/50 backdrop-blur-md  "
             : "top-[2%] py-2"
         }  left-0 flex justify-center items-center  z-50  transition-all  duration-300 ease-linear`}
       >
         <div
-          className={` bg-bgWhite   flex justify-between items-center 2xl:py-4 xl:py-4 lg:py-4 4k:py-8 3k:py-8 2xl:px-6 xl:px-6 lg:px-6 4k:px-10 3k:px-10 md:portrait:py-6 py-3 px-6 ${
+          className={`bg-bgWhite w-[90%] 3k:w-[75%] flex justify-between items-center 2xl:py-3 xl:py-4 lg:py-4 4k:py-6 3k:py-6 2xl:px-6 xl:px-6 lg:px-6 4k:px-6 3k:px-10 md:py-6 py-3 px-6 ${
             scrollPositionY >= 5
               ? " rounded-none w-full"
-              : "rounded-full headerMainWrapper w-[90%]"
-          } transition-all  duration-300 ease-linear`}
+              : "rounded-full headerMainWrapper"
+          } transition-all  duration-300 ease-linear `}
         >
           <div className="relative">
             <Link href="/">
@@ -70,7 +73,7 @@ function Header() {
                 src="/images/USFJ-DARK-Logo.png"
                 fill
                 alt="usfj-logo"
-                className="2xl:w-[12vw] 4k:w-[12vw] 3k:w-[12vw] 5k:w-[12vw] xl:w-[12vw] lg:w-[12vw] md:portrait:w-[20vw] w-[35vw] h-auto"
+                className="w-[120px] 3k:w-[300px] h-auto"
               />
             </Link>
           </div>
@@ -91,8 +94,8 @@ function Header() {
             >
               <ul
                 className={`${
-                  isOpen ? "flex-col mt-10 pt-10 px-5" : ""
-                } flex lg:justify-center lg:items-center gap-8`}
+                  isOpen ? "flex-col mt-10 pt-10 lg:px-3 px-5 " : ""
+                } flex lg:justify-center lg:items-center gap-8 lg:gap-1 xl:gap-8`}
               >
                 {navItems.map((item, i) => {
                   return item.items ? (
@@ -108,7 +111,7 @@ function Header() {
                             handleDropdown();
                           }}
                         >
-                          <span className="text-white text-[4vw] md:text-[2.5vw] lg:text-[1vw]">
+                          <span className="!text-white pTextStyle">
                             {item.label}
                           </span>
                         </p>
@@ -116,6 +119,10 @@ function Header() {
                           <TfiAngleDown
                             color="white"
                             className={`${dropdown && "rotate-180"}`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleDropdown();
+                            }}
                           />
                         </i>
                       </div>
@@ -132,7 +139,7 @@ function Header() {
                             >
                               <Link
                                 href={item.link}
-                                className={`text-blueColor  hover:opacity-50 text-[4vw] md:text-[2.5vw] lg:text-[1vw]`}
+                                className={`!text-blueColor  hover:opacity-50 pTextStyle`}
                               >
                                 {item.label}
                               </Link>
@@ -144,14 +151,37 @@ function Header() {
                   ) : (
                     <li
                       key={i}
-                      className="text-white lg:px-[10px] hover:opacity-50 text-[4vw] md:text-[2.5vw] lg:text-[1vw]"
+                      className="text-white lg:px-[10px] hover:opacity-50 pTextStyle"
                     >
-                      <Link href={item.link}>{item.label}</Link>
+                      <Link href={item.link} className="!text-white ">
+                        {item.label}
+                      </Link>
                     </li>
                   );
                 })}
               </ul>
+              <div
+                className={
+                  "lg:hidden flex justify-center flex-col mt-16 gap-7 ml-5"
+                }
+              >
+                <div className="">
+                  <button
+                    onClick={handleLogin}
+                    className="text-center rounded-full px-10 py-2 text-bgBlack bg-bgWhite cursor-pointer font-manFont transition-all duration-300 ease-in-out hover:text-blueColor hover:bg-transparent border hover:border-white hover:text-bgWhite !font-semibold pTextStyle"
+                  >
+                    Sign you
+                  </button>
+                </div>
+                <div className="">
+                  <SecondaryButton
+                    label="Donate Now"
+                    handler={handleRegister}
+                  />
+                </div>
+              </div>
             </nav>
+
             <div
               className="absolute top-12 right-7 lg:hidden rounded-full h-10 w-10 flex justify-center items-center "
               onClick={() => setIsOpen()}
@@ -160,11 +190,11 @@ function Header() {
             </div>
           </div>
 
-          <div className="flex justify-center items-center gap-5">
-            <div className="2xl:flex xl:flex lg:flex 4k:flex 3k:flex 5k:flex md:portrait:flex hidden">
+          <div className="flex justify-center items-center lg:gap-2 xl:gap-5">
+            <div className="2xl:flex xl:flex lg:flex 4k:flex 3k:flex 5k:flex hidden">
               <TransparentButton label="Sign In" handler={handleLogin} />
             </div>
-            <div className="2xl:flex xl:flex lg:flex 4k:flex 3k:flex 5k:flex md:portrait:flex hidden">
+            <div className="2xl:flex xl:flex lg:flex 4k:flex 3k:flex 5k:flex hidden">
               <SecondaryButton label="Donate Now" />
             </div>
             <button

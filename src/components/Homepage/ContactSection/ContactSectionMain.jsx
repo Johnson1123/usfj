@@ -1,12 +1,7 @@
 import Container from "@/components/layout/Container";
 import React from "react";
 import Form from "./Form";
-import {
-  headingStyle,
-  pTextStyle,
-  sectionTitleTextStyle,
-  subTitleStyle,
-} from "@/style/common";
+import { headingStyle, pTextStyle } from "@/style/common";
 
 function ContactSectionMain() {
   return (

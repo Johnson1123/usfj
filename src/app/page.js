@@ -17,12 +17,12 @@ export default function Home() {
       <Header />
       <Herosection />
       <Donationsection />
-      <WhatWeOffersection />
+      {/* <WhatWeOffersection />
       <Objectivesection />
       <Whatwedosection />
       <SupportiveHousing />
       <InsightSection />
-      <ContactSectionMain />
+      <ContactSectionMain />*/}
       <FAQQuestion />
       <Footer />
     </>

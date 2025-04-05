@@ -1,11 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import {
-  headingStyle,
-  pTextStyle,
-  sectionTitleTextStyle,
-  textStyle,
-} from "@/style/common";
+import { headingStyle, pTextStyle } from "@/style/common";
 import NewletterForm from "../medium/form/Newletter";
 import Container from "../layout/Container";
 

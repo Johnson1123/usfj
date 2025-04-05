@@ -1,4 +1,5 @@
 import "./globals.css";
+import "../style/style.css";
 import ReduxProvider from "./provider";
 
 export const metadata = {
