@@ -31,20 +31,20 @@ export const SupportiveHousing = () => {
         {/* header start */}
         <div className="flex justify-between items-center">
           <div>
-            <h2 className={headingStyle}>
+            <h2 className={"headingStyle"}>
               Supportive <span className="text-bgOrange">Housing</span>
             </h2>
           </div>
           <div className="flex justify-center items-center gap-5">
             <button
               //   onClick={handlePrev}
-              className="hover:bg-bgBlue bg-bgWhite 2xl:h-[3vw] xl:h-[3vw] lg:h-[3vw] 4k:h-[3vw] 3k:h-[3vw] md:portrait:h-[5vw] h-[10vw] 2xl:w-[3vw] xl:w-[3vw] lg:w-[3vw] 4k:w-[3vw] 3k:w-[3vw] md:portrait:w-[5vw] w-[10vw] flex justify-center items-center rounded-full border-none outline-none text-bgBlue hover:text-white transition-all duration-300 ease-linear"
+              className="hover:bg-bgBlue bg-bgWhite mediumCircle  flex justify-center items-center rounded-full border-none outline-none text-bgBlue hover:text-white transition-all duration-300 ease-linear"
             >
               <ArrowLeft />
             </button>
             <button
               //   onClick={handleNext}
-              className="hover:bg-bgBlue bg-bgWhite 2xl:h-[3vw] xl:h-[3vw] lg:h-[3vw] 4k:h-[3vw] 3k:h-[3vw] md:portrait:h-[5vw] h-[10vw] 2xl:w-[3vw] xl:w-[3vw] lg:w-[3vw] 4k:w-[3vw] 3k:w-[3vw] md:portrait:w-[5vw] w-[10vw] flex justify-center items-center rounded-full border-none outline-none text-bgBlue hover:text-white transition-all duration-300 ease-linear"
+              className="hover:bg-bgBlue bg-bgWhite mediumCircle  flex justify-center items-center rounded-full border-none outline-none text-bgBlue hover:text-white transition-all duration-300 ease-linear"
             >
               <ArrowRight />
             </button>
@@ -64,20 +64,18 @@ export const SupportiveHousing = () => {
             </div>
             <div className="flex flex-col justify-start items-start gap-4">
               <div className="bg-primary px-4 py-1 rounded-full">
-                <p
-                  className={`font-manFont ${pTextStyle} text-white  font-[500]`}
-                >
+                <p className={`font-manFont pTextStyle text-white  font-[500]`}>
                   $5,000 Raised
                 </p>
               </div>
               <div className="flex flex-col gap-4">
                 <h3
-                  className={`font-manFont font-[700] text-black ${h3HeadingStyle}`}
+                  className={`font-manFont font-[700] text-black h3HeadingStyle`}
                 >
                   Safe and Stable Environment
                 </h3>
                 <p
-                  className={`text-[#4D4D4D] font-secondaryFont font-[400] ${pTextStyle}`}
+                  className={`text-[#4D4D4D] font-secondaryFont font-[400] pTextStyle`}
                 >
                   Our Supportive Housing Program will offer a safe, stable
                   living environment for young adults who need temporary housing
@@ -89,12 +87,12 @@ export const SupportiveHousing = () => {
                   </div>
                   <div className="w-full flex justify-between items-center mt-1">
                     <p
-                      className={`text-[#142560] font-manFont ${pTextStyle}  font-[600]`}
+                      className={`text-[#142560] font-manFont pTextStyle  font-[600]`}
                     >
                       10 Donors{" "}
                     </p>
                     <p
-                      className={`text-[#142560] font-manFont ${pTextStyle} font-[600]`}
+                      className={`text-[#142560] font-manFont pTextStyle font-[600]`}
                     >
                       20%
                     </p>
@@ -104,7 +102,7 @@ export const SupportiveHousing = () => {
             </div>
           </div>
 
-          <div className="grid 2xl:grid-cols-1 xl:grid-cols-1 lg:grid-cols-1 4k:grid-cols-1 3k:grid-cols-1 md:portrait:grid-cols-2 grid-cols-1 2xl:gap-4 xl:gap-4 lg:gap-4 4k:gap-4 3k:gap-4 md:portrait:gap-2">
+          <div className="grid grid-cols-1 mobile-landscape:grid-cols-2 md-landscape:grid-cols-2 my-10">
             {dummyData.map((item, id) => (
               <div
                 key={id}
@@ -117,7 +115,7 @@ export const SupportiveHousing = () => {
                     className="object-cover rounded-lg"
                     alt={`${item.images}`}
                   />
-                  <button className="bg-bgBlue text-bgWhite 2xl:h-[3vw] xl:h-[3vw] lg:h-[3vw] 4k:h-[3vw] 3k:h-[3vw] md:portrait:h-[5vw] h-[10vw] 2xl:w-[3vw] xl:w-[3vw] lg:w-[3vw] 4k:w-[3vw] 3k:w-[3vw] md:portrait:w-[5vw] w-[10vw] flex justify-center items-center rounded-full border-none outline-none hover:text-bgBlue hover:bg-white -rotate-45 transition-all duration-300 ease-linear absolute 2xl:-right-5 xl:-right-5 lg:-right-5 md:portrait:-right-5 4k:-right-5 3k:-right-5 -right-4 top-[35%]">
+                  <button className="bg-bgBlue text-bgWhite mediumCircle flex justify-center items-center rounded-full border-none outline-none hover:text-bgBlue hover:bg-white -rotate-45 transition-all duration-300 ease-linear absolute 2xl:-right-5 xl:-right-5 lg:-right-5 md:portrait:-right-5 4k:-right-5 3k:-right-5 -right-4 top-[35%]">
                     <ArrowRight />
                   </button>
                 </div>
@@ -125,12 +123,12 @@ export const SupportiveHousing = () => {
                   <div className="flex flex-col gap-3">
                     <div className="bg-primary px-4 py-1 rounded-full max-w-max">
                       <p
-                        className={`font-manFont text-white ${pTextStyle} font-[500]`}
+                        className={`font-manFont text-white pTextStyle font-[500]`}
                       >
                         ${item.raisedAmount} Raised
                       </p>
                     </div>
-                    <h3 className={`font-manFont ${h3HeadingStyle}`}>
+                    <h3 className={`font-manFont h3HeadingStyle`}>
                       {item.title}
                     </h3>
                   </div>

@@ -128,7 +128,7 @@ export const Donationsection = () => {
               <h3 className={`text-[#101820]  font-[500] h3HeadingStyle`}>
                 Recent Donations
               </h3>
-              <button className="bg-bgBlue 2xl:h-[2vw] xl:h-[2vw] lg:h-[3vw] 4k:h-[2vw] 3k:h-[2vw] md:portrait:h-[5vw] h-[10vw] 2xl:w-[2vw] xl:w-[2vw] lg:w-[3vw] 4k:w-[2vw] 3k:w-[2vw] md:portrait:w-[5vw] w-[10vw] flex justify-center items-center rounded-full border-none outline-none">
+              <button className="bg-bgBlue mediumCircle flex justify-center items-center rounded-full border-none outline-none">
                 <ArrowIconWhite />
               </button>
             </div>

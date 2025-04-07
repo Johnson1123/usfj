@@ -14,16 +14,16 @@ import InsightSection from "@/components/Homepage/InsightAndInpiration/Main";
 export default function Home() {
   return (
     <>
-      <Header />
-      <Herosection />
+      {/* <Header /> */}
+      {/* <Herosection />
       <Donationsection />
       <WhatWeOffersection />
-      <Objectivesection />
-      {/* <Whatwedosection /> */}
-      {/*  <SupportiveHousing /> */}
-      <InsightSection />
+      <Objectivesection /> */}
+      <Whatwedosection />
+      <SupportiveHousing />
+      {/* <InsightSection />
       <ContactSectionMain />
-      <FAQQuestion />
+      <FAQQuestion /> */}
       <Footer />
     </>
   );
