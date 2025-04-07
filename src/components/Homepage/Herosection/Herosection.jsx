@@ -216,7 +216,7 @@ export const Herosection = () => {
                 ease: "linear",
                 delay: 0.3,
               }}
-              className="absolute opacity-0 z-10 top-0 left-0 w-full h-full bg-[#6D93A5] flex flex-col justify-end items-center gap-3"
+              className="cursor-pointer absolute opacity-0 z-10 top-0 left-0 w-full h-full bg-[#6D93A5] flex flex-col justify-end items-center gap-3"
             >
               <p className="text-bgWhite font-secondaryFont font-[600] text-[1rem] changeWrittingMode2 rotate-180 herosectionControlText">
                 OUR VISION

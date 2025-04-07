@@ -27,7 +27,7 @@ export default function Slider({ swiperRef }) {
             slidesPerView: "auto",
             spaceBetween: 15,
           },
-          768: {
+          760: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
@@ -55,9 +55,9 @@ export default function Slider({ swiperRef }) {
                   />
                 </div>
                 <div className="mt-4">
-                  <p className={`${pTextStyle} font-[600]`}>{item.title}</p>
+                  <p className={`h3HeadingStyle font-[600]`}>{item.title}</p>
                   <div className="mt-5 flex justify-between items-center">
-                    <span className={`${pTextStyle} font-thin texxt-[8vw]`}>
+                    <span className={`pTextStyle font-thin texxt-[8vw]`}>
                       {item.date} -{" "}
                       <span className="font-normal">{item.team}</span>
                     </span>

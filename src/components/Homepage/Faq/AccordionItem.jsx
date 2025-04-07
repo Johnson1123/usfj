@@ -31,7 +31,7 @@ const AccordionItem = ({ title, content, isOpen, index, onClick, image }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
-                className={`${sectionTitleTextStyle} text-textColor transition-all duration-700`}
+                className={` text-textColor/30 transition-all duration-700 text-[3vw]`}
               >
                 0{index + 1}.
               </motion.p>
@@ -39,7 +39,7 @@ const AccordionItem = ({ title, content, isOpen, index, onClick, image }) => {
           )}
         </div>
 
-        <h3 className={`col-span-6 lg:col-span-6 text-left ${h3HeadingStyle}`}>
+        <h3 className={`col-span-6 lg:col-span-6 text-left h3HeadingStyle`}>
           {title}
         </h3>
         <div className="col-span-2 lg:col-span-1 justify-items-end">
@@ -64,7 +64,7 @@ const AccordionItem = ({ title, content, isOpen, index, onClick, image }) => {
                 className="overflow-hidden"
               >
                 <div className="py-6 bg-white space-y-4">
-                  <p className={`${pTextStyle}`}>{content}</p>
+                  <p className={`pTextStyle`}>{content}</p>
                 </div>
                 <Image
                   src={image}

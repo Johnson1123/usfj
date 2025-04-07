@@ -5,10 +5,10 @@ function PrimaryButton({ label, handler }) {
   return (
     <button
       onClick={handler}
-      className="text-center px-3 py-1.5 md:px-4 md:py-2 rounded-xl md:rounded-2xl 
-        text-white bg-blueColor cursor-pointer pTexttStyle font-primary
-        transition-all duration-300 ease-in-out hover:text-blueColor hover:bg-transparent 
-        hover:border hover:border-blueColor"
+      className="text-center px-6 md:px-16 xl:px-6 py-2 rounded-full
+        text-white bg-bgBlue cursor-pointer pTexttStyle font-primary
+        transition-all duration-300 ease-in-out hover:text-bgBlue hover:bg-transparent
+        hover:border hover:border-bgBlue w-max"
     >
       {label}
     </button>

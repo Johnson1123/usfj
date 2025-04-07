@@ -44,9 +44,9 @@ const Main = () => {
   return (
     <div className="py-24 md:min-h-[100vh] xl:py-[8rem] xl:flex items-center">
       <Container>
-        <div className="xl:w-[90%] 3k:w-[70%] mx-auto">
+        <div className="xl:w-[90%] 3k:w-[70%] 4k:w-[65%] mx-auto">
           <div className="grid grid-cols-10  gap-5 items-center">
-            <h3 className={`${headingStyle} col-span-8 md:col-span-6 `}>
+            <h3 className={`headingStyle col-span-8 md:col-span-6 `}>
               Insights and Inspiration for a{" "}
               <span className="text-bgOrange">Better World</span>
             </h3>

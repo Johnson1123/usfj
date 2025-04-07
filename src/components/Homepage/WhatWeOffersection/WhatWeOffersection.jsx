@@ -70,20 +70,20 @@ export const WhatWeOffersection = () => {
         {/* header start */}
         <div className="flex justify-between items-center">
           <div>
-            <h2 className={headingStyle}>
+            <h2 className="headingStyle">
               What we <span className="text-bgOrange">Offer</span>
             </h2>
           </div>
           <div className="flex justify-center items-center gap-5">
             <button
               onClick={handlePrev}
-              className="hover:bg-bgBlue bg-bgWhite 2xl:h-[3vw] xl:h-[3vw] lg:h-[3vw] 4k:h-[3vw] 3k:h-[3vw] md:portrait:h-[5vw] h-[10vw] 2xl:w-[3vw] xl:w-[3vw] lg:w-[3vw] 4k:w-[3vw] 3k:w-[3vw] md:portrait:w-[5vw] w-[10vw] flex justify-center items-center rounded-full border-none outline-none text-bgBlue hover:text-white transition-all duration-300 ease-linear"
+              className="hover:bg-bgBlue bg-bgWhite mediumCircle flex justify-center items-center rounded-full border-none outline-none text-bgBlue hover:text-white transition-all duration-300 ease-linear"
             >
               <ArrowLeft />
             </button>
             <button
               onClick={handleNext}
-              className="hover:bg-bgBlue bg-bgWhite 2xl:h-[3vw] xl:h-[3vw] lg:h-[3vw] 4k:h-[3vw] 3k:h-[3vw] md:portrait:h-[5vw] h-[10vw] 2xl:w-[3vw] xl:w-[3vw] lg:w-[3vw] 4k:w-[3vw] 3k:w-[3vw] md:portrait:w-[5vw] w-[10vw] flex justify-center items-center rounded-full border-none outline-none text-bgBlue hover:text-white transition-all duration-300 ease-linear"
+              className="hover:bg-bgBlue bg-bgWhite mediumCircle  flex justify-center items-center rounded-full border-none outline-none text-bgBlue hover:text-white transition-all duration-300 ease-linear"
             >
               <ArrowRight />
             </button>
@@ -102,24 +102,24 @@ export const WhatWeOffersection = () => {
                 }}
                 key={id}
               >
-                <div className="2xl:h-[5vw] xl:h-[5vw] lg:h-[5vw] 4k:h-[5vw] 3k:h-[5vw] md:portrait:h-[8vw] h-[15vw] 2xl:w-[5vw] xl:w-[5vw] lg:w-[5vw] 4k:w-[5vw] 3k:w-[5vw] md:portrait:w-[8vw] w-[15vw] p-5 bg-bgWhite rounded-full shadow-md flex justify-center items-center">
+                <div className="2xl:h-[5vw] xl:h-[5vw] lg:h-[5vw] md:w-[14vw] md:h-[14vw] 4k:h-[5vw] 3k:h-[5vw] h-[24vw] 2xl:w-[5vw] xl:w-[5vw] lg:w-[5vw] 4k:w-[5vw] 3k:w-[5vw]  w-[24vw] md-landscape:w-[12vw] mobile-landscape:w-[12vw] mobile-landscape:h-[12vw]   p-5 bg-bgWhite rounded-full shadow-md flex justify-center items-center">
                   {cur?.icon}
                 </div>
                 <div>
-                  <h3 className="text-[#323232] font-[700] 2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] 4k:text-[1.2vw] 3k:text-[1.2vw] md:portrait:text-[2.5vw] text-[4.5vw]">
+                  <h3 className="text-[#323232] font-6700] h3HeadingStyle">
                     {cur?.title}
                   </h3>
                 </div>
                 <div>
                   <p
-                    className={`font-secondaryFont font-[500] ${pTextStyle} text-[#323232]/65 text-center`}
+                    className={`font-secondaryFont font-[500] pTextStyle text-[#323232]/65 text-center`}
                   >
                     {cur?.smallInfo}
                   </p>
                 </div>
                 <Link
                   href={cur.path}
-                  className="bg-bgWhite hover:bg-bgBlue hover:text-white transition-all duration-200 ease-linear border border-bgBlue rounded-3xl font-[700] px-10 py-2 text-bgBlue 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] 4k:text-[1vw] 3k:text-[1vw] md:portrait:text-[2vw] text-[3.1vw]"
+                  className="bg-bgWhite hover:bg-bgBlue hover:text-white transition-all duration-200 ease-linear border border-bgBlue rounded-3xl font-[700] px-10 py-2 text-bgBlue pTextStyle"
                 >
                   Join USFJ
                 </Link>
