@@ -10,7 +10,7 @@ import Image from "next/image";
 function MobileHeroSection() {
   const [currentActiveBox, setCurrentActiveBox] = useState("box_frame1");
   return (
-    <div className="relative z-10 w-[90%] 4k:w-[75%] landscape:md-landscape:h-[60%] md:h-[67%] h-[75%] mt-[10vh]  mobile-landscape:h-[70%] flex justify-center gap-2.5 md:hidden">
+    <div className="relative z-10 w-[90%]  h-[80%] mt-[10vh]   flex justify-center gap-2.5 md:hidden">
       <Swiper slidesPerView={2} spaceBetween={10}>
         {/* slide one */}
         <SwiperSlide
