@@ -39,7 +39,7 @@ export default {
           raw: "(max-width:800px) and (orientation:landscape)",
         },
         "md-landscape": {
-          raw: "(min-width:768px) and (max-width:1023px) and (orientation:landscape)",
+          raw: "(orientation:landscape) and (max-width:1023px) and (min-width:768px)",
         },
         "md:portrait": {
           raw: "(min-width:768px) and (max-width:1023px) and (orientation:portrait)",
