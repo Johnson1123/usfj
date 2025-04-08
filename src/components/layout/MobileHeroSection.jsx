@@ -10,7 +10,7 @@ import Image from "next/image";
 function MobileHeroSection() {
   const [currentActiveBox, setCurrentActiveBox] = useState("box_frame1");
   return (
-    <div className="relative z-10 w-[90%] 4k:w-[75%] landscape:md-landscape:h-[60%] md:h-[67%] h-[75%] mt-[10vh]  mobile-landscape:h-[70%] flex  justify-center gap-2.5 md:hidden">
+    <div className="relative z-10 w-[90%] 4k:w-[75%] landscape:md-landscape:h-[60%] md:h-[67%] h-[75%] mt-[10vh]  mobile-landscape:h-[70%] flex justify-center gap-2.5 md:hidden">
       <Swiper slidesPerView={2} spaceBetween={10}>
         {/* slide one */}
         <SwiperSlide
@@ -19,11 +19,12 @@ function MobileHeroSection() {
               ? "!w-[80vw] rounded-3xl"
               : "!w-[10%] !md:w-[7%] mobile-landscape:w-[6%] xl:w-[5%] 3k:w-[4%] rounded-full"
           }          
-             relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
+             relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 p-3 transition-all duration-700 ease-in-out`}
         >
           <motion.div
             id="box_frame1"
             onClick={() => setCurrentActiveBox("box_frame1")}
+            className="h-full flex justify-start items-end "
           >
             <Image
               fill
@@ -90,9 +91,12 @@ function MobileHeroSection() {
                   ? "!w-[80%]  rounded-3xl"
                   : "!w-[10%] md:w-[7%] mobile-landscape:w-[6%] xl:w-[5%] 3k:w-[4%] rounded-full"
               }
-             relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
+             relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 transition-all duration-700 ease-in-out`}
         >
-          <motion.div onClick={() => setCurrentActiveBox("box_frame2")}>
+          <motion.div
+            onClick={() => setCurrentActiveBox("box_frame2")}
+            className="h-full flex justify-start items-end "
+          >
             <Image
               fill
               className="object-cover w-full h-full"
@@ -161,9 +165,12 @@ function MobileHeroSection() {
                   ? "!w-[80%]  rounded-3xl"
                   : "!w-[10%] md:w-[7%] xl:w-[5%] 3k:w-[4%] mobile-landscape:w-[6%] rounded-full"
               }
-             relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
+             relative overflow-hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 transition-all duration-700 ease-in-out`}
         >
-          <motion.div onClick={() => setCurrentActiveBox("box_frame3")}>
+          <motion.div
+            onClick={() => setCurrentActiveBox("box_frame3")}
+            className="h-full flex justify-start items-end "
+          >
             <Image
               fill
               className="object-cover w-full h-full"
@@ -231,9 +238,12 @@ function MobileHeroSection() {
                   ? "!w-[80%]  rounded-3xl"
                   : "!w-[10%] md:w-[7%] mobile-landscape:w-[6%] rounded-full"
               }
-             relative overflow-hidden lg:hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
+             relative overflow-hidden lg:hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 transition-all duration-700 ease-in-out`}
         >
-          <motion.div onClick={() => setCurrentActiveBox("box_frame4")}>
+          <motion.div
+            onClick={() => setCurrentActiveBox("box_frame4")}
+            className="h-full flex justify-start items-end "
+          >
             <Image
               fill
               className="object-cover w-full h-full"
