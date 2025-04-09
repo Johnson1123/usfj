@@ -44,7 +44,7 @@ export const Herosection = () => {
               }}
               className="relative bg-gray-500 bg-opacity-50 backdrop-blur-sm rounded-3xl 2xl:p-7 xl:p-7 lg:p-7 4k:p-4 3k:p-7 md:portrait:p-5 p-3 w-full"
             >
-              <div className="mediumCircle bg-bgWhite">
+              <div className="mediumCircle bg-bgWhite my-4">
                 <h4 className="font-[500] font-secondaryFont text-textColor mediumCircleText">
                   01
                 </h4>
@@ -69,7 +69,7 @@ export const Herosection = () => {
                 ease: "backInOut",
                 delay: 0.3,
               }}
-              className="absolute opacity-0 z-10 top-0 left-0 w-full h-full bg-[#6D93A5] flex flex-col justify-end items-center gap-3"
+              className="cursor-pointer absolute opacity-0 z-10 top-0 left-0 w-full h-full bg-[#6D93A5] flex flex-col justify-end items-center gap-3"
             >
               <p className="text-bgWhite font-secondaryFont font-[600] changeWrittingMode2 rotate-180 herosectionControlText">
                 UNITED SERVANTS FOR JESUS
@@ -139,7 +139,7 @@ export const Herosection = () => {
                 ease: "linear",
                 delay: 0.3,
               }}
-              className="absolute opacity-0 z-10 top-0 left-0 w-full h-full bg-[#6D93A5] flex flex-col justify-end items-center gap-3"
+              className="cursor-pointer absolute opacity-0 z-10 top-0 left-0 w-full h-full bg-[#6D93A5] flex flex-col justify-end items-center gap-3"
             >
               <p className="text-bgWhite font-secondaryFont font-[600] herosectionControlText changeWrittingMode2 rotate-180">
                 OUR CORE VALUES
@@ -230,7 +230,7 @@ export const Herosection = () => {
                   ? "flex-1 rounded-3xl"
                   : "w-[10%] md:w-[7%] mobile-landscape:w-[6%] rounded-full"
               }
-             relative overflow-hidden lg:hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
+             relative overflow-hidden xl:hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
           >
             <Image
               fill
@@ -292,7 +292,7 @@ export const Herosection = () => {
         </div>
 
         {/* Our mission sendtion */}
-        <div className="hidden 2xl:w-[20%] xl:w-[20%] lg:w-[25%] lg:landscape:w-[25%]  2xl:h-full xl:h-full lg:h-full md:h-[40%] h-[35%] relative rounded-3xl overflow-hidden flex-shrink-0 2xl:p-4 xl:p-4 lg:p-4 4k:p-4 3k:p-4 md:p-4 lg:px-2 p-2 lg:flex justify-center items-center">
+        <div className="hidden 2xl:w-[20%] xl:w-[20%] lg:w-[25%] lg:landscape:w-[25%]  2xl:h-full xl:h-full lg:h-full md:h-[40%] h-[35%] relative rounded-3xl overflow-hidden flex-shrink-0 2xl:p-4 xl:p-4 lg:p-4 4k:p-4 3k:p-4 md:p-4 lg:px-2 p-2 xl:flex justify-center items-center">
           <Image
             fill
             priority
