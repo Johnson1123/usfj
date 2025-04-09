@@ -54,7 +54,7 @@ export const Donationsection = () => {
           {/* heading text box  */}
           <div className="">
             <h2
-              className={`headingStyle leading-[1.5] font-[700]  text-bgBlue w-[80%] md:w-[95%] lg:w-[80%]`}
+              className={`headingStyle leading-[1.5] font-[700]  text-bgBlue w-[80%] md:w-[90%] lg:w-[95%] xl:w-[90%] 3k:w-[85%] 2xl:w-[85%]`}
             >
               Transforming Lives With Your Kind <br />
               <span className="text-bgOrange">Generosity</span>
