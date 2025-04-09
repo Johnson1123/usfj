@@ -289,3 +289,12 @@ export const pTextStyle = `text-[clamp(.75rem,_1.25vw,_1.75rem)]  3k:text-[clamp
     font-size: clamp(0.8rem, 1vw, 1.3rem);
   }
 }
+
+.our-mission {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .our-mission {
+    display: flex;
+  }
+}

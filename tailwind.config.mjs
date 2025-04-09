@@ -39,7 +39,7 @@ export default {
           raw: "screen and ((max-height: 480px) and (max-width: 960px)) and (orientation: landscape)",
         },
         "md-landscape": {
-          raw: "screen and ((max-height: 1366px) and (min-width: 1024px)) and (orientation: landscape)",
+          raw: "screen and ((max-device-height: 1024px) and (max-device-width: 768px) and  (orientation: landscape))",
         },
         "md:portrait": {
           raw: "(min-width:768px) and (max-width:1023px) and (orientation:portrait)",
@@ -47,6 +47,7 @@ export default {
         "3k": {
           raw: "(min-width:1920px)",
         },
+
         "4k": {
           raw: "(min-width:2568px)",
         },

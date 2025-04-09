@@ -230,7 +230,7 @@ export const Herosection = () => {
                   ? "flex-1 rounded-3xl"
                   : "w-[10%] md:w-[7%] mobile-landscape:w-[6%] rounded-full"
               }
-             relative overflow-hidden lg:hidden md-landscape:flex 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
+             relative overflow-hidden xl:landscape:hidden 2xl:p-6 xl:p-6 lg:p-6 4k:p-6 3k:p-6 md:portrait:p-4 p-3 flex justify-start items-end transition-all duration-700 ease-in-out`}
           >
             <Image
               fill
@@ -292,7 +292,7 @@ export const Herosection = () => {
         </div>
 
         {/* Our mission sendtion */}
-        <div className="hidden 2xl:w-[20%] xl:w-[20%] lg:w-[25%] lg:landscape:w-[25%]  2xl:h-full xl:h-full lg:h-full md:h-[40%] h-[35%] relative rounded-3xl overflow-hidden flex-shrink-0 2xl:p-4 xl:p-4 lg:p-4 4k:p-4 3k:p-4 md:p-4 lg:px-2 p-2 lg:flex md-landscape:hidden justify-center items-center">
+        <div className="hidden 2xl:w-[20%] xl:w-[20%] lg:w-[25%] lg:landscape:w-[25%]  2xl:h-full xl:h-full lg:h-full md:h-[40%] h-[35%] relative rounded-3xl overflow-hidden flex-shrink-0 2xl:p-4 xl:p-4 lg:p-4 4k:p-4 3k:p-4 md:p-4 lg:px-2 p-2 xl:landscape:flex justify-center items-center">
           <Image
             fill
             priority
