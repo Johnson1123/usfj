@@ -61,9 +61,9 @@ function Header() {
         }  left-0 flex justify-center items-center  z-50  transition-all  duration-300 ease-linear`}
       >
         <div
-          className={`bg-bgWhite w-[90%] xl:w-[80%] flex justify-between items-center 2xl:py-3 xl:py-4 lg:py-4 4k:py-6 3k:py-6 2xl:px-6 xl:px-6 lg:px-6 4k:px-6 3k:px-6 md:py-6 py-3 px-6 mobile-landscape:py-3 md-landscape:py-3 ${
+          className={`bg-bgWhite w-[90%] lg:[80%] flex justify-between items-center lg:py-3 4k:py-3 3k:py-3 2xl:px-6 xl:px-6 lg:px-6 4k:px-6 3k:px-6 md:py-6 py-3 px-6 mobile-landscape:py-3 md-landscape:py-3 ${
             scrollPositionY >= 5
-              ? " rounded-none w-full 3k:w-[100%] !bg-transparent"
+              ? " rounded-none w-full !bg-transparent"
               : "rounded-full headerMainWrapper"
           } transition-all  duration-300 ease-linear `}
         >

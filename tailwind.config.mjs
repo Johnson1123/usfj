@@ -36,10 +36,10 @@ export default {
         xl: "1280px",
         "2xl": "1536px",
         "mobile-landscape": {
-          raw: "screen and (min-device-width: 768px) and (max-device-width: 900px) and (orientation: landscape)",
+          raw: "screen and ((max-height: 480px) and (max-width: 960px)) and (orientation: landscape)",
         },
         "md-landscape": {
-          raw: "screen and (min-device-width: 900px) and (max-device-width: 1000px) and (orientation: landscape)",
+          raw: "screen and ((max-height: 1366px) and (min-width: 1024px)) and (orientation: landscape)",
         },
         "md:portrait": {
           raw: "(min-width:768px) and (max-width:1023px) and (orientation:portrait)",
