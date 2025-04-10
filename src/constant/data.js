@@ -408,3 +408,54 @@ export const insightData = [
     team: "USFJ",
   },
 ];
+
+import {
+  BibleStudiesIcon,
+  MentorshipIcon,
+  PrayerGroupsIcon,
+} from "../../public/SVGs/AllSvgs";
+
+export const offerDummyData = [
+  {
+    icon: MentorshipIcon(),
+    title: "Mentorship",
+    smallInfo: `Personal, faith-based mentorship to help young adults grow spiritually and navigate life’s challenges.`,
+    path: "/",
+  },
+  {
+    icon: BibleStudiesIcon(),
+    title: "Bible Studies",
+    smallInfo: `Regular group sessions to explore and understand God’s word.`,
+    path: "/",
+  },
+  {
+    icon: PrayerGroupsIcon(),
+    title: "Prayer Groups",
+    smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
+    path: "/",
+  },
+  {
+    icon: BibleStudiesIcon(),
+    title: "Bible Studies",
+    smallInfo: `Regular group sessions to explore and understand God’s word.`,
+    path: "/",
+  },
+  {
+    icon: PrayerGroupsIcon(),
+    title: "Prayer Groups",
+    smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
+    path: "/",
+  },
+  {
+    icon: BibleStudiesIcon(),
+    title: "Bible Studies",
+    smallInfo: `Regular group sessions to explore and understand God’s word.`,
+    path: "/",
+  },
+  {
+    icon: PrayerGroupsIcon(),
+    title: "Prayer Groups",
+    smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
+    path: "/",
+  },
+];

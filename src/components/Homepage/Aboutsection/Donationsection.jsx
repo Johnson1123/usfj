@@ -87,7 +87,8 @@ export const Donationsection = () => {
               <div className="flex justify-between items-center gap-4 w-full">
                 <div className="2xl:max-w-[60%] xl:max-w-[60%] lg:max-w-[60%] 4k:max-w-[60%] 3k:max-w-[60%] md:portrait:max-w-[60%] max-w-[80%]">
                   <p className={`text-[#101820] h3HeadingStyle font-[500]`}>
-                    Every Donation Brings New Hope
+                    Every Donation <br />
+                    Brings New Hope
                   </p>
                 </div>
                 <button className="bg-bgBlue mediumCircle w-[10vw] flex justify-center items-center rounded-full border-none outline-none">
@@ -96,7 +97,7 @@ export const Donationsection = () => {
               </div>
               <div className="flex justify-around items-center w-full">
                 <div>
-                  <p className={`h3HeadingStyle font-[800] text-[#101820]`}>
+                  <p className={`h3HeadingStyle !font-[500] text-[#101820]`}>
                     $120,930.90
                   </p>
                 </div>

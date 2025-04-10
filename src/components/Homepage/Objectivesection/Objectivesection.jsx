@@ -22,15 +22,16 @@ export const Objectivesection = () => {
 
       <div className="grid grid-cols-1 gap-16 relative opacity-100 z-20 w-[90%] xl:w-[80%] 2xl:w-[70%] 3k:w-[65%]">
         {/* first section */}
-        <div className="w-full grid grid-cols-1 mobile-landscape:grid-cols-2 md-landscape:grid-cols-2 gap-8 md:grid-cols-2 md:gap-20 lg:gap-[16vw] 2xl:gap-[10vw]">
-          <div>
-            <h2 className="headingStyle lg:w-[80%] 2xl:w-[100%] 4k:w-[80%]">
-              Building a Better World Through{" "}
+        <div className="w-full grid grid-cols-1 sm:landscape:grid-cols-2 md:portrait:grid-cols-10 xl:portrait:grid-cols-2 gap-8 md:grid-cols-2 md:gap-20 lg:gap-[10vw] 2xl:gap-[10vw]">
+          <div className=" md:portrait:col-start-1 md:portrait:col-end-7 xl:portrait:col-start-1 xl:portrait:col-end-2">
+            <h2 className="headingStyle md:w-[100%] lg:w-[100%] 2xl:w-[100%] 4k:w-[80%]">
+              Building a Better <br />
+              World Through <br />
               <span className="text-primary">Unity and Compassion</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 w-full">
+          <div className="grid grid-cols-1 gap-6 w-full md:portrait:col-span-4 xl:portrait:col-start-2 xl:portrait:col-end-3">
             <div className="relative rounded-3xl overflow-hidden">
               <Image
                 src="/images/BuildingABetterImg.png"
@@ -57,7 +58,7 @@ export const Objectivesection = () => {
           <div className="col-span-1 mobile-landscape:order-last md:order-last">
             <div className="lg:flex flex-col items-end h-full justify-between w-full">
               <h3 className="text-bgBlue font-manFont headingStyle mobile-landscape:text-right md-landscape:text-right md:text-right lg:w-[70%] 3k:w-[35%]">
-                Supporting Causes that{" "}
+                Supporting <br /> Causes that <br />
                 <span className="text-primary">Change Lives</span>
               </h3>
 
@@ -88,7 +89,8 @@ export const Objectivesection = () => {
           <div className="flex flex-col gap-6 ">
             <div>
               <h2 className={"headingStyle 3k:w-[65%]"}>
-                Driven by Hope, Committed to{" "}
+                Driven by Hope,
+                <br /> Committed to <br />{" "}
                 <span className="text-primary">Humanity</span>
               </h2>
             </div>

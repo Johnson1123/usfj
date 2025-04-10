@@ -1,69 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./WhatWeOffersection.css";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import {
-  BibleStudiesIcon,
-  MentorshipIcon,
-  PrayerGroupsIcon,
-} from "../../../../public/SVGs/AllSvgs";
-import Link from "next/link";
-import { headingStyle, pTextStyle } from "@/style/common";
 
-const fakeData = [
-  {
-    icon: MentorshipIcon(),
-    title: "Mentorship",
-    smallInfo: `Personal, faith-based mentorship to help young adults grow spiritually and navigate life’s challenges.`,
-    path: "/",
-  },
-  {
-    icon: BibleStudiesIcon(),
-    title: "Bible Studies",
-    smallInfo: `Regular group sessions to explore and understand God’s word.`,
-    path: "/",
-  },
-  {
-    icon: PrayerGroupsIcon(),
-    title: "Prayer Groups",
-    smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
-    path: "/",
-  },
-  {
-    icon: BibleStudiesIcon(),
-    title: "Bible Studies",
-    smallInfo: `Regular group sessions to explore and understand God’s word.`,
-    path: "/",
-  },
-  {
-    icon: PrayerGroupsIcon(),
-    title: "Prayer Groups",
-    smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
-    path: "/",
-  },
-  {
-    icon: BibleStudiesIcon(),
-    title: "Bible Studies",
-    smallInfo: `Regular group sessions to explore and understand God’s word.`,
-    path: "/",
-  },
-  {
-    icon: PrayerGroupsIcon(),
-    title: "Prayer Groups",
-    smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
-    path: "/",
-  },
-];
+import WhatWeOfferSlider from "./WhatWeOfferSlider";
 
 export const WhatWeOffersection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((curr) => (curr === 0 ? fakeData.length - 1 : curr - 1));
-    console.log(currentIndex, "pervious");
+    ref.current?.slidePrev();
   };
   const handleNext = () => {
-    setCurrentIndex((curr) => (curr === fakeData.length - 1 ? 0 : curr + 1));
+    ref.current?.slideNext();
   };
+
+  const ref = useRef(null);
   return (
     <div className=" bg-[#F7F9FF] flex justify-center items-center py-16 xl:py-[5rem] 3k:py-[20rem]">
       <div className="2xl:w-[80%] xl:w-[80%] lg:w-[85%] 4k:w-[80%] 3k:w-[80%] md:portrait:w-[90%] w-[90%] overflow-hidden">
@@ -91,8 +42,19 @@ export const WhatWeOffersection = () => {
         </div>
         {/* header end */}
 
-        {/* slider wrapper start */}
-        <div className="flex flex-col justify-center items-center gap-4 my-6 w-full">
+        <div className="mt-16 xl:mt-20">
+          <WhatWeOfferSlider swiperRef={ref} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+{
+  /* slider wrapper start */
+}
+{
+  /* <div className="flex flex-col justify-center items-center gap-4 my-6 w-full">
           <div className="flex justify-start 2xl:gap-10 xl:gap-10 lg:gap-7 4k:gap-10 3k:gap-10 md:portrait:gap-7 gap-5 p-6 overflow-x-auto no-scrollbar ">
             {fakeData.map((cur, id) => (
               <div
@@ -102,7 +64,7 @@ export const WhatWeOffersection = () => {
                 }}
                 key={id}
               >
-                <div className="2xl:h-[5vw] xl:h-[5vw] lg:h-[5vw] md:w-[14vw] md:h-[14vw] 4k:h-[5vw] 3k:h-[5vw] h-[24vw] 2xl:w-[5vw] xl:w-[5vw] lg:w-[5vw] 4k:w-[5vw] 3k:w-[5vw]  w-[24vw] md-landscape:w-[12vw] mobile-landscape:w-[12vw] mobile-landscape:h-[12vw]   p-5 bg-bgWhite rounded-full shadow-md flex justify-center items-center">
+                <div className="h-[5rem] w-[5rem]   p-5 bg-bgWhite rounded-full shadow-md flex justify-center items-center">
                   {cur?.icon}
                 </div>
                 <div>
@@ -127,8 +89,10 @@ export const WhatWeOffersection = () => {
             ))}
           </div>
           <div className="flex justify-center items-center gap-2">
-            {/* indicators wrapper */}
-            {fakeData.map((_, id) => (
+            {/* indicators wrapper */
+}
+{
+  /* {fakeData.map((_, id) => (
               <div
                 key={id}
                 className={`h-[.5vw] w-[.5vw] rounded-full  ${
@@ -139,9 +103,8 @@ export const WhatWeOffersection = () => {
               />
             ))}
           </div>
-        </div>
-        {/* slider wrapper end */}
-      </div>
-    </div>
-  );
-};
+        </div> */
+}
+{
+  /* slider wrapper end */
+}
