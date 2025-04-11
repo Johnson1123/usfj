@@ -19,11 +19,11 @@ export default function Home() {
       <Donationsection />
       <WhatWeOffersection />
       <Objectivesection />
-      {/* <Whatwedosection /> */}
-      {/* <SupportiveHousing /> */}
+      <Whatwedosection />
+      <SupportiveHousing />
       <InsightSection />
-      {/* <ContactSectionMain />
-      <FAQQuestion /> */}
+      <ContactSectionMain />
+      <FAQQuestion />
       <Footer />
     </>
   );

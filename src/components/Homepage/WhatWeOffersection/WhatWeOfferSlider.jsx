@@ -9,7 +9,7 @@ import "../../../style/swiper.css";
 
 export default function WhatWeOfferSlider({ swiperRef }) {
   return (
-    <div className="w-[90%] mx-auto h-[100%] overflow-hidden">
+    <div className="w-[90%] 3k:w-[80%] mx-auto h-[100%] overflow-hidden">
       <Swiper
         modules={[Pagination]}
         pagination={{
@@ -38,7 +38,7 @@ export default function WhatWeOfferSlider({ swiperRef }) {
           },
           2200: {
             slidesPerView: 3,
-            spaceBetween: 100,
+            spaceBetween: 20,
           },
         }}
       >
@@ -46,7 +46,7 @@ export default function WhatWeOfferSlider({ swiperRef }) {
           return (
             <SwiperSlide key={id} className="slides-width">
               <div
-                className=" mx-auto md:mx-0 flex-shrink-0 bg-bgWhite py-2 px-4 flex justify-center items-center flex-col gap-4 rounded-lg transition-all  duration-700 ease-in-out  aspect-square xl:aspect-auto 2xl:aspect-square w-full max-w-[400px] xl:w-auto xl:h-[350px] 2xl:w-full 2xl:h-auto"
+                className=" mx-auto md:mx-0 flex-shrink-0 bg-bgWhite py-2 px-4 flex justify-center items-center flex-col gap-4 rounded-lg transition-all  duration-700 ease-in-out  aspect-square xl:aspect-auto 2xl:aspect-square w-full max-w-[400px] xl:w-auto xl:h-[350px] 2xl:w-full 2xl:h-[450px]"
                 key={id}
               >
                 <div className="h-[4rem] w-[4rem]   p-5 bg-bgWhite rounded-full shadow-md flex justify-center items-center">

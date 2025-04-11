@@ -11,7 +11,7 @@ import { ArrowIconWhite } from "../../../../public/SVGs/AllSvgs";
 
 export default function Slider({ swiperRef }) {
   return (
-    <div className="w-[100%] h-[100%] overflow-hidden">
+    <div className="w-[90%] 3k:w-[80%] h-[100%] mx-auto overflow-hidden">
       <Swiper
         autoplay={true}
         speed={500}

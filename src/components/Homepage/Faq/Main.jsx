@@ -9,12 +9,12 @@ function Main() {
   return (
     <div className="py-20 xl:min-h-[100vh] xl:py-[8rem] 3k:py-[20rem] xl:flex items-center">
       <Container>
-        <div className="xl:w-[80%] 3k:w-[70%] 4k:w-[65%]  mx-auto">
-          <div className="grid grid-cols-10 md:grid-cols-2 gap-5 items-center">
-            <h2 className={`headingStyle col-span-8  md:col-span-1 3k:w-[40%]`}>
+        <div className="mx-auto">
+          <div className="grid grid-cols-10  gap-5 items-center">
+            <h2 className={`headingStyle col-span-8  `}>
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
-            <div className="col-span-2 md:col-span-1 justify-items-end ">
+            <div className="col-span-2 justify-items-end ">
               <button className="bg-bgBlue flex-shrink-0 rounded-full w-[45px] h-[45px] lg:w-[45px] lg:h-[45px]  flex justify-center items-center">
                 <ArrowIconWhite />
               </button>

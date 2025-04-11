@@ -23,7 +23,7 @@ const AccordionItem = ({ title, content, isOpen, index, onClick, image }) => {
         }`}
         onClick={onClick}
       >
-        <div className="col-span-2 lg:col-span-3">
+        <div className="col-span-2 lg:col-span-3 justify-items-start">
           {isOpen && (
             <AnimatePresence>
               <motion.p
@@ -31,7 +31,7 @@ const AccordionItem = ({ title, content, isOpen, index, onClick, image }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
-                className={` text-textColor/30 transition-all duration-700 text-[3vw]`}
+                className={` text-textColor/30 transition-all duration-700 text-[6vw] md:text-[5vw] lg:text-[4vw] 2xl:text-[3vw]`}
               >
                 0{index + 1}.
               </motion.p>

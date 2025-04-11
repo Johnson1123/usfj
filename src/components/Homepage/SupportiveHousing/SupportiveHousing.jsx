@@ -27,7 +27,7 @@ const dummyData = [
 export const SupportiveHousing = () => {
   return (
     <div className=" bg-[#F7F9FF] flex justify-center items-center py-16 xl:py-[8rem] 3k:py-[20rem] xl:min-h-[100vh]">
-      <div className="2xl:w-[80%] xl:w-[80%] lg:w-[85%] 4k:w-[70%] 3k:w-[70%] md:portrait:w-[90%] w-[90%] overflow-hidden">
+      <div className="overflow-hidden 2xl:w-[75%]  4k:w-[70%] w-[90%]">
         {/* header start */}
         <div className="flex justify-between items-center">
           <div>

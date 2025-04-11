@@ -9,7 +9,7 @@ export const Whatwedosection = () => {
   return (
     <>
       <div className="min-h-[100dvh] py-16 xl:py-[9rem] 3k:py-[20rem] ">
-        <div className="2xl:w-[60%] xl:w-[60%] lg:w-[60%] 4k:w-[60%] 3k:w-[60%] md:portrait:w-[85%] w-[95%] mx-auto flex justify-between items-center flex-col 2xl:flex-row xl:flex-row lg:flex-row 4k:flex-row 3k:flex-row md:portrait:flex-row gap-y-4">
+        <div className="2xl:w-[75%]  4k:w-[70%] w-[90%] mx-auto flex justify-between items-center flex-col 2xl:flex-row xl:flex-row lg:flex-row 4k:flex-row 3k:flex-row md:portrait:flex-row gap-y-4">
           {/* Heading section */}
 
           <div className="flex-1">

@@ -48,13 +48,13 @@ export const Donationsection = () => {
           alt="section-bg-image"
         />
       </div>
-      <div className="relative 2xl:w-[80%]  4k:w-[75%] w-[90%] grid grid-cols-1 mobile-landscape:grid-cols-2 lg:grid-cols-2 lg:gap-[7vw] md-landscape:gap-7 mobile-landscape:gap-7 md:grid-cols-2 md:gap-5 xl:gap-[10vw]">
+      <div className="relative 2xl:w-[75%]  4k:w-[70%] w-[90%] grid grid-cols-1 mobile-landscape:grid-cols-2 lg:grid-cols-2 lg:gap-[7vw] md-landscape:gap-7 mobile-landscape:gap-7 md:grid-cols-2 md:gap-5 xl:gap-[10vw]">
         {/* first columns */}
         <div className="grid grid-cols-1 gap-10 md-landscape:h-max mobile-landscape:h-max md-landscape:gap-7 mobile-landscape:gap-7 md:gap-7 md:h-max">
           {/* heading text box  */}
           <div className="">
             <h2
-              className={`headingStyle leading-[1.5] font-[700]  text-bgBlue w-[80%] md:w-[90%] lg:w-[95%] xl:w-[90%] 3k:w-[85%] 2xl:w-[85%]`}
+              className={`headingStyle leading-[1.5] font-[700]  text-bgBlue w-[80%] md:w-[90%] lg:w-[95%] xl:w-[90%] 2xl:w-[95%] 3k:w-[90%] 4k:w-[95%]`}
             >
               Transforming Lives With Your Kind <br />
               <span className="text-bgOrange">Generosity</span>

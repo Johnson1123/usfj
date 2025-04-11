@@ -17,7 +17,7 @@ export const WhatWeOffersection = () => {
   const ref = useRef(null);
   return (
     <div className=" bg-[#F7F9FF] flex justify-center items-center py-16 xl:py-[5rem] 3k:py-[20rem]">
-      <div className="2xl:w-[80%] xl:w-[80%] lg:w-[85%] 4k:w-[80%] 3k:w-[80%] md:portrait:w-[90%] w-[90%] overflow-hidden">
+      <div className="2xl:w-[75%]  4k:w-[70%] w-[90%] overflow-hidden">
         {/* header start */}
         <div className="flex justify-between items-center">
           <div>
@@ -42,7 +42,7 @@ export const WhatWeOffersection = () => {
         </div>
         {/* header end */}
 
-        <div className="mt-16 xl:mt-20">
+        <div className="mt-16 xl:mt-20 ">
           <WhatWeOfferSlider swiperRef={ref} />
         </div>
       </div>
