@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import ContactFormSection from "@/components/medium/ContactFormSection";
 import ContactBanner from "@/components/medium/ContactUsBanner";
@@ -11,6 +12,7 @@ const ContactUsPage = () => {
       <ContactBanner />
       <ContactFormSection />
       <ContactUsNewsletter />
+      <Footer />
     </>
   );
 };

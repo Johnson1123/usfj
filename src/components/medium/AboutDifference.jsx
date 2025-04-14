@@ -14,17 +14,15 @@ import Link from "next/link";
 function AboutDifference() {
   return (
     <Container>
-      <div className=" lg:w-[75%] mx-auto min-h-[100vh] flex items-center mobile-landscape:py-10">
+      <div className="mx-auto min-h-[100vh] flex items-center mobile-landscape:py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[5vw] md:gap-[10vw] mobile-landscape:grid-cols-2">
           <div className="col-span-1 md:col-start-1 md:col-end-2 flex flex-col gap-10 md:gap-[2rem] 2xl:gap-[4rem]">
-            <h3
-              className={`font-bold ${headingStyle} mobile-landscape:text-[5vw]`}
-            >
+            <h3 className={`font-bold headingStyle `}>
               Join Us in Making a{" "}
               <span className="text-primary">Difference</span>
             </h3>
             <p
-              className={`text-textColor font-secondaryFont ${pTextStyle} mobile-landscape:text-[3vw]`}
+              className={`text-textColor font-secondaryFont pTextStyle mobile-landscape:text-[3vw]`}
             >
               Through mentorship, community engagement, and spiritual guidance,
               we strive to create lasting change in the lives of those we serve.

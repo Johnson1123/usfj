@@ -11,12 +11,10 @@ function AboutWhoWeAre() {
   return (
     <Container>
       <div
-        className={`grid md:grid-cols-2 xl:w-[75%] mx-auto xl:gap-[7vw] min-h-[100vh] py-16 3k:py-[15vh] gap-5 ${sectionTitleTextStyle}`}
+        className={`w-full grid md:grid-cols-2 mx-auto xl:gap-[7vw] min-h-[100vh] py-16 3k:py-[15vh] gap-5`}
       >
         <div className="col-start-1 col-end-2 w-full">
-          <h3
-            className={`${headingStyle} font-bold mobile-landscape:text-[5vw] `}
-          >
+          <h3 className={`headingStyle font-bold mobile-landscape:text-[5vw] `}>
             Who we <span className={`text-primary`}>are</span>
           </h3>
           <div className="">

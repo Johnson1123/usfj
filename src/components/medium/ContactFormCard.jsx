@@ -13,31 +13,29 @@ import React from "react";
 function ContactFormCard() {
   return (
     <div className="bg-bgBlue rounded-xl min-h-[80vh] mobile-landscape:min-h-[600px] md:min-h-[50vh] px-5 3k:px-10 py-10 3k:py-16 relative overflow-hidden xl:col-span-2 lg:h-[60vh] xl:h-[75vh] 2xl:h-[75vh] 3k:h-[70vh]">
-      <h3 className={`${h3HeadingStyle} text-white font-bold`}>
+      <h3 className={`h3HeadingStyle !text-white font-bold`}>
         Get in Touch With Us Today!
       </h3>
-      <p
-        className={`${pTextStyle} text-white mt-10 xl:mt-8 font-secondaryFont`}
-      >
+      <p className={`pTextStyle text-white mt-10 xl:mt-8 font-secondaryFont`}>
         Feel free to reach out using the contact information below or by filling
         out our contact form. We’ll get back to you as soon as possible!
       </p>
       <div className="mt-10 xl:mt-16 flex flex-col gap-4">
         <div className="flex gap-3 xl:gap-5 items-center">
           <BiSolidPhoneCall className="text-white text-[20px] 3k:text-[25px]" />
-          <p className={`text-white font-secondaryFont ${textStyle}`}>
+          <p className={`text-white font-secondaryFont textStyle`}>
             +1(501) 3456 789
           </p>
         </div>
         <div className="flex gap-3 xl:gap-5 items-center">
           <MdEmail className="text-white text-[20px] 3k:text-[25px]" />
-          <p className={`text-white font-secondaryFont ${textStyle}`}>
+          <p className={`text-white font-secondaryFont textStyle`}>
             Info@usfjesus.org
           </p>
         </div>
         <div className="flex gap-3 xl:gap-5 items-center">
           <IoLocationSharp className="text-white text-[20px] 3k:text-[25px]" />
-          <p className={`text-white font-secondaryFont ${textStyle}`}>
+          <p className={`text-white font-secondaryFont textStyle`}>
             1100 Ring Road, Elizabeth town USA
           </p>
         </div>

@@ -5,7 +5,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 function AboutWhoWeAreBtn({ label, active, steps, setSteps }) {
   return (
     <button
-      className={`font-semibold flex justify-between items-center w-full my-10 ${pTextStyle}`}
+      className={`font-semibold flex justify-between items-center w-full my-10 h3HeadingStyle`}
       onClick={() => setSteps(active)}
     >
       <p className={`${active == steps ? "text-primary" : "text-textColor"}`}>

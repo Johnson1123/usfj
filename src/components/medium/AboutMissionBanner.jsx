@@ -1,12 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import WhiteBgBtn from "../small/WhiteBgBtn";
-import {
-  headingStyle,
-  pTextStyle,
-  sectionTitleTextStyle,
-  textStyle,
-} from "@/style/common";
+
 import Container from "../layout/Container";
 
 function AboutMissionBanner() {
@@ -19,16 +14,10 @@ function AboutMissionBanner() {
         objectFit="cover"
       />
 
-      <div className="absolute grid grid-cols-10 xl:w-[65%]">
+      <div className="absolute grid grid-cols-10 2xl:w-[75%]  4k:w-[70%] w-[90%] mx-auto">
         <div className="col-start-2 col-end-10 md:col-start-3 md:col-end-9 xl:col-start-1 xl:col-end-6 flex flex-col gap-7">
-          <h3
-            className={`font-bold  ${headingStyle} mobile-landscape:text-[5vw] text-white`}
-          >
-            Our Mission
-          </h3>
-          <p
-            className={` font-secondaryFont ${pTextStyle} mobile-landscape:text-[3vw] text-white`}
-          >
+          <h3 className={`font-bold  headingStyle !text-white`}>Our Mission</h3>
+          <p className={` font-secondaryFont pTextStyle  text-white`}>
             We provide a safe, nurturing environment where they can grow in
             faith, develop essential life skills, and build the foundations for
             a successful, independent future. 

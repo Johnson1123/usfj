@@ -14,11 +14,6 @@ function Main() {
             <h2 className={`headingStyle col-span-8  `}>
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
-            <div className="col-span-2 justify-items-end ">
-              <button className="bg-bgBlue flex-shrink-0 rounded-full w-[45px] h-[45px] lg:w-[45px] lg:h-[45px]  flex justify-center items-center">
-                <ArrowIconWhite />
-              </button>
-            </div>
           </div>
           <AccordionContainer items={faqitem} />
         </div>
