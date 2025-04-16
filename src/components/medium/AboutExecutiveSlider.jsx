@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 
 function AboutExecutiveSlider() {
-  return <div></div>;
+  const swiperRef = useRef();
+  const handeleNext = () => {
+    swiperRef?.current.slidePrev();
+  };
+
+  const handlePrve = () => {
+    swiperRef?.current.slideNext();
+  };
+
+  return (
+    <div>
+      <div className=""></div>
+    </div>
+  );
 }
 
 export default AboutExecutiveSlider;

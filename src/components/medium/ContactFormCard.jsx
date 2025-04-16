@@ -7,12 +7,12 @@ import {
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import { FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import React from "react";
 
 function ContactFormCard() {
   return (
-    <div className="bg-bgBlue rounded-xl min-h-[80vh] mobile-landscape:min-h-[600px] md:min-h-[50vh] px-5 3k:px-10 py-10 3k:py-16 relative overflow-hidden xl:col-span-2 lg:h-[60vh] xl:h-[75vh] 2xl:h-[75vh] 3k:h-[70vh]">
+    <div className="bg-bgBlue rounded-xl min-h-[60vh] mobile-landscape:min-h-[600px] md:min-h-[55vh] px-5 3k:px-10 py-10 3k:py-16 relative overflow-hidden xl:col-span-2 lg:h-[60vh] xl:h-[75vh] 2xl:h-[85vh] 3k:h-[70vh]">
       <h3 className={`h3HeadingStyle !text-white font-bold`}>
         Get in Touch With Us Today!
       </h3>
@@ -41,11 +41,14 @@ function ContactFormCard() {
         </div>
       </div>
 
-      <div className="flex gap-7 absolute bottom-10 left-5">
-        <div className="h-10 w-10 3k:h-12 3k:w-12  bg-blue-500 rounded-full hover:bg-white flex justify-center items-center group transition-all duration-100">
+      <div className="flex gap-3 absolute bottom-10 left-5">
+        <div className="mediumCircle  bg-blue-500 rounded-full hover:bg-white group transition-all duration-100">
+          <FaFacebook className="text-white text-xl 3k:text-2xl group-hover:text-black" />
+        </div>
+        <div className="mediumCircle bg-blue-500 rounded-full hover:bg-white  group transition-all duration-100">
           <FaTwitter className="text-white text-xl 3k:text-2xl group-hover:text-black" />
         </div>
-        <div className="h-10 w-10 3k:h-12 3k:w-12 bg-blue-500 rounded-full hover:bg-white flex justify-center items-center group transition-all duration-100">
+        <div className="mediumCircle bg-blue-500 rounded-full hover:bg-white group transition-all duration-100">
           <FaInstagram className="text-white text-xl 3k:text-2xl group-hover:text-black" />
         </div>
       </div>

@@ -14,6 +14,7 @@ export const Herosection = () => {
       {/* Hero section background */}
       {/* End of Hero section background */}
       <MobileHeroSection />
+
       <div className="relative z-10 w-[90%] 4k:w-[75%] mb-[3rem] landscape:md-landscape:h-[60%] md:h-[67%] lg:h-[65%] xl:h-[60%] 2xl:h-[calc(100vh_-_34vh)] 3k:h-[calc(100vh_-40vh)] mobile-landscape:h-[70%] 2xl:flex-row xl:flex-row lg:flex-row 4k:flex-row 3k:flex-row justify-center 2xl:gap-5 xl:gap-5 lg:gap-5 4k:gap-10 3k:gap-10 gap-2.5 md:mb-[9vh] xl:mb-0 xl:mt-[10vh] 2xl:mt-[15vh] hidden md:flex">
         <div className="flex-1 h-full flex justify-center xl:gap-5 3k:gap-10 md:gap-5 gap-3">
           <motion.div
