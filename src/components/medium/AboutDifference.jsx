@@ -36,7 +36,7 @@ function AboutDifference() {
           </div>
           <div className="w-full mt-10 md:mt-0 col-span-1 grid-cols-2 md:grid-cols-3">
             <Image
-              src="/images/usfj_admin-2.png"
+              src="/images/join-us-img.webp"
               alt="Usfj Admin Image"
               height={1358}
               width={1358}

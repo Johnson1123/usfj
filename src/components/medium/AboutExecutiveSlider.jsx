@@ -83,13 +83,13 @@ function AboutExecutiveSlider() {
                         </div>
                       </div>
                       {/* active slider image */}
-                      <div className="">
+                      <div className="relative md:landscape:h-[500px] md:h-[400px] 3k:landscape:h-[450px] overflow-hidden rounded-xl">
                         <Image
                           src={`/images/${item.image}`}
                           alt="Insight and Inspiration"
                           height={650}
                           width={1200}
-                          className="aspect-square mobile-landscape:aspect-square md:aspect-video w-full md:landscape:h-[500px] md:h-[400px] 3k:h-[450px]  object-cover rounded-2xl"
+                          className="aspect-square w-full h-full  object-contain rounded-xl"
                         />
                       </div>
                     </div>
@@ -109,18 +109,21 @@ function AboutExecutiveSlider() {
                         </div>
                       </div>
 
-                      <div className="md:grid grid-cols-3 gap-3 mt-5 hidden sm:landscape:grid">
+                      <div className="md:grid grid-cols-3 gap-5 mt-5 hidden sm:landscape:grid">
                         {executives
                           .filter((item) => item.id !== activeIndex)
                           .map((el, k) => {
                             return (
-                              <div key={k} className="">
+                              <div
+                                key={k}
+                                className="relative left-0 top-0 aspect-square w-full md:landscape:max-h-[250px] 3k:landscape:max-h-[280px] overflow-hidden rounded-xl"
+                              >
                                 <Image
                                   src={`/images/${el.image}`}
                                   alt="Insight and Inspiration"
-                                  height={150}
-                                  width={150}
-                                  className="aspect-square mobile-landscape:aspect-square md:aspect-video w-full object-cover rounded-2xl md:landscape:h-[200px] md:h-[150px] 3k:h-[200px]"
+                                  height={650}
+                                  width={976}
+                                  className="mobile-landscape:aspect-square md:aspect-video w-full h-full object-contain rounded-xl"
                                 />
                               </div>
                             );
