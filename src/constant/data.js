@@ -459,3 +459,34 @@ export const offerDummyData = [
     path: "/",
   },
 ];
+
+export const executives = [
+  {
+    id: 0,
+    name: "Jeffrey Grounds",
+    role: "Chairperson",
+    text: "“Our mission is not just to serve but to uplift, guiding hearts toward Christ with love and unwavering faith. True leadership is about seeing beyond the present, envisioning a future where every soul experiences the fullness of God’s grace.”",
+    image: "chairperson.png",
+  },
+  {
+    id: 1,
+    name: "Stacy Harris",
+    role: "Treasurer",
+    text: "“True leadership is found in servanthood—when we walk in humility, we reflect the heart of Jesus. The greatest calling is to serve, not to be served, to love unconditionally, and to be a vessel of His peace”",
+    image: "treasurer.png",
+  },
+  {
+    id: 2,
+    name: "Marc Mabini",
+    role: "Community Engagement Ambassador",
+    text: "“Strength is found in unity, and our faith is strongest when we serve together as one body in Christ. The Church was never meant to be a place of isolation, but a home where every heart is welcomed, every voice is heard, and every hand is joined in service.”",
+    image: "ambassador.png",
+  },
+  {
+    id: 3,
+    name: "Victor Jikong",
+    role: "Organization Consultant",
+    text: "“Every step in faith is a step toward transformation—our goal is to nurture, empower, and lead with grace. Growth in Christ is not a destination but a lifelong journey, and as stewards of His calling, we are entrusted with the responsibility to guide, teach, and cultivate an environment where faith flourishes.”",
+    image: "consultant.png",
+  },
+];
