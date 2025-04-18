@@ -52,45 +52,47 @@ function AboutExecutiveSlider() {
               return (
                 <SwiperSlide key={i} className="slides-width">
                   <div className="grid sm:landscape:grid-cols-2 2xl:landscape:grid-cols-5 md:grid-cols-2 gap-5 my-5 md:landscape:gap-16">
-                    <div className="grid gap-5 2xl:col-span-2">
-                      {/* control btn */}
-                      <div className="grid grid-cols-7 gap-5 items-center md:order-last sm:landscape:order-last">
-                        <div className="justity-start">
-                          <button
-                            className="col-span-1 mediumCircle bg-bgBlue rounded-full hover:bg-white group transition-all duration-100"
-                            onClick={handlePrev}
-                          >
-                            <FaAngleLeft className="text-white group-hover:text-bgBlue" />
-                          </button>
-                        </div>
-                        <div className="col-span-5 flex gap-5 items-center">
-                          <span>0{activeIndex + 1}</span>
-                          <progress
-                            value={activeIndex + 1}
-                            max={executives.length}
-                            className="h-1 flex-1 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-bgBlue [&::-moz-progress-bar]:bg-gray-100"
-                          />
-                          <span>0{executives.length}</span>
-                        </div>
+                    <div className="grid  2xl:col-span-2">
+                      <div className="w-[calc(100%_/_1.5)] 2xl:w-full grid gap-5 mx-auto">
+                        {/* control btn */}
+                        <div className="grid grid-cols-7 gap-5 items-center md:order-last sm:landscape:order-last">
+                          <div className="justity-start">
+                            <button
+                              className="col-span-1 mediumCircle bg-bgBlue rounded-full hover:bg-white group transition-all duration-100"
+                              onClick={handlePrev}
+                            >
+                              <FaAngleLeft className="text-white group-hover:text-bgBlue" />
+                            </button>
+                          </div>
+                          <div className="col-span-5 flex gap-5 items-center">
+                            <span>0{activeIndex + 1}</span>
+                            <progress
+                              value={activeIndex + 1}
+                              max={executives.length}
+                              className="h-1 flex-1 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-bgBlue [&::-moz-progress-bar]:bg-gray-100"
+                            />
+                            <span>0{executives.length}</span>
+                          </div>
 
-                        <div className="place-items-end col-span-1">
-                          <button
-                            className=" mediumCircle rounded-full bg-bgBlue hover:bg-white group transition-all duration-100"
-                            onClick={handeleNext}
-                          >
-                            <FaAngleRight className="text-white group-hover:text-bgBlue" />
-                          </button>
+                          <div className="place-items-end col-span-1">
+                            <button
+                              className=" mediumCircle rounded-full bg-bgBlue hover:bg-white group transition-all duration-100"
+                              onClick={handeleNext}
+                            >
+                              <FaAngleRight className="text-white group-hover:text-bgBlue" />
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                      {/* active slider image */}
-                      <div className="relative md:landscape:h-[500px] md:h-[400px] 3k:landscape:h-[500px] overflow-hidden rounded-xl">
-                        <Image
-                          src={`/images/${item.image}`}
-                          alt="Insight and Inspiration"
-                          height={650}
-                          width={1200}
-                          className="aspect-square w-full h-full  object-cover rounded-[1rem]"
-                        />
+                        {/* active slider image */}
+                        <div className="relative h-auto aspect-square overflow-hidden rounded-xl">
+                          <Image
+                            src={`/images/${item.image}`}
+                            alt="Insight and Inspiration"
+                            fill={true}
+                            layout="fill"
+                            className="  object-cover rounded-[1rem]"
+                          />
+                        </div>
                       </div>
                     </div>
 
@@ -116,14 +118,14 @@ function AboutExecutiveSlider() {
                             return (
                               <div
                                 key={k}
-                                className="relative left-0 top-0 aspect-square w-full overflow-hidden bg-slate-400 rounded-[1rem]"
+                                className="relative left-0 top-0 aspect-square w-full overflow-hidden"
                               >
                                 <Image
                                   src={`/images/${el.image}`}
                                   alt="Insight and Inspiration"
                                   layout="fill"
-                                  objectFit="cover"
-                                  className="w-full h-full object-contain"
+                                  fill={true}
+                                  className="rounded-[1rem]"
                                 />
                               </div>
                             );
