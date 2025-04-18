@@ -89,7 +89,7 @@ function AboutExecutiveSlider() {
                           alt="Insight and Inspiration"
                           height={650}
                           width={1200}
-                          className="aspect-square w-full h-full  object-contain rounded-xl"
+                          className="aspect-square w-full h-full  object-cover rounded-[1rem]"
                         />
                       </div>
                     </div>
@@ -116,14 +116,14 @@ function AboutExecutiveSlider() {
                             return (
                               <div
                                 key={k}
-                                className="relative left-0 top-0 aspect-square w-full md:landscape:max-h-[250px] 3k:landscape:max-h-[280px] overflow-hidden rounded-xl"
+                                className="relative left-0 top-0 aspect-square w-full overflow-hidden bg-slate-400 rounded-[1rem]"
                               >
                                 <Image
                                   src={`/images/${el.image}`}
                                   alt="Insight and Inspiration"
-                                  height={650}
-                                  width={976}
-                                  className="mobile-landscape:aspect-square md:aspect-video w-full h-full object-contain rounded-xl"
+                                  layout="fill"
+                                  objectFit="cover"
+                                  className="w-full h-full object-contain"
                                 />
                               </div>
                             );
