@@ -36,8 +36,8 @@ function AboutDifference() {
           </div>
           <div className="w-full mt-10 md:mt-0 col-span-1 grid-cols-2 md:grid-cols-3">
             <Image
-              src="/images/join-us-img.webp"
-              alt="Usfj Admin Image"
+              src="/images/Join-us-Img.webp"
+              alt="USFJ executives team"
               height={1358}
               width={1358}
               className="h-[350px] md:w-full md:h-auto object-cover rounded-3xl w-auto aspect-square"

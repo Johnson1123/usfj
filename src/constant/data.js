@@ -466,7 +466,7 @@ export const executives = [
     name: "Jeffrey Grounds",
     role: "Chairperson",
     text: "“Our mission is not just to serve but to uplift, guiding hearts toward Christ with love and unwavering faith. True leadership is about seeing beyond the present, envisioning a future where every soul experiences the fullness of God’s grace.”",
-    image: "Marc.webp",
+    image: "Jeff.webp",
   },
   {
     id: 1,
