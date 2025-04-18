@@ -83,7 +83,7 @@ function AboutExecutiveSlider() {
                         </div>
                       </div>
                       {/* active slider image */}
-                      <div className="relative md:landscape:h-[500px] md:h-[400px] 3k:landscape:h-[450px] overflow-hidden rounded-xl">
+                      <div className="relative md:landscape:h-[500px] md:h-[400px] 3k:landscape:h-[500px] overflow-hidden rounded-xl">
                         <Image
                           src={`/images/${item.image}`}
                           alt="Insight and Inspiration"
