@@ -26,6 +26,8 @@ function AboutExecutiveSlider() {
     setActiveIndex(currentSlide);
   };
 
+  console.log(activeIndex);
+
   return (
     <div>
       <div className="">
@@ -119,6 +121,9 @@ function AboutExecutiveSlider() {
                               <div
                                 key={k}
                                 className="relative left-0 top-0 aspect-square w-full overflow-hidden"
+                                onClick={() => {
+                                  swiperRef?.current.slideTo(el.id, 1000);
+                                }}
                               >
                                 <Image
                                   src={`/images/${el.image}`}
