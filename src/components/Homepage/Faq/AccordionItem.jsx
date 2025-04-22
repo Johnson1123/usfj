@@ -1,8 +1,3 @@
-import {
-  h3HeadingStyle,
-  pTextStyle,
-  sectionTitleTextStyle,
-} from "@/style/common";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { IoIosArrowRoundForward } from "react-icons/io";

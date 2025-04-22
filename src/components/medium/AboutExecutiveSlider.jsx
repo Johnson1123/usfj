@@ -92,7 +92,7 @@ function AboutExecutiveSlider() {
                             alt="Insight and Inspiration"
                             fill={true}
                             layout="fill"
-                            className="  object-cover rounded-[1rem]"
+                            className="object-cover rounded-[1rem]"
                           />
                         </div>
                       </div>

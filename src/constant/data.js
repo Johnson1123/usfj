@@ -465,28 +465,81 @@ export const executives = [
     id: 0,
     name: "Jeffrey Grounds",
     role: "Chairperson",
-    text: "“Our mission is not just to serve but to uplift, guiding hearts toward Christ with love and unwavering faith. True leadership is about seeing beyond the present, envisioning a future where every soul experiences the fullness of God’s grace.”",
+    text: "“I love my USFJ hoodie! It’s not just comfortable, but also a great way to start conversations about my faith.”",
     image: "Jeff.webp",
   },
   {
     id: 1,
     name: "Stacy Harris",
     role: "Treasurer",
-    text: "“True leadership is found in servanthood—when we walk in humility, we reflect the heart of Jesus. The greatest calling is to serve, not to be served, to love unconditionally, and to be a vessel of His peace”",
+    text: "“Wearing my USFJ bracelet reminds me daily of my commitment to Christ. Such a simple yet powerful tool!”",
     image: "Stacy.webp",
   },
   {
     id: 2,
     name: "Marc Mabini",
     role: "Community Engagement Ambassador",
-    text: "“Strength is found in unity, and our faith is strongest when we serve together as one body in Christ. The Church was never meant to be a place of isolation, but a home where every heart is welcomed, every voice is heard, and every hand is joined in service.”",
+    text: "“The devotional journal has transformed my quiet time with God. Thank you, USFJ!”",
     image: "Marc.webp",
   },
   {
     id: 3,
     name: "Victor Jikong",
     role: "Organization Consultant",
-    text: "“Every step in faith is a step toward transformation—our goal is to nurture, empower, and lead with grace. Growth in Christ is not a destination but a lifelong journey, and as stewards of His calling, we are entrusted with the responsibility to guide, teach, and cultivate an environment where faith flourishes.”",
+    text: "“I bought a T-shirt for my youth group, and they loved it! Amazing quality and message.”",
     image: "Victor.webp",
+  },
+];
+
+export const reviews = [
+  {
+    id: 0,
+    name: "Emily Wilson",
+    rating: 5,
+    review:
+      "I have been attending USFJ for a few months now, and I must say it has been a life-changing experience. The community is so supportive and loving.",
+    date: "2022-01-01",
+    image: "",
+    productname: "Product 1",
+  },
+  {
+    id: 1,
+    name: "Michael Brown",
+    rating: 5,
+    review:
+      "The Bible studies at USFJ have helped me deepen my understanding of God's word. The leaders are knowledgeable and passionate about their faith.",
+    date: "2022-02-15",
+    image: "",
+    productname: "Product 2",
+  },
+  {
+    id: 2,
+    name: "Sarah Lee",
+    rating: 4,
+    review:
+      "I was hesitant to join a new church, but USFJ has been a great fit for me. The worship services are uplifting and the people are friendly.",
+    date: "2022-03-20",
+    image: "",
+    productname: "Product 3",
+  },
+  {
+    id: 3,
+    name: "John Doe",
+    rating: 5,
+    review:
+      "USFJ has been a blessing to my family and me. The prayer groups have been a source of comfort and strength during difficult times.",
+    date: "2022-04-10",
+    image: "",
+    productname: "Product 4",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    rating: 4,
+    review:
+      "I have been impressed by the community outreach programs at USFJ. They truly care about making a positive impact in the community.",
+    date: "2022-05-01",
+    image: "",
+    productname: "Product 5",
   },
 ];
