@@ -38,7 +38,7 @@ const fakeData = [
 
 export const Donationsection = () => {
   return (
-    <div className="relative 2xl:min-h-[90dvh] 3k:min-h-[70dvh] flex justify-center items-center py-16 md:py-10">
+    <div className="relative lg:min-h-[90dvh] 3k:min-h-[70dvh] flex justify-center items-center py-16 md:py-10">
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
         <Image
           fill={true}
@@ -53,7 +53,7 @@ export const Donationsection = () => {
         {/* heading text box  */}
         <div className="grid grid-cols-1 col-span-1 gap-10 md-landscape:h-max mobile-landscape:h-max md-landscape:gap-7 mobile-landscape:gap-7 md:gap-7 md:h-max">
           <h2
-            className={`headingStyle leading-[1.5] font-[700]  text-bgBlue w-[80%] md:w-[90%] lg:w-[95%] xl:w-[90%] 2xl:w-[95%] 3k:w-[90%] 4k:w-[95%]`}
+            className={`headingStyle leading-[1.5] font-[700]  text-bgBlue w-[80%] md:w-[90%] lg:w-[95%] xl:w-[75%] 2xl:w-[95%] 3k:w-[90%] 4k:w-[95%]`}
           >
             Transforming Lives With Your Kind <br />
             <span className="text-bgOrange">Generosity</span>
@@ -62,10 +62,10 @@ export const Donationsection = () => {
 
         {/* description text box  */}
         <div className="col-span-1 place-self-end mt-10 sm:landscape:mt-0 md:mt-0">
-          <div className="w-full 2xl:w-[70%] 3k:w-[60%] md:ml-auto sm:landscape:ml-auto">
+          <div className="w-full xl:w-[80%] 2xl:w-[70%] 3k:w-[60%] md:ml-auto sm:landscape:ml-auto">
             <div className="flex-1 w-full border-r-[5px] border-primary">
               <p
-                className={`pTextStyle leading-[1.5] pr-1 text-justify font-secondaryFont font-[600]  text-textColor`}
+                className={`pTextStyle leading-[1.5] text-justify font-secondaryFont font-[600]  text-textColor pr-4`}
               >
                 We are a Christ-centered organization dedicated to empowering
                 young adults in Kentucky by providing spiritual guidance, life

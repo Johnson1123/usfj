@@ -26,7 +26,7 @@ export default function ProductSlide() {
             spaceBetween: 15,
           },
           760: {
-            slidesPerView: 3.5,
+            slidesPerView: 2.5,
             spaceBetween: 20,
           },
           1280: {
