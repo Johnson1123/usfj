@@ -38,7 +38,7 @@ const fakeData = [
 
 export const Donationsection = () => {
   return (
-    <div className="relative 2xl:min-h-[100dvh] flex justify-center items-center py-16 md:py-10">
+    <div className="relative 2xl:min-h-[90dvh] 3k:min-h-[70dvh] flex justify-center items-center py-16 md:py-10">
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
         <Image
           fill={true}
