@@ -17,7 +17,7 @@ function ShopBanner() {
 
         {/* Banner content */}
         <div className="h-full w-full grid grid-cols-10 items-end">
-          <div className="relative col-start-2 col-end-10  md:col-end-9 lg:col-end-8 xl:col-end-10 bg-bgWhite/10 backdrop-blur-sm py-7  px-3 pl-[1rem] mb-10 mobile-landscape:mb-6 2xl:px-16 flex flex-col gap-7 rounded-3xl">
+          <div className="relative col-start-2 col-end-10   xl:col-end-10 bg-bgWhite/10 backdrop-blur-sm py-7 px-[1rem] mb-10 mobile-landscape:mb-6 2xl:px-16 flex flex-col gap-7 rounded-3xl">
             <h2 className={`!text-bgWhite headingStyle text-center`}>
               Faith-Inspired Merchandise for a Purpose-Driven Life
             </h2>

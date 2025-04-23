@@ -1,38 +1,39 @@
 // import ProductSlide from "./Slider";
 
-import ProductSlide from "./Slider";
+import ProductSlide from './Slider';
 
 export const TopProductsSection = () => {
-  return (
-    <div className=" bg-[#F7F9FF] flex justify-center items-center py-16 xl:py-[5rem] 3k:py-[20rem]">
-      <div className="overflow-hidden">
-        {/* header start */}
-        <div className="flex justify-between items-center">
-          <div className="w-[80%] md:w-[65%] sm:landscape:w-[65%] lg:landscape:w-[60%] 2xl:w-[50%] 3k:w-[35%] mx-auto">
-            <h2 className="headingStyle text-center">
-              Top <span className="text-bgOrange">Product</span>
-            </h2>
-            <p className="pTextStyle text-center mt-5">
-              Discover faith-filled essentials designed to uplift and inspire.
-              Shop our bestsellers and carry your faith wherever you go.
-            </p>
-          </div>
-        </div>
-        {/* header end */}
+    return (
+        <div className=" bg-[#F7F9FF] flex py-16 md:landscape:py-24 md:landscape:min-h-[100vh] md:flex items-center">
+            <div className="overflow-hidden">
+                {/* header start */}
+                <div className="flex justify-between items-center">
+                    <div className="w-[80%] md:w-[65%] sm:landscape:w-[65%] lg:landscape:w-[60%] 2xl:w-[40%] 3k:w-[30%] mx-auto">
+                        <h2 className="headingStyle text-center">
+                            Top <span className="text-bgOrange">Product</span>
+                        </h2>
+                        <p className="pTextStyle text-center mt-5">
+                            Discover faith-filled essentials designed to uplift
+                            and inspire. Shop our bestsellers and carry your
+                            faith wherever you go.
+                        </p>
+                    </div>
+                </div>
+                {/* header end */}
 
-        <div className="mt-16 xl:mt-20 ">
-          <ProductSlide />
+                <div className="mt-16 xl:mt-20 ">
+                    <ProductSlide />
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 {
-  /* slider wrapper start */
+    /* slider wrapper start */
 }
 {
-  /* <div className="flex flex-col justify-center items-center gap-4 my-6 w-full">
+    /* <div className="flex flex-col justify-center items-center gap-4 my-6 w-full">
           <div className="flex justify-start 2xl:gap-10 xl:gap-10 lg:gap-7 4k:gap-10 3k:gap-10 md:portrait:gap-7 gap-5 p-6 overflow-x-auto no-scrollbar ">
             {fakeData.map((cur, id) => (
               <div
@@ -70,7 +71,7 @@ export const TopProductsSection = () => {
             {/* indicators wrapper */
 }
 {
-  /* {fakeData.map((_, id) => (
+    /* {fakeData.map((_, id) => (
               <div
                 key={id}
                 className={`h-[.5vw] w-[.5vw] rounded-full  ${
@@ -84,5 +85,5 @@ export const TopProductsSection = () => {
         </div> */
 }
 {
-  /* slider wrapper end */
+    /* slider wrapper end */
 }
