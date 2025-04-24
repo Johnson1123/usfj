@@ -15,8 +15,8 @@ function ReviewsSection() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 grid-rows-1 sm:landscape:grid-cols-2 sm:landscape:grid-rows-2 md:landscape:grid-cols-2 md:landscape:grid-rows-2 md:grid-cols-2 md:grid-rows-2 sm:landscape:gap-10 gap-5 md:landscape:gap-5 w-full mt-16">
-                        <div className="col-span-1 col-row-1  p-3 bg-white rounded-2xl hover:bg-primary group lg:landscape:flex  items-center gap-5 transition-[background] duration-1000">
+                    <div className="grid grid-cols-1 grid-rows-1 sm:landscape:grid-cols-2 sm:landscape:grid-rows-2 md:landscape:grid-cols-2 md:landscape:grid-rows-2 md:grid-cols-2 md:grid-rows-2 sm:landscape:gap-10 gap-5 md:landscape:gap-5 w-full mt-16 2xl:w-[95%]  3k:w-[75%] 4k:w-[65%] mx-auto">
+                        <div className="col-span-1 col-row-1  p-3 bg-white rounded-2xl hover:bg-primary group lg:landscape:flex  items-center gap-5 transition-[background] duration-1000 aspect-[1/.4]">
                             <div className="relative aspect-square w-full  md:landscape:aspect-square md:landscape:h-[200px]">
                                 <Image
                                     src={`/images/customer-1.png`}
