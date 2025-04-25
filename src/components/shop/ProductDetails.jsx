@@ -203,7 +203,7 @@ function ProductDetails() {
                                         {product.description}
                                     </p>
                                 </div>
-                                <div className="relative aspect-square sm:landscape:aspect-[1/1.6] md:landscape:aspect-[1/.8] md:aspect-[1/1.3] w-full md:landscape:w-[90%]">
+                                <div className="relative aspect-square sm:landscape:aspect-[1/1.6] md:landscape:aspect-[1/1.15] md:aspect-[1/1.3] w-full">
                                     <Image
                                         src={product.images[imageState]}
                                         layout="fill"
