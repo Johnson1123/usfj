@@ -10,14 +10,11 @@ function ShpCategories() {
     const [categoriesProduct, setCategoriesProducts] = useState([]);
 
     useEffect(() => {
-        const filteredProducts = Products.filter((product) =>
-            product.categories.includes(categories.toLowerCase()),
+        const filteredProducts = Products.filter(
+            (product) => product.category == categories,
         );
         setCategoriesProducts(filteredProducts.slice(0, 4));
     }, [categories]);
-
-    console.log(categoriesProduct);
-    console.log(categories);
 
     const handleFilter = (category) => {
         setCategories(category);
@@ -39,14 +36,16 @@ function ShpCategories() {
                                     <button
                                         className={`${
                                             categories.toLowerCase() ===
-                                            item.title.toLowerCase()
+                                            item.category.toLowerCase()
                                                 ? 'text-primary'
                                                 : 'text-bgBlue'
                                         } pTextStyle`}
-                                        onClick={() => handleFilter(item.title)}
+                                        onClick={() =>
+                                            handleFilter(item.category)
+                                        }
                                         key={i}
                                     >
-                                        {item.title}
+                                        {item.category}
                                     </button>
                                 );
                             })}
@@ -66,7 +65,7 @@ function ShpCategories() {
                                         className="object-contain rounded-[.5rem]"
                                     />
                                     <CategoriesOverlay
-                                        title={'Woman'}
+                                        name={'Woman'}
                                         link={'/shop'}
                                     />
                                 </div>

@@ -47,10 +47,10 @@ export default function ProductSlide() {
                     return (
                         <SwiperSlide key={id} className="slides-width">
                             <TopProducts
-                                title={item.title}
-                                label={item.categories[0]}
+                                name={item.name}
+                                label={item.category}
                                 price={item.price}
-                                discount={item.discount}
+                                discount={item.discount_price}
                             />
                         </SwiperSlide>
                     );

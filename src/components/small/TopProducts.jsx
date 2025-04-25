@@ -4,10 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
-function TopProducts({ title, label, price, discount }) {
-    const route = useRouter();
-
-    const handelNavigation = route.push('/shop/product-details/1');
+function TopProducts({ name, label, price, discount }) {
     return (
         <div>
             <Link href={'/shop/product-details/1'}>
@@ -27,9 +24,7 @@ function TopProducts({ title, label, price, discount }) {
                     </div>
                     <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-[80%]">
                         <div className="w-full flex flex-col justify-center items-center">
-                            <p className="h3HeadingStyle !text-white">
-                                {title}
-                            </p>
+                            <p className="h3HeadingStyle !text-white">{name}</p>
                             <p className="!text-white pTextStyle">{label}</p>
                             <div className="flex gap-2">
                                 <p className=" rounded-full px-2 py-[2px] bg-white mt-5 pTextStyle w-max !text-sm line-through !text-primary">

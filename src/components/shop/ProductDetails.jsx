@@ -87,7 +87,7 @@ function ProductDetails() {
                                     {/* product title */}
                                     <div className="">
                                         <h3 className="headingStyle ">
-                                            {product.title}
+                                            {product.name}
                                         </h3>{' '}
                                     </div>
 
@@ -183,9 +183,9 @@ function ProductDetails() {
                                         </div>
                                     </div>
                                     {/* checkout button */}
-                                    <div className="mt-10">
+                                    <div className="mt-7">
                                         <SecondaryButton
-                                            label={'Checkout'}
+                                            label={'Buy Now'}
                                             handler={() => {}}
                                         />
                                     </div>
@@ -203,7 +203,7 @@ function ProductDetails() {
                                         {product.description}
                                     </p>
                                 </div>
-                                <div className="relative aspect-square sm:landscape:aspect-[1/1.6] md:landscape:aspect-[1/1.1] md:aspect-[1/1.3] w-full">
+                                <div className="relative aspect-square sm:landscape:aspect-[1/1.6] md:landscape:aspect-[1/.8] md:aspect-[1/1.3] w-full md:landscape:w-[90%]">
                                     <Image
                                         src={product.images[imageState]}
                                         layout="fill"
