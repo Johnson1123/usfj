@@ -357,28 +357,19 @@ export const Products = [
 
 export const productsCategories = [
     {
-        category: 'All Products',
-        tags: ['product', 'all', ''],
-    },
-    {
         category: 'T-Shirts',
-        tags: ['shirt', 't-shirt', 't'],
     },
     {
         category: 'Caps ',
-        tags: ['cap', 'caps', 'face-cap'],
     },
 
     {
         category: 'Mugs',
-        tags: ['cup', 'mug', 'product'],
     },
     {
         category: 'Pens',
-        tags: ['pen', 'stationary', 'products'],
     },
     {
-        category: 'Journals',
-        tags: ['book', 'Journal', 'products'],
+        category: 'Bags',
     },
 ];

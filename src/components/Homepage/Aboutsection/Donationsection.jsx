@@ -38,7 +38,7 @@ const fakeData = [
 
 export const Donationsection = () => {
     return (
-        <div className="relative py-24 flex justify-center items-center 2xl:py-44 3k:py-64 2xl:min-h-[60dvh] 3k:min-h-[55dvh]">
+        <div className="py-24 flex justify-center items-center 2xl:py-44 3k:py-64 2xl:min-h-[60dvh] 3k:min-h-[55dvh]">
             <div className="absolute top-0 left-0 w-full h-full opacity-30">
                 <Image
                     fill={true}
@@ -65,7 +65,7 @@ export const Donationsection = () => {
                     <div className="w-full xl:w-[80%] 2xl:w-[70%] 3k:w-[60%] md:ml-auto sm:landscape:ml-auto">
                         <div className="flex-1 w-full border-r-[5px] border-primary">
                             <p
-                                className={`pTextStyle leading-[1.5] text-justify font-secondaryFont font-[600]  text-textColor pr-4`}
+                                className={`pTextStyle leading-[1.5] text-justify font-secondaryFont font-[600] pr-4 4k:pr-[2rem]`}
                             >
                                 We are a Christ-centered organization dedicated
                                 to empowering young adults in Kentucky by
@@ -73,12 +73,15 @@ export const Donationsection = () => {
                                 educational opportunities........{' '}
                                 <Link
                                     href="/"
-                                    className="pTextStyle text-primary"
+                                    className="pTextStyle !text-primary"
                                 >
                                     More Information
                                 </Link>{' '}
                             </p>
                         </div>
+
+                        {/* button */}
+
                         <div className="mt-3">
                             <PrimaryButton
                                 label={'Start Now'}

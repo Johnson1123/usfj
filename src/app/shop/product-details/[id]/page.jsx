@@ -1,4 +1,5 @@
 'use client';
+import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import ShopBanner from '@/components/medium/ShopBanner';
 import Banner from '@/components/shop/Banner';
@@ -14,6 +15,7 @@ function page() {
             <ProductDetails />
             <TopProductsSection />
             <Banner />
+            <Footer />
         </>
     );
 }

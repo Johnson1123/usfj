@@ -86,7 +86,7 @@ function ProductDetails() {
                                 <div className="mt-10 sm:landscape:mt-0 md:mt-0">
                                     {/* product title */}
                                     <div className="">
-                                        <h3 className="headingStyle ">
+                                        <h3 className="headingStyle">
                                             {product.name}
                                         </h3>{' '}
                                     </div>
@@ -119,7 +119,7 @@ function ProductDetails() {
                                             {' '}
                                             Details Product
                                         </p>
-                                        <p className="py-3">
+                                        <p className="py-3 pTextStyle">
                                             {product.details}
                                         </p>
                                     </div>
@@ -199,7 +199,7 @@ function ProductDetails() {
                                         Description
                                     </p>
 
-                                    <p className="py-3">
+                                    <p className="py-3 pTextStyle">
                                         {product.description}
                                     </p>
                                 </div>

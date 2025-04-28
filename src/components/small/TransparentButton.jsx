@@ -1,17 +1,14 @@
-import React from "react";
+import React from 'react';
 
 function TransparentButton({ label, handler }) {
-  return (
-    <button
-      onClick={() => handler()}
-      className="text-center rounded-full px-6 lg:px-3 xl:px-6 py-2 
-        text-bgBlack bg-transparent cursor-pointer linkText !font-medium
-        transition-all duration-300 ease-in-out border border-bgBlue
-        hover:bg-blueColor hover:text-bgBlack hover:bg-bgOrange hover:border-bgOrange"
-    >
-      {label}
-    </button>
-  );
+    return (
+        <button
+            onClick={() => handler()}
+            className="text-center px-4 md:px-4 xl:px-4 py-2 bg-bgWhite hover:bg-bgBlue hover:text-white transition-all duration-200 ease-linear border border-bgBlue rounded-3xl font-[700]  text-bgBlue pTextStyle !font-manFont"
+        >
+            {label}
+        </button>
+    );
 }
 
 export default TransparentButton;
