@@ -13,7 +13,7 @@ import React from 'react';
 function ContactFormCard() {
     return (
         <div className="bg-bgBlue rounded-xl min-h-[60vh] mobile-landscape:min-h-[600px] md:min-h-[55vh] px-5 3k:px-10 py-10 3k:py-16 relative overflow-hidden xl:col-span-2 lg:h-[60vh] xl:h-[75vh] 2xl:h-[85vh] 3k:h-[70vh]">
-            <h3 className={`h3HeadingStyle !text-white font-bold`}>
+            <h3 className={`h3HeadingStyle !text-white`}>
                 Get in Touch With Us Today!
             </h3>
             <p className={`pTextStyle mt-10 xl:mt-8  !text-white`}>
@@ -24,19 +24,17 @@ function ContactFormCard() {
             <div className="mt-10 xl:mt-16 flex flex-col gap-4">
                 <div className="flex gap-3 xl:gap-5 items-center">
                     <BiSolidPhoneCall className="text-white text-[20px] 3k:text-[25px]" />
-                    <p className={`!text-white font-secondaryFont pTextStyle`}>
-                        +1(501) 3456 789
-                    </p>
+                    <p className={`!text-white pTextStyle`}>+1(501) 3456 789</p>
                 </div>
                 <div className="flex gap-3 xl:gap-5 items-center">
                     <MdEmail className="text-white text-[20px] 3k:text-[25px]" />
-                    <p className={`!text-white font-secondaryFont pTextStyle`}>
+                    <p className={`!text-white pTextStyle`}>
                         Info@usfjesus.org
                     </p>
                 </div>
                 <div className="flex gap-3 xl:gap-5 items-center">
                     <IoLocationSharp className="text-white text-[20px] 3k:text-[25px]" />
-                    <p className={`!text-white font-secondaryFont pTextStyle`}>
+                    <p className={`!text-white pTextStyle`}>
                         1100 Ring Road, Elizabeth town USA
                     </p>
                 </div>

@@ -6,7 +6,7 @@ function PrimaryButton({ label, handler }) {
         <button
             onClick={handler}
             className="text-center px-4 py-2 rounded-full
-        text-white bg-bgBlue cursor-pointer linkText font-manFont !font-medium
+        text-white bg-bgBlue cursor-pointer font-manFont
         transition-all duration-300 ease-in-out hover:text-bgBlue hover:bg-transparent
         border border-bgBlue w-max"
         >
