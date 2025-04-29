@@ -105,7 +105,7 @@ export const pTextStyle = `text-[clamp(.75rem,_1.25vw,_1.75rem)]  3k:text-[clamp
 
 /* Paragrah style */
 .pTextStyle {
-    font-size: clamp(1rem, 1.25vw, 1.3rem);
+    font-size: clamp(0.9rem, 1vw, 1.125rem);
     font-weight: 300;
     font-family: 'Nunito';
     color: #000000b3;
@@ -118,22 +118,22 @@ export const pTextStyle = `text-[clamp(.75rem,_1.25vw,_1.75rem)]  3k:text-[clamp
 
 @media (min-width: 1024px) {
     .pTextStyle {
-        font-size: clamp(1.125rem, 1.6vw, 1.75rem);
+        font-size: clamp(1rem, 1.3vw, 1.5rem);
     }
 }
 @media (min-width: 1264px) {
     .pTextStyle {
-        font-size: clamp(1.125rem, 1.3vw, 1.4rem);
+        font-size: clamp(1rem, 1.2vw, 1.3rem);
     }
 }
 @media (min-width: 1526px) {
     .pTextStyle {
-        font-size: clamp(1.125rem, 1.125vw, 1.4rem);
+        font-size: clamp(1rem, 1vw, 1.3rem);
     }
 }
 @media (min-width: 2200px) {
     .pTextStyle {
-        font-size: clamp(1.3rem, 1.125vw, 2rem);
+        font-size: clamp(1.2rem, 1vw, 1.4rem);
     }
 }
 

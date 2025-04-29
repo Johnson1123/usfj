@@ -19,6 +19,13 @@ function Header() {
     const router = useRouter();
     const [scrollPositionY, setScrollPositionY] = useState(0);
 
+    const ref = useRef();
+    const angleRef = useRef();
+
+    // function handleOutide(event) {
+    //     if (angleRef.current == angleRef.current.contains(event.target)) return;
+    //     setDropdown(!dropdown);
+    // }
     const handleScrollPosition = () => {
         setScrollPositionY(window.scrollY);
     };
@@ -35,9 +42,10 @@ function Header() {
         setDropdown(!dropdown);
     };
 
+    useClickOutside(ref, () => setDropdown(false));
+
     const handleOpen = () => {
         setIsOpen(!isOpen);
-        console.log(isOpen);
     };
 
     const handleActiveItem = () => {
@@ -51,10 +59,6 @@ function Header() {
     const handleRegister = () => {
         router.push('/auth/register');
     };
-
-    const ref = useRef();
-
-    useClickOutside(ref, () => setDropdown(false));
 
     return (
         <>
@@ -112,8 +116,9 @@ function Header() {
                                         <div
                                             key={i}
                                             className="flex flex-col gap-3 relative left-0 top-0"
+                                            ref={ref}
                                         >
-                                            <div className="flex  items-center gap-3">
+                                            <div className="flex  items-center gap-3 ">
                                                 <p
                                                     className="flex  items-center gap-3 cursor-pointer"
                                                     onClick={(e) => {
@@ -146,7 +151,6 @@ function Header() {
                                                         ? 'flex h-max'
                                                         : 'hidden'
                                                 }`}
-                                                ref={ref}
                                             >
                                                 {item.items.map((item, i) => {
                                                     return (
