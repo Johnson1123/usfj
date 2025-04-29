@@ -74,15 +74,15 @@ function Header() {
                         scrollPositionY >= 5
                             ? ' rounded-none w-full !bg-transparent'
                             : 'rounded-full headerMainWrapper'
-                    } transition-all  duration-300 ease-linear `}
+                    } transition-all  duration-300 ease-linear h-full`}
                 >
-                    <div className="relative">
+                    <div className="w-auto h-full">
                         <Link href="/">
                             <img
                                 src="/images/USFJ-DARK-Logo.png"
                                 fill
                                 alt="usfj-logo"
-                                className="w-[120px] 3k:w-[150px] h-auto"
+                                className="w-[150px] 3k:w-[180px]"
                             />
                         </Link>
                     </div>

@@ -314,7 +314,7 @@ export const Herosection = () => {
                             }}
                             className="absolute opacity-0 z-10 top-0 left-0 w-full h-full bg-[#6D93A5] flex flex-col justify-end items-center gap-3"
                         >
-                            <p className="uppercase !text-white h3HeadingStyle !font-secondaryFont">
+                            <p className="uppercase !text-white herosectionControlText changeWrittingMode2 !font-secondaryFont">
                                 OUR MISSION
                             </p>
                             <div className="heroCircle bg-bgWhite my-4">

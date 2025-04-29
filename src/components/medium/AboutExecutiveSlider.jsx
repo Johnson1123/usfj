@@ -32,7 +32,7 @@ function AboutExecutiveSlider() {
             <div className="">
                 <div className="mt-5 md:landscape:mt-10 md:mt-10">
                     <Swiper
-                        speed={500}
+                        // speed={500}
                         modules={[Pagination, EffectFade]}
                         // observer={true}
                         effect={'fade'}
@@ -51,7 +51,10 @@ function AboutExecutiveSlider() {
                     >
                         {executives.map((item, i) => {
                             return (
-                                <SwiperSlide key={i} className="slides-width">
+                                <SwiperSlide
+                                    key={i}
+                                    className="slides-width bg-white"
+                                >
                                     <div className="grid sm:landscape:grid-cols-2 2xl:landscape:grid-cols-5 md:grid-cols-2 gap-5 my-5 md:landscape:gap-16">
                                         <div className="grid  2xl:col-span-2">
                                             <div className="w-[calc(100%_/_1.5)] 2xl:w-full grid gap-5 mx-auto">
@@ -143,7 +146,7 @@ function AboutExecutiveSlider() {
                                                                 onClick={() => {
                                                                     swiperRef?.current.slideTo(
                                                                         el.id,
-                                                                        1000,
+                                                                        500,
                                                                     );
                                                                 }}
                                                             >
