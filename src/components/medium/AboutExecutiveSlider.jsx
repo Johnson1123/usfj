@@ -28,15 +28,13 @@ function AboutExecutiveSlider() {
     };
 
     return (
-        <div>
-            <div className="">
+        <>
+            <div className="bg-white py-5 mt-5 rounded-2xl">
                 <div className="mt-5 md:landscape:mt-10 md:mt-10">
                     <Swiper
-                        // speed={500}
+                        speed={500}
                         modules={[Pagination, EffectFade]}
-                        // observer={true}
                         effect={'fade'}
-                        // observeParents={true}
                         onSwiper={(swiper) => {
                             swiperRef.current = swiper;
                         }}
@@ -55,11 +53,12 @@ function AboutExecutiveSlider() {
                                     key={i}
                                     className="slides-width bg-white"
                                 >
-                                    <div className="grid sm:landscape:grid-cols-2 2xl:landscape:grid-cols-5 md:grid-cols-2 gap-5 my-5 md:landscape:gap-16">
-                                        <div className="grid  2xl:col-span-2">
-                                            <div className="w-[calc(100%_/_1.5)] 2xl:w-full grid gap-5 mx-auto">
+                                    <div className="grid sm:landscape:grid-cols-2 2xl:landscape:grid-cols-5 md:portrait:grid-cols-2 gap-5 my-5 md:landscape:gap-16 px-5 bg-white">
+                                        <div className="grid grid-cols-1  2xl:col-span-2 w-full xl:w-[100%_/_1.5]">
+                                            <div className="w-full 2xl:w-full grid gap-5 mx-auto">
                                                 {/* control btn */}
-                                                <div className="grid grid-cols-7 gap-5 items-center md:order-last sm:landscape:order-last">
+
+                                                <div className="grid  grid-cols-7 gap-5 items-center md:order-last sm:landscape:order-last w-full">
                                                     <div className="justity-start">
                                                         <button
                                                             className="col-span-1 mediumCircle bg-bgBlue rounded-full hover:bg-white group transition-all duration-100"
@@ -97,6 +96,7 @@ function AboutExecutiveSlider() {
                                                         </button>
                                                     </div>
                                                 </div>
+
                                                 {/* active slider image */}
                                                 <div className="relative h-auto aspect-square overflow-hidden rounded-xl">
                                                     <Image
@@ -169,7 +169,7 @@ function AboutExecutiveSlider() {
                     </Swiper>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
