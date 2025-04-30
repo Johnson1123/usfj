@@ -32,9 +32,12 @@ function AboutExecutiveSlider() {
             <div className="bg-white py-5 mt-5 rounded-2xl">
                 <div className="mt-5 md:landscape:mt-10 md:mt-10">
                     <Swiper
-                        speed={500}
+                        speed={1000}
                         modules={[Pagination, EffectFade]}
                         effect={'fade'}
+                        fadeEffect={{
+                            crossFade: true,
+                        }}
                         onSwiper={(swiper) => {
                             swiperRef.current = swiper;
                         }}
@@ -46,6 +49,14 @@ function AboutExecutiveSlider() {
                         }}
                         initialSlide={activeIndex}
                         onActiveIndexChange={updateIndex}
+                        allowTouchMove={true}
+                        followFinger={true}
+                        touchRatio={1}
+                        touchAngle={45}
+                        resistance={true}
+                        resistanceRatio={0.85}
+                        watchSlidesProgress={true}
+                        preventInteractionOnTransition={true}
                     >
                         {executives.map((item, i) => {
                             return (
@@ -146,7 +157,8 @@ function AboutExecutiveSlider() {
                                                                 onClick={() => {
                                                                     swiperRef?.current.slideTo(
                                                                         el.id,
-                                                                        500,
+                                                                        800,
+                                                                        true,
                                                                     );
                                                                 }}
                                                             >
