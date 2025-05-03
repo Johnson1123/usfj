@@ -8,28 +8,19 @@ import {
 
 import OtherButton from '@/components/small/OtherButton';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 function ContactForm() {
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-    });
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isLoading },
+        reset,
+    } = useForm();
     const [result, setResult] = useState({});
     const [loading, setLoading] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
-    };
-
-    const sendEmail = async () => {
+    const sendEmail = async (data) => {
         setLoading(true);
         try {
             const response = await fetch('/api/emails', {
@@ -37,10 +28,13 @@ function ContactForm() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(data),
             });
-            const data = await response.json();
-            setResult(data);
+            const result = await response.json();
+            setResult(result);
+            if (result.success) {
+                reset(); // Reset form on success
+            }
         } catch (err) {
             setResult({ error: err.message });
         } finally {
@@ -48,86 +42,97 @@ function ContactForm() {
         }
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        sendEmail();
+    const onSubmit = (data) => {
+        sendEmail(data);
     };
 
-    const inputContainerStyle = `flex flex-col gap-2 border-b-2 my-5 border-[#8D8D8D]`;
-    const inputStyle = `outline-none px-1 py-1 h-[45px] xl:h-[2.5vw] text-[1vw]`;
-
+    const inputContainerStyle = `flex flex-col my-5 gap-2`;
+    const inputInnerContainerStyle = ` flex flex-col gap-2 border-b-2 border-[#8D8D8D]`;
+    const inputStyle = `outline-none px-1 h-[45px] xl:h-[2.5vw] text-[1rem]`;
     return (
         <form
+            action=""
             className="py-16 w-full order-last xl:col-span-3"
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
         >
             <div className="grid grid-cols-1 gap-2 mobile-landscape:grid-cols-2 mobile-landscape:gap-10 md:grid-cols-2 md:gap-10 xl:my-[1vw]">
                 <div className={`${inputContainerStyle}`}>
-                    <label
-                        htmlFor="firstName"
-                        className={`font-bold ${subTitleStyle}`}
-                    >
-                        First Name
-                    </label>
-                    <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        className={`${inputStyle}`}
-                        required
-                    />
+                    <div className={`${inputInnerContainerStyle}`}>
+                        <label
+                            htmlFor=""
+                            className={`font-bold ${subTitleStyle}`}
+                        >
+                            First Name
+                        </label>
+                        <input
+                            type="text"
+                            {...register('firstName', { required: true })}
+                            className={`${inputStyle}`}
+                        />
+                    </div>
+                    {errors.firstName && (
+                        <span className="text-sm text-red-500">
+                            This field is required
+                        </span>
+                    )}
                 </div>
                 <div className={`${inputContainerStyle}`}>
-                    <label
-                        htmlFor="lastName"
-                        className={`font-bold ${subTitleStyle}`}
-                    >
+                    <label htmlFor="" className={`font-bold ${subTitleStyle}`}>
                         Last Name
                     </label>
                     <input
                         type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
+                        {...register('lastName', { required: true })}
                         className={`${inputStyle}`}
-                        required
                     />
+                    {errors.lastName && (
+                        <span className="text-sm text-red-500">
+                            This field is required
+                        </span>
+                    )}
                 </div>
             </div>
 
             <div className="grid grid-cols-1 gap-2 mobile-landscape:grid-cols-2 mobile-landscape:gap-10 md:grid-cols-2 md:gap-10 xl:my-[1vw]">
                 <div className={`${inputContainerStyle}`}>
-                    <label
-                        htmlFor="email"
-                        className={`font-bold ${pTextStyle}`}
-                    >
-                        Email
-                    </label>
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className={`${inputStyle}`}
-                        required
-                    />
+                    <div className={`${inputInnerContainerStyle}`}>
+                        <label htmlFor="" className={`font-bold ${pTextStyle}`}>
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            {...register('email', {
+                                required: true,
+                                pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                            })}
+                            className={`${inputStyle}`}
+                        />
+                    </div>
+                    {errors.email && (
+                        <span className="text-sm text-red-500">
+                            Input valid email
+                        </span>
+                    )}
                 </div>
                 <div className={`${inputContainerStyle}`}>
-                    <label
-                        htmlFor="phone"
-                        className={`font-bold ${pTextStyle}`}
-                    >
-                        Phone Number
-                    </label>
-                    <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className={`${inputStyle}`}
-                        required
-                    />
+                    <div className={`${inputInnerContainerStyle}`}>
+                        <label htmlFor="" className={`font-bold ${pTextStyle}`}>
+                            Phone Number
+                        </label>
+                        <input
+                            type="text"
+                            {...register('phoneNumber', {
+                                required: true,
+                                pattern: /^\d+$/,
+                            })}
+                            className={`${inputStyle}`}
+                        />
+                    </div>
+                    {errors.phoneNumber && (
+                        <span className="text-sm text-red-500">
+                            Input a valid phone number
+                        </span>
+                    )}
                 </div>
             </div>
             <div className="mt-7 xl:my-[2vw]">
@@ -136,61 +141,62 @@ function ContactForm() {
                     <div className="flex gap-3 items-center">
                         <input
                             type="radio"
-                            name="subject"
-                            value="General Inquiry"
-                            checked={formData.subject === 'General Inquiry'}
-                            onChange={handleChange}
+                            {...register('subject', { required: true })}
+                            size={30}
                         />
-                        <label className={`${textStyle}`}>
+                        <label htmlFor="" className={`${textStyle}`}>
                             General Inquiry
                         </label>
                     </div>
                     <div className="flex gap-3 items-center">
                         <input
                             type="radio"
-                            name="subject"
-                            value="Donation"
-                            checked={formData.subject === 'Donation'}
-                            onChange={handleChange}
+                            {...register('subject', { required: true })}
+                            size={30}
                         />
-                        <label className={`${textStyle}`}>Donation</label>
+                        <label htmlFor="" className={`${textStyle}`}>
+                            Donation
+                        </label>
                     </div>
                     <div className="flex gap-3 items-center">
                         <input
                             type="radio"
-                            name="subject"
-                            value="Our Causes"
-                            checked={formData.subject === 'Our Causes'}
-                            onChange={handleChange}
+                            {...register('subject', { required: true })}
+                            size={30}
                         />
-                        <label className={`${textStyle}`}>Our Causes</label>
+                        <label htmlFor="Message" className={`${textStyle}`}>
+                            Our Causes
+                        </label>
                     </div>
+                    {errors.subject && (
+                        <span className="text-sm text-red-500">
+                            Select Subject
+                        </span>
+                    )}
                 </div>
             </div>
             <div className="mt-7">
                 <div className="flex flex-col gap-2 border-b-2 border-bgBlue">
-                    <label
-                        htmlFor="message"
-                        className={`font-bold ${subTitleStyle}`}
-                    >
+                    <label htmlFor="" className={`font-bold ${subTitleStyle}`}>
                         Message
                     </label>
                     <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
                         cols={7}
-                        rows={2}
+                        rows={4}
+                        {...register('message', { required: true })}
                         className="border-none outline-none"
-                        required
                     ></textarea>
                 </div>
+                {errors.message && (
+                    <span className="text-sm text-red-500">
+                        This field is required
+                    </span>
+                )}
             </div>
             <div className="flex justify-end mt-10">
                 <OtherButton
-                    label={loading ? 'Sending...' : 'Send Message'}
-                    handler={() => {}}
-                    disabled={loading}
+                    label={isLoading ? 'Sending...' : 'Send Message'}
+                    handler={handleSubmit(onSubmit)}
                 />
             </div>
         </form>
