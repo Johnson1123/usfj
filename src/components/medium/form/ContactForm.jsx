@@ -77,14 +77,19 @@ function ContactForm() {
                     )}
                 </div>
                 <div className={`${inputContainerStyle}`}>
-                    <label htmlFor="" className={`font-bold ${subTitleStyle}`}>
-                        Last Name
-                    </label>
-                    <input
-                        type="text"
-                        {...register('lastName', { required: true })}
-                        className={`${inputStyle}`}
-                    />
+                    <div className={`${inputInnerContainerStyle}`}>
+                        <label
+                            htmlFor=""
+                            className={`font-bold ${subTitleStyle}`}
+                        >
+                            Last Name
+                        </label>
+                        <input
+                            type="text"
+                            {...register('lastName', { required: true })}
+                            className={`${inputStyle}`}
+                        />
+                    </div>
                     {errors.lastName && (
                         <span className="text-sm text-red-500">
                             This field is required
@@ -168,12 +173,10 @@ function ContactForm() {
                             Our Causes
                         </label>
                     </div>
-                    {errors.subject && (
-                        <span className="text-sm text-red-500">
-                            Select Subject
-                        </span>
-                    )}
                 </div>
+                {errors.subject && (
+                    <span className="text-sm text-red-500">Select Subject</span>
+                )}
             </div>
             <div className="mt-7">
                 <div className="flex flex-col gap-2 border-b-2 border-bgBlue">
