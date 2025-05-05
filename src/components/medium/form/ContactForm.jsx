@@ -1,14 +1,10 @@
 'use client';
-import {
-    h3HeadingStyle,
-    pTextStyle,
-    subTitleStyle,
-    textStyle,
-} from '@/style/common';
+import { pTextStyle, subTitleStyle, textStyle } from '@/style/common';
 
 import OtherButton from '@/components/small/OtherButton';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 function ContactForm() {
     const {
@@ -34,9 +30,11 @@ function ContactForm() {
             setResult(result);
             if (result.success) {
                 reset(); // Reset form on success
+                toast.success('Message Recieved');
             }
         } catch (err) {
             setResult({ error: err.message });
+            toast.success('Submission Failed');
         } finally {
             setLoading(false);
         }

@@ -1,6 +1,7 @@
 import './globals.css';
 import '../style/style.css';
 import ReduxProvider from './provider';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
     title: 'United Servants For Jesus',
