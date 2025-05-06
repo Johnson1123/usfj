@@ -7,8 +7,6 @@ import { FaAngleRight } from 'react-icons/fa6';
 import { FaStar } from 'react-icons/fa';
 import SecondaryButton from '../small/SecondaryButton';
 
-// import stripe from 'stripe';
-
 function ProductDetails() {
     const [imageState, setImageState] = useState(0);
 
