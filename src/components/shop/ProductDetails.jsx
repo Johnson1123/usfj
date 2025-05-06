@@ -31,7 +31,7 @@ function ProductDetails() {
 
     const product = Products[0];
     // const Stripe = stripe(
-    //     'sk_test_51Oqtk1I6MOtxdUuDdsjUhRkFavLLig1iDr0qNu7qjhGmfuIzdMV6fewbjwHDlQRV7K3oIGamzrVwOh8RUoaAVny1008YXVoPTH',
+    //     '',
     // );
 
     // const paymentLink = async () => {
