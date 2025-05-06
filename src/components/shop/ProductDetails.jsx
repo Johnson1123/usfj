@@ -30,23 +30,6 @@ function ProductDetails() {
     const [size, setSize] = useState('m');
 
     const product = Products[0];
-    // const Stripe = stripe(
-    //     '',
-    // );
-
-    // const paymentLink = async () => {
-    //     const plink = await Stripe.paymentLinks.create({
-    //         line_items: [
-    //             {
-    //                 price: '{{price_1RLmBYI6MOtxdUuD6IqwBlHr}}',
-    //                 quantity: 5,
-    //             },
-    //         ],
-    //         inactive_message: 'Sorry, we are out of stock for now!',
-    //     });
-
-    //     console.log(plink);
-    // };
 
     return (
         <div className="py-10 md:landscape:py-20">
