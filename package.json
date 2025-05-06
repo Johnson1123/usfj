@@ -27,6 +27,7 @@
     "react-redux-toolkit": "^0.0.1-alpha.2",
     "react-toastify": "^11.0.5",
     "socket.io-client": "^4.8.1",
+    "stripe": "^18.1.0",
     "swiper": "^11.2.5"
   },
   "devDependencies": {

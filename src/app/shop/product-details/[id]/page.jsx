@@ -8,6 +8,7 @@ import { TopProductsSection } from '@/components/shop/TopProductSlider';
 import React from 'react';
 
 function page() {
+    console.log('Hello');
     return (
         <>
             <Header />

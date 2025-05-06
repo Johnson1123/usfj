@@ -351,9 +351,10 @@ export const Herosection = () => {
                             </p>
                         </div>
                         <div className="flex justify-end items-center gap-3 mt-auto 2xl:mt-auto xl:mt-auto lg:mt-auto 4k:mt-auto 3k:mt-auto">
-                            <button className="border border-bgWhite font-secondaryFont rounded-full text-bgWhite px-5 py-1">
-                                Donate Now{' '}
+                            <button className="px-4 py-2 bg-transparent text-white hover:bg-bgOrange hover:text-white transition-all duration-200 ease-linear border border-white hover:border-bgOrange text-center 2xl:rounded-3xl xl:rounded-3xl lg:rounded-3xl lg:landscape:rounded-3xl 4k:rounded-3xl 3k:rounded-3xl md:portrait:rounded-3xl rounded-full font-manFont">
+                                Donate Now
                             </button>
+
                             <button className="bg-whiteColor h-[3vw] w-[3vw] rounded-full flex justify-center items-center">
                                 <ArrowIconBlack />
                             </button>

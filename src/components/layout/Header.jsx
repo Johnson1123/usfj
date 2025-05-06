@@ -26,6 +26,7 @@ function Header() {
     //     if (angleRef.current == angleRef.current.contains(event.target)) return;
     //     setDropdown(!dropdown);
     // }
+
     const handleScrollPosition = () => {
         setScrollPositionY(window.scrollY);
     };
@@ -120,13 +121,13 @@ function Header() {
                                         >
                                             <div className="flex  items-center gap-3 ">
                                                 <p
-                                                    className="flex  items-center gap-3 cursor-pointer"
+                                                    className="flex  items-center gap-3 cursor-pointer font-300"
                                                     onClick={(e) => {
                                                         e.stopPropagation();
                                                         handleDropdown();
                                                     }}
                                                 >
-                                                    <span className="!text-white linkText">
+                                                    <span className="!text-white">
                                                         {item.label}
                                                     </span>
                                                 </p>
@@ -160,7 +161,7 @@ function Header() {
                                                         >
                                                             <Link
                                                                 href={item.link}
-                                                                className={`!text-blueColor  hover:opacity-50 linkText`}
+                                                                className={`!text-blueColor  hover:opacity-50 font-300`}
                                                             >
                                                                 {item.label}
                                                             </Link>
@@ -173,7 +174,7 @@ function Header() {
                                         // links
                                         <li
                                             key={i}
-                                            className="text-white lg:px-[10px] hover:opacity-50 linkText"
+                                            className="text-white lg:px-[10px] hover:opacity-50 "
                                         >
                                             <Link
                                                 href={item.link}
@@ -191,12 +192,10 @@ function Header() {
                                 }
                             >
                                 <div className="">
-                                    <button
-                                        onClick={handleLogin}
-                                        className="text-center rounded-full px-10 py-2 text-bgBlack bg-bgWhite cursor-pointer font-manFont transition-all duration-300 ease-in-out hover:text-blueColor hover:bg-transparent border hover:border-white hover:text-bgWhite !font-semibold linkText"
-                                    >
-                                        Sign In
-                                    </button>
+                                    <TransparentButton
+                                        handler={handleLogin}
+                                        label={'Sign In'}
+                                    />
                                 </div>
                                 <div className="">
                                     <SecondaryButton

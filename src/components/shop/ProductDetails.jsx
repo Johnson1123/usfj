@@ -7,6 +7,8 @@ import { FaAngleRight } from 'react-icons/fa6';
 import { FaStar } from 'react-icons/fa';
 import SecondaryButton from '../small/SecondaryButton';
 
+// import stripe from 'stripe';
+
 function ProductDetails() {
     const [imageState, setImageState] = useState(0);
 
@@ -28,6 +30,23 @@ function ProductDetails() {
     const [size, setSize] = useState('m');
 
     const product = Products[0];
+    // const Stripe = stripe(
+    //     'sk_test_51Oqtk1I6MOtxdUuDdsjUhRkFavLLig1iDr0qNu7qjhGmfuIzdMV6fewbjwHDlQRV7K3oIGamzrVwOh8RUoaAVny1008YXVoPTH',
+    // );
+
+    // const paymentLink = async () => {
+    //     const plink = await Stripe.paymentLinks.create({
+    //         line_items: [
+    //             {
+    //                 price: '{{price_1RLmBYI6MOtxdUuD6IqwBlHr}}',
+    //                 quantity: 5,
+    //             },
+    //         ],
+    //         inactive_message: 'Sorry, we are out of stock for now!',
+    //     });
+
+    //     console.log(plink);
+    // };
 
     return (
         <div className="py-10 md:landscape:py-20">
