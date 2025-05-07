@@ -1,12 +1,12 @@
 import nodemailer from 'nodemailer';
 
-const transport = nodemailer.createTransport({
-    host: process.env.MAIL_HOST,
-    port: process.env.MAIL_PORT,
+const transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
     secure: true,
     auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
     },
     tls: {
         // Do not fail on invalid certs
@@ -18,7 +18,7 @@ const sendEmail = async (data) => {
     const { sender, receipients, message, subject } = data;
 
     try {
-        return await transport.sendMail({
+        return await transporter.sendMail({
             from: `${sender.name} <${sender.address}>`,
             to: receipients.map(
                 (recipient) => `${recipient.name} <${recipient.address}>`,
