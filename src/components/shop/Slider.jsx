@@ -30,16 +30,14 @@ export default function ProductSlide() {
                         spaceBetween: 20,
                     },
                     1024: {
-                        slidesPerView: 3.5,
+                        slidesPerView: 3,
                         spaceBetween: 20,
                     },
                     1280: {
-                        slidesPerView: 5,
+                        slidesPerView: 4,
                         spaceBetween: 25,
-                    },
-                    2200: {
-                        slidesPerView: 6,
-                        spaceBetween: 20,
+                        loop: false,
+                        centeredSlides: false,
                     },
                 }}
             >
@@ -47,10 +45,12 @@ export default function ProductSlide() {
                     return (
                         <SwiperSlide key={id} className="slides-width">
                             <TopProducts
+                                id={item.id}
                                 name={item.name}
                                 label={item.category}
                                 price={item.price}
                                 discount={item.discount_price}
+                                image={item.images[0]}
                             />
                         </SwiperSlide>
                     );

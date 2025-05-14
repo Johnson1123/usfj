@@ -174,7 +174,7 @@ function Header() {
                                         // links
                                         <li
                                             key={i}
-                                            className="text-white lg:px-[10px] hover:opacity-50 "
+                                            className="text-white lg:px-[10px] hover:opacity-50"
                                         >
                                             <Link
                                                 href={item.link}

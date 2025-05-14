@@ -1,14 +1,19 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from '../layout/Container';
 import Image from 'next/image';
 import { Products } from '@/constant/product';
 import { FaAngleRight } from 'react-icons/fa6';
 import { FaStar } from 'react-icons/fa';
 import SecondaryButton from '../small/SecondaryButton';
+import { useRouter } from 'next/navigation';
 
-function ProductDetails() {
+function ProductDetails({ id }) {
+    const [product, setProduct] = useState(null);
+
     const [imageState, setImageState] = useState(0);
+
+    const route = useRouter();
 
     const handleImageState = (num) => {
         setImageState(num);
@@ -16,19 +21,53 @@ function ProductDetails() {
 
     const [qty, setQty] = useState(1);
 
+    // decrease quantity
     const handleDecrease = () => {
         if (qty <= 1) return;
         setQty(qty - 1);
     };
+
+    // increase quantity
     const handleIncrease = () => {
         if (qty >= 10) return;
         setQty(qty + 1);
     };
 
-    const [size, setSize] = useState('m');
+    const handleBuy = async (quantity, product_id, amount) => {
+        try {
+            const response = await fetch('/api/stripe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    quantity: quantity,
+                    product_id,
+                    amount: amount * 100,
+                }),
+            });
+            const data = await response.json();
 
-    const product = Products[0];
+            if (response.ok) {
+                // toast.success('Successfully subscribed!');
+                console.log('good');
+                route.push(data.data.url);
+            } else {
+                // toast.error('Failed to subscribe. Please try again.');
+                console.log('error');
+            }
+        } catch (error) {
+            console.log(error);
+            // toast.error('Failed to subscribe. Please try again.');
+        }
+    };
 
+    useEffect(() => {
+        const foundProduct = Products.find((p) => p.id === Number(id));
+        setProduct(foundProduct);
+    }, [id]);
+
+    console.log(product);
     return (
         <div className="py-10 md:landscape:py-20">
             <Container>
@@ -38,7 +77,7 @@ function ProductDetails() {
                         <div className="flex items-center">
                             <span>Shop</span>
                             <FaAngleRight />
-                            <span>Tees</span>
+                            <span>{'tag'}</span>
                             <FaAngleRight />
                             <span>Tropical Tree</span>
                         </div>
@@ -51,14 +90,14 @@ function ProductDetails() {
                                 <div className="">
                                     <div className="relative aspect-square w-full sm:landscape:aspect-[1/1.6] md:landscape:aspect-[1/1.1] 2xl:landscape:aspect-square">
                                         <Image
-                                            src={product.images[imageState]}
+                                            src={product?.images[imageState]}
                                             layout="fill"
                                             fill="true"
                                         />
                                     </div>
                                     {/* image control */}
                                     <div className="grid grid-cols-3 gap-5 mt-7">
-                                        {product.images.map((item, i) => {
+                                        {product?.images.map((item, i) => {
                                             return (
                                                 <div
                                                     className={`relative col-span-1 w-full aspect-square rounded-md overflow-hidden ${
@@ -87,7 +126,7 @@ function ProductDetails() {
                                     {/* product title */}
                                     <div className="">
                                         <h3 className="headingStyle">
-                                            {product.name}
+                                            {product?.name}
                                         </h3>{' '}
                                     </div>
 
@@ -109,7 +148,7 @@ function ProductDetails() {
                                             <sub className="text-primary text-sm">
                                                 $ {''}
                                             </sub>
-                                            <span>{product.price}</span>
+                                            <span>{product?.price}</span>
                                         </p>
                                     </div>
 
@@ -120,7 +159,7 @@ function ProductDetails() {
                                             Details Product
                                         </p>
                                         <p className="py-3 pTextStyle">
-                                            {product.details}
+                                            {product?.details}
                                         </p>
                                     </div>
 
@@ -149,26 +188,28 @@ function ProductDetails() {
                                                 </button>
                                             </div>
                                         </div>
-
                                         {/* size */}
-                                        <div className="flex justify-between">
-                                            <p className="pTextStyle !font-bold">
-                                                Size
-                                            </p>
-                                            <div className="  flex gap-4">
-                                                {product.size.map((item, i) => {
-                                                    return (
-                                                        <button
-                                                            key={i}
-                                                            className=" border border-bgBlue rounded-full px-3 py-[2px]"
-                                                        >
-                                                            {item}
-                                                        </button>
-                                                    );
-                                                })}
+                                        {product?.size && (
+                                            <div className="flex justify-between">
+                                                <p className="pTextStyle !font-bold">
+                                                    Size
+                                                </p>
+                                                <div className="  flex gap-4">
+                                                    {product?.size.map(
+                                                        (item, i) => {
+                                                            return (
+                                                                <button
+                                                                    key={i}
+                                                                    className=" border border-bgBlue rounded-full px-3 py-[2px]"
+                                                                >
+                                                                    {item}
+                                                                </button>
+                                                            );
+                                                        },
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-
+                                        )}
                                         {/* subTotal */}
                                         <div className="flex justify-between items-center">
                                             <p className="pTextStyle !font-bold">
@@ -178,15 +219,24 @@ function ProductDetails() {
                                                 <span className="text-primary">
                                                     $
                                                 </span>{' '}
-                                                {qty * product.price}
+                                                {(qty * product?.price).toFixed(
+                                                    2,
+                                                )}
                                             </p>
                                         </div>
                                     </div>
+
                                     {/* checkout button */}
                                     <div className="mt-7">
                                         <SecondaryButton
                                             label={'Buy Now'}
-                                            handler={() => {}}
+                                            handler={() =>
+                                                handleBuy(
+                                                    qty,
+                                                    product.product_id,
+                                                    product.discount_price,
+                                                )
+                                            }
                                         />
                                     </div>
                                 </div>
@@ -200,12 +250,12 @@ function ProductDetails() {
                                     </p>
 
                                     <p className="py-3 pTextStyle">
-                                        {product.description}
+                                        {product?.description}
                                     </p>
                                 </div>
                                 <div className="relative aspect-square sm:landscape:aspect-[1/1.6] md:landscape:aspect-[1/1.15] md:aspect-[1/1.3] w-full">
                                     <Image
-                                        src={product.images[imageState]}
+                                        src={product?.images[imageState]}
                                         layout="fill"
                                         fill="true"
                                     />
