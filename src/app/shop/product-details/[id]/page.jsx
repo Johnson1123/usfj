@@ -15,7 +15,9 @@ function page({ params }) {
     return (
         <>
             <Header />
-            <ShopBanner />
+
+            {/* <ShopBanner /> */}
+            <div className="mt-[4.5rem] md:mt-[2.5rem]"></div>
             <ProductDetails id={id} />
             <TopProductsSection />
             <Banner />

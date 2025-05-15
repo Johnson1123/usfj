@@ -79,8 +79,8 @@ function ShpCategories() {
                                     />
                                     <div className="absolute opacity-30 h-full w-full left-0 top-0 bg-black group-hover:bg-transparent rounded-[.5rem] transition-all duration-700"></div>
                                     <CategoriesOverlay
-                                        name={'Woman'}
-                                        link={'/shop/filter/bags'}
+                                        name={'Bags'}
+                                        link={'/shop/product-details/2'}
                                     />
                                 </div>
                                 {/* right columns */}
@@ -96,8 +96,8 @@ function ShpCategories() {
                                         />
                                         <div className="absolute opacity-30 h-full w-full left-0 top-0 bg-black group-hover:bg-transparent rounded-[.5rem] transition-all duration-700"></div>
                                         <CategoriesOverlay
-                                            name={'Children'}
-                                            link={'/shop/filter/caps'}
+                                            name={'Caps'}
+                                            link={'/shop/product-details/4'}
                                         />
                                     </div>
 
@@ -114,8 +114,8 @@ function ShpCategories() {
                                             />
                                             <div className="absolute opacity-30 h-full w-full left-0 top-0 bg-black group-hover:bg-transparent rounded-[.5rem] transition-all duration-700"></div>
                                             <CategoriesOverlay
-                                                name={'Men'}
-                                                link={'/shop/filter/t-shirts'}
+                                                name={'Shirts'}
+                                                link={'/shop/product-details/1'}
                                             />
                                         </div>
 
@@ -130,8 +130,8 @@ function ShpCategories() {
                                             />
                                             <div className="absolute opacity-30 h-full w-full left-0 top-0 bg-black group-hover:bg-transparent rounded-[.5rem] transition-all duration-700"></div>
                                             <CategoriesOverlay
-                                                name={'Babies'}
-                                                link={'/shop/filter/mugs'}
+                                                name={'Mugs'}
+                                                link={'/shop/product-details/3'}
                                             />
                                         </div>
                                     </div>

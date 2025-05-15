@@ -17,6 +17,7 @@ export const Products = [
         reviews: 4.5,
         total_reviews: 7,
         product_id: 'prod_SFw4JfUGtWCrK8',
+        tag: 'Shirt',
     },
     {
         id: 2,
@@ -38,6 +39,7 @@ export const Products = [
         reviews: 4.5,
         total_reviews: 12,
         product_id: 'prod_SIdRMpyTCUx8XZ',
+        tag: 'Bag',
     },
     {
         id: 3,
@@ -54,6 +56,7 @@ export const Products = [
         reviews: 4.5,
         total_reviews: 30,
         product_id: 'prod_SIdXrz0PIyUN5I',
+        tag: 'Mug',
     },
     {
         id: 4,
@@ -70,6 +73,7 @@ export const Products = [
         reviews: 4.5,
         total_reviews: 4,
         product_id: 'prod_SIdZz5J6xjlI3q',
+        tag: 'Cap',
     },
     {
         id: 5,
@@ -92,6 +96,7 @@ export const Products = [
         reviews: 4.5,
         total_reviews: 47,
         product_id: 'prod_SIda6Sz4gso7yI',
+        tag: 'Pen',
     },
 ];
 

@@ -29,7 +29,7 @@ function ProductDetails({ id }) {
 
     // increase quantity
     const handleIncrease = () => {
-        if (qty >= 10) return;
+        if (qty >= 99) return;
         setQty(qty + 1);
     };
 
@@ -76,10 +76,8 @@ function ProductDetails({ id }) {
                         {/* product label */}
                         <div className="flex items-center">
                             <span>Shop</span>
-                            <FaAngleRight />
-                            <span>{'tag'}</span>
-                            <FaAngleRight />
-                            <span>Tropical Tree</span>
+                            <FaAngleRight className="text-gray-400" />
+                            <span>{product?.tag}</span>
                         </div>
 
                         {/* Product details container */}
@@ -148,7 +146,9 @@ function ProductDetails({ id }) {
                                             <sub className="text-primary text-sm">
                                                 $ {''}
                                             </sub>
-                                            <span>{product?.price}</span>
+                                            <span>
+                                                {product?.discount_price}
+                                            </span>
                                         </p>
                                     </div>
 
@@ -219,9 +219,10 @@ function ProductDetails({ id }) {
                                                 <span className="text-primary">
                                                     $
                                                 </span>{' '}
-                                                {(qty * product?.price).toFixed(
-                                                    2,
-                                                )}
+                                                {(
+                                                    qty *
+                                                    product?.discount_price
+                                                ).toFixed(2)}
                                             </p>
                                         </div>
                                     </div>
@@ -243,7 +244,7 @@ function ProductDetails({ id }) {
                             </div>
 
                             {/* product bottom */}
-                            <div className="mt-7 grid py-4 grid-cols-1 sm:landscape:grid-cols-2 sm:landscape:gap-10 sm:landscape:mt-24 2xl:landscape:gap-36 md:grid-cols-2 md:gap-10 md:mt-24">
+                            {/* <div className="mt-7 grid py-4 grid-cols-1 sm:landscape:grid-cols-2 sm:landscape:gap-10 sm:landscape:mt-24 2xl:landscape:gap-36 md:grid-cols-2 md:gap-10 md:mt-24">
                                 <div className="">
                                     <p className="h3HeadingStyle">
                                         Description
@@ -260,7 +261,7 @@ function ProductDetails({ id }) {
                                         fill="true"
                                     />
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
