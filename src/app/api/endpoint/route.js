@@ -18,7 +18,7 @@ export const config = {
 export default async function webhookHandler(req, res) {
     if (req.method === 'POST') {
         const buf = await buffer(req);
-        const sig = req.headers['stripe-signature'];
+        const sig = req.headers[process.env.SESSION_COMPLETED];
 
         let event;
 
