@@ -7,14 +7,22 @@ const base_url =
 
 export async function POST(request) {
     try {
-        const { quantity, product_id, amount } = await request.json();
+        const data = await request.json();
+
+        const { quantity, product_id, amount, custom } = data;
 
         if (!quantity || !product_id || !amount) {
             return Response.json(
                 { error: 'Inavalid is data' },
                 { status: 400 },
             );
+        } else if (!custom) {
+            return Response.json(
+                { error: 'Select color or size' },
+                { status: 400 },
+            );
         }
+
         const stripe = Stripe(process.env.STRIPE_KEY);
 
         const price = await stripe.prices.create({
@@ -51,6 +59,33 @@ export async function POST(request) {
             shipping_address_collection: {
                 allowed_countries: ['US', 'CA', 'GB'], // Specify the allowed shipping countries
             },
+            // custom_fields: [
+            //     {
+            //         key: custom.key,
+            //         label: {
+            //             type: 'custom',
+            //             custom: custom.key,
+            //         },
+            //         type: 'dropdown',
+            //         dropdown: {
+            //             default_value: custom.default,
+            //             options: [
+            //                 {
+            //                     value: custom.values[0],
+            //                     label: custom.values[0],
+            //                 },
+            //                 {
+            //                     value: custom.values[1],
+            //                     label: custom.values[1],
+            //                 },
+            //                 {
+            //                     value: custom.values[2],
+            //                     label: custom.values[2],
+            //                 },
+            //             ],
+            //         },
+            //     },
+            // ],
             // payment_method_types: ['card'],
             // payment_method_collection: 'auto',
             // customer_creation: 'if_required',

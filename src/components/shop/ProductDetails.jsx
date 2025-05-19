@@ -13,6 +13,11 @@ function ProductDetails({ id }) {
 
     const [imageState, setImageState] = useState(0);
 
+    const [color, setColor] = useState('');
+    const [size, setSize] = useState('');
+
+    const [custom, setCustom] = useState(null);
+
     const route = useRouter();
 
     const handleImageState = (num) => {
@@ -33,6 +38,26 @@ function ProductDetails({ id }) {
         setQty(qty + 1);
     };
 
+    //setColor
+    const handleColor = (item) => {
+        setColor(item);
+        setCustom({
+            key: 'color',
+            values: ['red', 'gray', 'blue'],
+            default: color,
+        });
+    };
+
+    // setSize
+    const handleSize = (item) => {
+        setSize(item);
+        setCustom({
+            key: 'size',
+            values: ['M', 'L', 'XL'],
+            default: size,
+        });
+    };
+
     const handleBuy = async (quantity, product_id, amount) => {
         try {
             const response = await fetch('/api/stripe', {
@@ -44,6 +69,7 @@ function ProductDetails({ id }) {
                     quantity: quantity,
                     product_id,
                     amount: amount * 100,
+                    custom,
                 }),
             });
             const data = await response.json();
@@ -67,7 +93,6 @@ function ProductDetails({ id }) {
         setProduct(foundProduct);
     }, [id]);
 
-    console.log(product);
     return (
         <div className="py-10 md:landscape:py-20">
             <Container>
@@ -200,7 +225,17 @@ function ProductDetails({ id }) {
                                                             return (
                                                                 <button
                                                                     key={i}
-                                                                    className=" border border-bgBlue rounded-full px-3 py-[2px]"
+                                                                    className={`border border-bgBlue rounded-full px-3 py-[2px] ${
+                                                                        size ==
+                                                                        item
+                                                                            ? 'bg-primary border-primary text-white'
+                                                                            : 'bg-transparent'
+                                                                    }`}
+                                                                    onClick={() =>
+                                                                        handleSize(
+                                                                            item,
+                                                                        )
+                                                                    }
                                                                 >
                                                                     {item}
                                                                 </button>
@@ -210,6 +245,46 @@ function ProductDetails({ id }) {
                                                 </div>
                                             </div>
                                         )}
+
+                                        {/* color */}
+                                        {product?.color && (
+                                            <div className="flex justify-between">
+                                                <p className="pTextStyle !font-bold">
+                                                    Colors
+                                                </p>
+                                                <div className="  flex gap-4">
+                                                    {product?.color.map(
+                                                        (item, i) => {
+                                                            return (
+                                                                <button
+                                                                    key={i}
+                                                                    className={` border-bgBlue  py-[1px] h-5 w-5 flex justify-center items-center rounded-sm ${
+                                                                        color ==
+                                                                        item
+                                                                            ? 'border-primary border-[2px]'
+                                                                            : 'border-bgBlue'
+                                                                    }`}
+                                                                    onClick={() =>
+                                                                        handleColor(
+                                                                            item,
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    <div
+                                                                        className={`h-3 w-3`}
+                                                                        style={{
+                                                                            background:
+                                                                                item,
+                                                                        }}
+                                                                    ></div>
+                                                                </button>
+                                                            );
+                                                        },
+                                                    )}
+                                                </div>
+                                            </div>
+                                        )}
+
                                         {/* subTotal */}
                                         <div className="flex justify-between items-center">
                                             <p className="pTextStyle !font-bold">

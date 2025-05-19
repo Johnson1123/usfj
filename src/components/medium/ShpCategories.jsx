@@ -79,7 +79,7 @@ function ShpCategories() {
                                     />
                                     <div className="absolute opacity-30 h-full w-full left-0 top-0 bg-black group-hover:bg-transparent rounded-[.5rem] transition-all duration-700"></div>
                                     <CategoriesOverlay
-                                        name={'Bags'}
+                                        name={'Tote'}
                                         link={'/shop/product-details/2'}
                                     />
                                 </div>

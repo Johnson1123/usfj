@@ -21,13 +21,13 @@ export const Products = [
     },
     {
         id: 2,
-        name: 'USFJ Bag',
-        category: 'Bags',
+        name: 'USFJ Tote',
+        category: 'Tote',
         description:
             'Carry your essentials in style with our USFJ Bag. Made from durable materials, this bag is designed to withstand daily use while keeping your belongings organized and within reach. Perfect for school, work, or travel, this bag is a must-have for anyone on-the-go.',
         details:
             "Our USFJ Bag features a spacious interior with multiple compartments, including a dedicated laptop sleeve and several pockets for smaller items. The sturdy straps and reinforced seams ensure durability, while the sleek design and vibrant colors make it a fashionable accessory. Whether you're heading to class, the office, or a weekend getaway, this bag has got you covered.",
-        size: ['M', 'L', 'XL'],
+        color: ['Red', 'Gray', 'Blue'],
         images: [
             '/categories-bag.png',
             '/categories-bag.png',
@@ -39,7 +39,7 @@ export const Products = [
         reviews: 4.5,
         total_reviews: 12,
         product_id: 'prod_SIdRMpyTCUx8XZ',
-        tag: 'Bag',
+        tag: 'Tote',
     },
     {
         id: 3,
@@ -50,6 +50,7 @@ export const Products = [
         details:
             "Our USFJ Mug is crafted from high-quality ceramic, ensuring a durable and long-lasting product. The vibrant colors and subtle branding details add a touch of personality to your morning coffee, while the comfortable handle and balanced design make it easy to hold and sip from. Whether you're a coffee connoisseur or a tea enthusiast, this mug is the perfect addition to your daily routine.",
         images: ['/mug.png', '/mug.png', '/mug.png'],
+        color: ['red', 'gray', 'blue'],
         price: '15.50',
         discount_price: '5.00',
         sponsor: 'USFJ',
@@ -69,6 +70,7 @@ export const Products = [
         images: ['/cap.png', '/cap.png', '/cap.png'],
         price: '45.00',
         discount_price: '35.50',
+        color: ['red', 'gray', 'blue'],
         sponsor: 'USFJ',
         reviews: 4.5,
         total_reviews: 4,
@@ -83,7 +85,7 @@ export const Products = [
             'Write in style with our USFJ Pen. Perfect for students, professionals, or anyone who loves to write, this pen is designed to provide a smooth writing experience while adding a touch of flair to your desk or bag.',
         details:
             "Our USFJ Pen features a sleek design with a comfortable grip and smooth ink flow. The vibrant colors and subtle branding details add a touch of personality to your writing experience, while the durable construction ensures a long-lasting product. Whether you're taking notes, signing documents, or creating art, this pen is the perfect tool.",
-        color: ['Red', 'Blue', 'Black'],
+        color: ['red', 'gray', 'blue'],
         images: [
             '/USfJ_Pen.avif',
             '/USfJ_Pen_2.avif',

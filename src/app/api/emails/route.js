@@ -46,7 +46,7 @@ export async function POST(request) {
 
         const sender = {
             name: 'Kaltech Contact Form',
-            address: 'onifadejohnson2017@gmail.com',
+            address: 'usfj_auth@kaltechconsultancy.tech',
         };
 
         const recipients = [
