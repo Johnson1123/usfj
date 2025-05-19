@@ -59,33 +59,33 @@ export async function POST(request) {
             shipping_address_collection: {
                 allowed_countries: ['US', 'CA', 'GB'], // Specify the allowed shipping countries
             },
-            // custom_fields: [
-            //     {
-            //         key: custom.key,
-            //         label: {
-            //             type: 'custom',
-            //             custom: custom.key,
-            //         },
-            //         type: 'dropdown',
-            //         dropdown: {
-            //             default_value: custom.default,
-            //             options: [
-            //                 {
-            //                     value: custom.values[0],
-            //                     label: custom.values[0],
-            //                 },
-            //                 {
-            //                     value: custom.values[1],
-            //                     label: custom.values[1],
-            //                 },
-            //                 {
-            //                     value: custom.values[2],
-            //                     label: custom.values[2],
-            //                 },
-            //             ],
-            //         },
-            //     },
-            // ],
+            custom_fields: [
+                {
+                    key: custom.key,
+                    label: {
+                        type: 'custom',
+                        custom: custom.key,
+                    },
+                    type: 'dropdown',
+                    dropdown: {
+                        default_value: custom.default,
+                        options: [
+                            {
+                                value: custom.values[0],
+                                label: custom.values[0],
+                            },
+                            {
+                                value: custom.values[1],
+                                label: custom.values[1],
+                            },
+                            {
+                                value: custom.values[2],
+                                label: custom.values[2],
+                            },
+                        ],
+                    },
+                },
+            ],
             // payment_method_types: ['card'],
             // payment_method_collection: 'auto',
             // customer_creation: 'if_required',

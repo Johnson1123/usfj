@@ -1,5 +1,6 @@
 // pages/api/webhook.js
 
+import sendEmail from '@/utils/email';
 import { buffer } from 'micro';
 import Stripe from 'stripe';
 
@@ -7,7 +8,7 @@ import Stripe from 'stripe';
 const stripe = Stripe(process.env.STRIPE_KEY);
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
-const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
+const endpointSecret = process.env.SESSION_COMPLETED;
 
 export const config = {
     api: {
@@ -18,7 +19,7 @@ export const config = {
 export default async function webhookHandler(req, res) {
     if (req.method === 'POST') {
         const buf = await buffer(req);
-        const sig = req.headers[process.env.SESSION_COMPLETED];
+        const sig = req.headers['stripe-signature'];
 
         let event;
 
@@ -28,6 +29,22 @@ export default async function webhookHandler(req, res) {
                 sig,
                 endpointSecret,
             );
+            const email = event.data.object.metadata.email;
+            if (email) {
+                const subject = 'Checkout Session Completed';
+                const body = `Your checkout session has been completed successfully. Your order is being processed.`;
+                // Assuming there's a function to send emails
+                sendEmail(
+                    {
+                        name: 'Kaltech Contact Form',
+                        address: 'usfj_auth@kaltechconsultancy.tech',
+                    },
+                    { email: email, name: 'admin' },
+                    'subject',
+                    'Order complete',
+                );
+                receipients, message, subject;
+            }
         } catch (err) {
             console.log(`Webhook Error: ${err.message}`);
             res.status(400).send(`Webhook Error: ${err.message}`);

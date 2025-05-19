@@ -43,8 +43,8 @@ function ProductDetails({ id }) {
         setColor(item);
         setCustom({
             key: 'color',
-            values: ['red', 'gray', 'blue'],
-            default: color,
+            values: ['Red', 'Gray', 'Blue'],
+            default: item,
         });
     };
 
@@ -54,7 +54,7 @@ function ProductDetails({ id }) {
         setCustom({
             key: 'size',
             values: ['M', 'L', 'XL'],
-            default: size,
+            default: item,
         });
     };
 
