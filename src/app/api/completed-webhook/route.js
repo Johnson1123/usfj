@@ -29,22 +29,10 @@ export default async function webhookHandler(req, res) {
                 sig,
                 endpointSecret,
             );
-            const email = event.data.object.metadata.email;
-            if (email) {
-                const subject = 'Checkout Session Completed';
-                const body = `Your checkout session has been completed successfully. Your order is being processed.`;
-                // Assuming there's a function to send emails
-                sendEmail(
-                    {
-                        name: 'Kaltech Contact Form',
-                        address: 'usfj_auth@kaltechconsultancy.tech',
-                    },
-                    { email: email, name: 'admin' },
-                    'subject',
-                    'Order complete',
-                );
-                receipients, message, subject;
-            }
+            // const email = event.data.object.metadata.email;
+            // if (email) {
+
+            // }
         } catch (err) {
             console.log(`Webhook Error: ${err.message}`);
             res.status(400).send(`Webhook Error: ${err.message}`);
@@ -60,6 +48,20 @@ export default async function webhookHandler(req, res) {
                     'Checkout Session Completed:',
                     checkoutSessionCompleted,
                 );
+
+                const subject = 'Checkout Session Completed';
+                const body = `Your checkout session has been completed successfully. Your order is being processed.`;
+                // Assuming there's a function to send emails
+                sendEmail(
+                    {
+                        name: 'Kaltech Contact Form',
+                        address: 'usfj_auth@kaltechconsultancy.tech',
+                    },
+                    { email: 'onifadejohnson2014@gmail.com', name: 'admin' },
+                    'subject',
+                    'Order complete',
+                );
+                receipients, message, subject;
                 // You might want to update your database, fulfill the order,
                 // send emails, etc., based on the session details.
                 break;
