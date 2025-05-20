@@ -92,7 +92,7 @@ import sendEmail from '@/utils/email';
 import Stripe from 'stripe';
 const stripe = new Stripe(process.env.STRIPE_KEY);
 const endpointSecret = process.env.SESSION_COMPLETED;
-export default async function handler(req, res) {
+export default async function POST(req, res) {
     // if (req.method !== 'POST') {
     //     res.setHeader('Allow', ['POST']);
     //     return res.status(405).end('Method Not Allowed');

@@ -1,6 +1,6 @@
 import sendEmail from '@/utils/email';
 
-export async function handler(request) {
+export async function POST(request) {
     try {
         // Check if request body exists
         if (!request.body) {
