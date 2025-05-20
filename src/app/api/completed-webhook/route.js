@@ -93,45 +93,41 @@ import Stripe from 'stripe';
 const stripe = new Stripe(process.env.STRIPE_KEY);
 const endpointSecret = process.env.SESSION_COMPLETED;
 export default async function handler(req, res) {
-    if (req.method === 'POST') {
-        const sig = req.headers['stripe-signature'];
-        let event;
-        try {
-            event = stripe.webhooks.constructEvent(
-                req.body,
-                sig,
-                endpointSecret,
-            );
-        } catch (err) {
-            console.error('Error verifying webhook signature:', err);
-            return res.status(400).send(`Webhook Error: ${err.message}`);
-        }
-        // Handle the event
-        switch (event.type) {
-            case 'checkout.session.completed':
-                // Handle successful payment
-                await sendEmail(
-                    {
-                        name: 'Kaltech Contact Form',
-                        address: 'usfj_auth@kaltechconsultancy.tech',
-                    },
-                    { email: 'onifadejohnson2014@gmail.com', name: 'admin' },
-                    'subject',
-                    'Order complete',
-                );
-                break;
-            case 'invoice.payment_succeeded':
-                // Handle successful subscription payment
-                break;
-            // Add more cases for other event types you want to handle
-            default:
-                console.log(`Unhandled event type: ${event.type}`);
-        }
-        res.status(200).json({ received: true });
-    } else {
-        res.setHeader('Allow', 'POST');
-        res.status(405).end('Method Not Allowed');
+    if (req.method !== 'POST') {
+        res.setHeader('Allow', ['POST']);
+        return res.status(405).end('Method Not Allowed');
     }
+
+    const sig = req.headers['stripe-signature'];
+    let event;
+    try {
+        event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+    } catch (err) {
+        console.error('Error verifying webhook signature:', err);
+        return res.status(400).send(`Webhook Error: ${err.message}`);
+    }
+    // Handle the event
+    switch (event.type) {
+        case 'checkout.session.completed':
+            // Handle successful payment
+            await sendEmail(
+                {
+                    name: 'Kaltech Contact Form',
+                    address: 'usfj_auth@kaltechconsultancy.tech',
+                },
+                { email: 'onifadejohnson2014@gmail.com', name: 'admin' },
+                'subject',
+                'Order complete',
+            );
+            break;
+        case 'invoice.payment_succeeded':
+            // Handle successful subscription payment
+            break;
+        // Add more cases for other event types you want to handle
+        default:
+            console.log(`Unhandled event type: ${event.type}`);
+    }
+    res.status(200).json({ received: true });
 }
 export const config = {
     api: {
