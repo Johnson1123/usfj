@@ -93,10 +93,10 @@ import Stripe from 'stripe';
 const stripe = new Stripe(process.env.STRIPE_KEY);
 const endpointSecret = process.env.SESSION_COMPLETED;
 export default async function handler(req, res) {
-    if (req.method !== 'POST') {
-        res.setHeader('Allow', ['POST']);
-        return res.status(405).end('Method Not Allowed');
-    }
+    // if (req.method !== 'POST') {
+    //     res.setHeader('Allow', ['POST']);
+    //     return res.status(405).end('Method Not Allowed');
+    // }
 
     const sig = req.headers['stripe-signature'];
     let event;
