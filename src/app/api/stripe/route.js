@@ -49,12 +49,12 @@ export async function POST(request) {
             payment_method_types: ['card'],
             currency: 'usd',
 
-            // after_completion: {
-            //     type: 'redirect',
-            //     redirect: {
-            //         url: `${base_url}payment-successful`,
-            //     },
-            // },
+            after_completion: {
+                type: 'redirect',
+                redirect: {
+                    url: `${base_url}payment-successful`,
+                },
+            },
             billing_address_collection: 'required', // Collect billing address, set to 'auto' to collect when required
             shipping_address_collection: {
                 allowed_countries: ['US', 'CA', 'GB'], // Specify the allowed shipping countries

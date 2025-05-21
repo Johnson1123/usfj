@@ -132,9 +132,13 @@ export async function POST(request) {
 
             const emailContent = `
             <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> Hi ${event.data.object.customer_details.name}</p>
+            <p>Hi <strong>${event.data.object.customer_details.name}</strong> </p>
             <p>Thank you for your recent purchase from USFJ! We've received your order and are now preparing it for shipment.</p>
             <p><strong>Order Details</strong></p>
+            <p><strong>Amount</strong></p>
+            <p><strong>Sub_Total: </strong>${event.data.object.amount_subtotal}</p>
+            <p><strong>Total:</strong>${event.data.object.amount_total}</p>
+
             <p><strong>Address</strong></p>
             <p><strong>Country: </strong> ${event.data.object.customer_details?.address.country}</p>
             <p><strong>State:</strong> ${event.data.object.customer_details?.address.state}</p>

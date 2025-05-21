@@ -7,6 +7,7 @@ import { FaAngleRight } from 'react-icons/fa6';
 import { FaStar } from 'react-icons/fa';
 import SecondaryButton from '../small/SecondaryButton';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 function ProductDetails({ id }) {
     const [product, setProduct] = useState(null);
@@ -72,19 +73,18 @@ function ProductDetails({ id }) {
                     custom,
                 }),
             });
+
             const data = await response.json();
 
             if (response.ok) {
                 // toast.success('Successfully subscribed!');
-                console.log('good');
                 route.push(data.data.url);
             } else {
-                // toast.error('Failed to subscribe. Please try again.');
-                console.log('error');
+                toast.error(data.error);
             }
         } catch (error) {
-            console.log(error);
-            // toast.error('Failed to subscribe. Please try again.');
+            console.log('error');
+            toast.error('hee');
         }
     };
 

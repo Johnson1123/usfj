@@ -8,6 +8,7 @@ import { TopProductsSection } from '@/components/shop/TopProductSlider';
 // import React, { use } from 'react';
 // import { useRouter } from 'next/navigation';
 import { use } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 function page({ params }) {
     const { id } = use(params);
@@ -22,6 +23,7 @@ function page({ params }) {
             <TopProductsSection />
             <Banner />
             <Footer />
+            <ToastContainer />
         </>
     );
 }

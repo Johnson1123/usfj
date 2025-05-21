@@ -8,8 +8,8 @@ import InsightSection from '@/components/Homepage/InsightAndInpiration/Main';
 import React from 'react';
 import Banner from '@/components/shop/Banner';
 import ReviewsSection from '@/components/shop/Reviews';
-import FilterProductCard from '@/components/shop/FilterProductCard';
 import Footer from '@/components/layout/Footer';
+import { ToastContainer } from 'react-toastify';
 
 function page() {
     return (
@@ -23,6 +23,7 @@ function page() {
             <InsightSection />
             <Banner />
             <Footer />
+            <ToastContainer />
         </>
     );
 }
