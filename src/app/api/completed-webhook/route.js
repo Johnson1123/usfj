@@ -1,6 +1,8 @@
 // pages/api/webhook.js
 
 import sendEmail from '@/utils/email';
+import { headers } from 'next/headers';
+import { NextResponse } from 'next/server';
 // import { buffer } from 'micro';
 // import Stripe from 'stripe';
 
@@ -92,45 +94,37 @@ import sendEmail from '@/utils/email';
 import Stripe from 'stripe';
 const stripe = new Stripe(process.env.STRIPE_KEY);
 const endpointSecret = process.env.SESSION_COMPLETED;
-export default async function POST(req, res) {
-    // if (req.method !== 'POST') {
-    //     res.setHeader('Allow', ['POST']);
-    //     return res.status(405).end('Method Not Allowed');
-    // }
+export async function POST(request) {
+    const body = await request.text();
 
-    const sig = req.headers['stripe-signature'];
+    const headerList = await headers();
+
+    const sig = headerList.get('stripe-signature');
     let event;
     try {
-        event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+        event = stripe.webhooks.constructEvent(body, sig, endpointSecret);
     } catch (err) {
         console.error('Error verifying webhook signature:', err);
-        return res.status(400).send(`Webhook Error: ${err.message}`);
+        return NextResponse.json({ message: err.message });
     }
     // Handle the event
     switch (event.type) {
         case 'checkout.session.completed':
             // Handle successful payment
-            await sendEmail(
-                {
-                    name: 'Kaltech Contact Form',
-                    address: 'usfj_auth@kaltechconsultancy.tech',
-                },
-                { email: 'onifadejohnson2014@gmail.com', name: 'admin' },
-                'subject',
-                'Order complete',
-            );
+            // await sendEmail(
+            //     {
+            //         name: 'Kaltech Contact Form',
+            //         address: 'usfj_auth@kaltechconsultancy.tech',
+            //     },
+            //     { email: 'onifadejohnson2014@gmail.com', name: 'admin' },
+            //     'subject',
+            //     'Order complete',
+            // );
+            console.log('Payment successful', event);
             break;
-        case 'invoice.payment_succeeded':
-            // Handle successful subscription payment
-            break;
-        // Add more cases for other event types you want to handle
+
         default:
             console.log(`Unhandled event type: ${event.type}`);
     }
-    res.status(200).json({ received: true });
+    return NextResponse.json({ received: true }, { status: 200 });
 }
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
