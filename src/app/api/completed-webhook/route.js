@@ -111,15 +111,15 @@ export async function POST(request) {
     switch (event.type) {
         case 'checkout.session.completed':
             // Handle successful payment
-            // await sendEmail(
-            //     {
-            //         name: 'Kaltech Contact Form',
-            //         address: 'usfj_auth@kaltechconsultancy.tech',
-            //     },
-            //     { email: 'onifadejohnson2014@gmail.com', name: 'admin' },
-            //     'subject',
-            //     'Order complete',
-            // );
+            await sendEmail(
+                {
+                    name: 'Kaltech Contact Form',
+                    address: 'usfj_auth@kaltechconsultancy.tech',
+                },
+                { email: 'onifadejohnson2014@gmail.com', name: 'admin' },
+                'subject',
+                'Order complete',
+            );
             console.log('Payment successful', event);
             break;
 
