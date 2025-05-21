@@ -98,7 +98,7 @@ const endpointSecret = process.env.SESSION_COMPLETED;
 // Add validation for required environment variables
 if (!process.env.STRIPE_KEY) {
     console.error('STRIPE_KEY is not defined in environment variables');
-    return NextResponse.json(
+    NextResponse.json(
         { message: 'Server configuration error' },
         { status: 500 },
     );
@@ -106,7 +106,7 @@ if (!process.env.STRIPE_KEY) {
 
 if (!endpointSecret) {
     console.error('SESSION_COMPLETED is not defined in environment variables');
-    return NextResponse.json(
+    NextResponse.json(
         { message: 'Server configuration error' },
         { status: 500 },
     );
@@ -123,7 +123,7 @@ export async function POST(request) {
         event = stripe.webhooks.constructEvent(body, sig, endpointSecret);
     } catch (err) {
         console.error('Error verifying webhook signature:', err);
-        return NextResponse.json({ message: err.message });
+        NextResponse.json({ message: err.message });
     }
     // Handle the event
     switch (event.type) {
@@ -170,5 +170,5 @@ export async function POST(request) {
         default:
             console.log(`Unhandled event type: ${event.type}`);
     }
-    return NextResponse.json({ received: true }, { status: 200 });
+    NextResponse.json({ received: true }, { status: 200 });
 }
