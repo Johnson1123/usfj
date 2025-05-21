@@ -155,8 +155,8 @@ export async function POST(request) {
                         name: event.data.object.customer_details.name,
                     },
                 ],
-                message: '',
-                subject: `Great News! Your USFJ Order ${event.id} is Confirmed!`,
+                message: emailContent,
+                subject: `Great News! Your USFJ Order is Confirmed!`,
             };
 
             await sendEmail(data);
