@@ -94,6 +94,24 @@ import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 const stripe = new Stripe(process.env.STRIPE_KEY);
 const endpointSecret = process.env.SESSION_COMPLETED;
+
+// Add validation for required environment variables
+if (!process.env.STRIPE_KEY) {
+    console.error('STRIPE_KEY is not defined in environment variables');
+    return NextResponse.json(
+        { message: 'Server configuration error' },
+        { status: 500 },
+    );
+}
+
+if (!endpointSecret) {
+    console.error('SESSION_COMPLETED is not defined in environment variables');
+    return NextResponse.json(
+        { message: 'Server configuration error' },
+        { status: 500 },
+    );
+}
+
 export async function POST(request) {
     const body = await request.text();
 
@@ -111,15 +129,37 @@ export async function POST(request) {
     switch (event.type) {
         case 'checkout.session.completed':
             // Handle successful payment
-            await sendEmail(
-                {
+
+            const emailContent = `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> Hi ${event.data.object.customer_details.name}</p>
+            <p>Thank you for your recent purchase from USFJ! We've received your order and are now preparing it for shipment.</p>
+            <p><strong>Order Details</strong></p>
+            <p><strong>Address</strong></p>
+            <p><strong>Country: </strong> ${event.data.object.customer_details?.address.country}</p>
+            <p><strong>State:</strong> ${event.data.object.customer_details?.address.state}</p>
+            <p><strong>Street: </strong>${event.data.object.customer_details?.address.line1}</p>
+            <p><strong>Zipcode:</strong>${event.data.object.customer_details?.address.postal_code}</p>
+            
+          
+        `;
+
+            const data = {
+                sender: {
                     name: 'Kaltech Contact Form',
                     address: 'usfj_auth@kaltechconsultancy.tech',
                 },
-                { email: 'onifadejohnson2014@gmail.com', name: 'admin' },
-                'subject',
-                'Order complete',
-            );
+                receipients: [
+                    {
+                        address: event.data.object.customer_details.email,
+                        name: event.data.object.customer_details.name,
+                    },
+                ],
+                message: '',
+                subject: `Great News! Your USFJ Order ${event.id} is Confirmed!`,
+            };
+
+            await sendEmail(data);
             console.log('Payment successful', event);
             break;
 
