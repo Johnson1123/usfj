@@ -71,6 +71,9 @@ function ProductDetails({ id }) {
                     product_id,
                     amount: amount * 100,
                     custom,
+                    details: {
+                        description: product?.description,
+                    },
                 }),
             });
 

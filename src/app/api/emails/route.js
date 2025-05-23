@@ -81,7 +81,6 @@ export async function POST(request) {
             data: result,
         });
     } catch (error) {
-        console.error('Email sending error:', error);
         return Response.json(
             {
                 success: false,

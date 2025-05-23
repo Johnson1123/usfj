@@ -50,7 +50,7 @@ export const Products = [
         details:
             "Our USFJ Mug is crafted from high-quality ceramic, ensuring a durable and long-lasting product. The vibrant colors and subtle branding details add a touch of personality to your morning coffee, while the comfortable handle and balanced design make it easy to hold and sip from. Whether you're a coffee connoisseur or a tea enthusiast, this mug is the perfect addition to your daily routine.",
         images: ['/mug.png', '/mug.png', '/mug.png'],
-        color: ['Red', 'Gray', 'Blue'],
+        color: ['Gray', 'Blue'],
         price: '15.50',
         discount_price: '5.00',
         sponsor: 'USFJ',
@@ -85,7 +85,7 @@ export const Products = [
             'Write in style with our USFJ Pen. Perfect for students, professionals, or anyone who loves to write, this pen is designed to provide a smooth writing experience while adding a touch of flair to your desk or bag.',
         details:
             "Our USFJ Pen features a sleek design with a comfortable grip and smooth ink flow. The vibrant colors and subtle branding details add a touch of personality to your writing experience, while the durable construction ensures a long-lasting product. Whether you're taking notes, signing documents, or creating art, this pen is the perfect tool.",
-        color: ['Red', 'Gray', 'Blue'],
+        color: ['Black', 'Gray', 'Blue'],
         images: [
             '/USfJ_Pen.avif',
             '/USfJ_Pen_2.avif',

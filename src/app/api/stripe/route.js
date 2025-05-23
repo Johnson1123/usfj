@@ -9,7 +9,7 @@ export async function POST(request) {
     try {
         const data = await request.json();
 
-        const { quantity, product_id, amount, custom } = data;
+        const { quantity, product_id, amount, custom, details } = data;
 
         if (!quantity || !product_id || !amount) {
             return Response.json(
@@ -43,10 +43,13 @@ export async function POST(request) {
                     },
                 },
             ],
+            metadata: {
+                description: details.description,
+            },
             // consent_collection: {
             //     terms_of_service: 'required',
             // },
-            payment_method_types: ['card'],
+            payment_method_types: ['card', 'paypal'],
             currency: 'usd',
 
             after_completion: {
@@ -86,7 +89,7 @@ export async function POST(request) {
                     },
                 },
             ],
-            // payment_method_types: ['card'],
+            // payment_method_types: ['card', 'paypal'],
             // payment_method_collection: 'auto',
             // customer_creation: 'if_required',
             // customer_update: 'true',
