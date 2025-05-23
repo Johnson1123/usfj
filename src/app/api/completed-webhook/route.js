@@ -96,17 +96,11 @@ const endpointSecret = process.env.SESSION_COMPLETED;
 
 // Add validation for required environment variables
 if (!process.env.STRIPE_KEY) {
-    return Response.json(
-        { message: 'Server configuration error' },
-        { status: 500 },
-    );
+    Response.json({ message: 'Server configuration error' }, { status: 500 });
 }
 
 if (!endpointSecret) {
-    return Response.json(
-        { message: 'Server configuration error' },
-        { status: 500 },
-    );
+    Response.json({ message: 'Server configuration error' }, { status: 500 });
 }
 
 export async function POST(request) {
@@ -121,7 +115,7 @@ export async function POST(request) {
     try {
         event = stripe.webhooks.constructEvent(body, sig, endpointSecret);
     } catch (err) {
-        return Response.json({ message: err.message });
+        Response.json({ message: err.message });
     }
     // Handle the event
     switch (event.type) {
@@ -217,5 +211,5 @@ export async function POST(request) {
             console.log('Other events');
     }
 
-    return Response.json({ received: true }, { status: 200 });
+    Response.json({ received: true }, { status: 200 });
 }
