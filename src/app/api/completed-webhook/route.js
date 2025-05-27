@@ -131,6 +131,10 @@ export async function POST(req, res) {
                             address: event.data.object.customer_details.email,
                             name: event.data.object.customer_details.name,
                         },
+                        {
+                            address: 'test@kaltechconsultancy.tech',
+                            name: 'Admin',
+                        },
                     ],
                     message: emailContent,
                     subject: `Great News! Your USFJ Order is Confirmed!`,
