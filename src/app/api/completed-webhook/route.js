@@ -138,8 +138,17 @@ export async function POST(req, res) {
 
                 try {
                     await sendEmail(data);
+                    console.log(
+                        'Email sent successfully for order:',
+                        event.data.object.id,
+                    );
                 } catch (emailError) {
-                    console.error('Failed to send email:', emailError);
+                    console.error('Failed to send email:', {
+                        error: emailError.message,
+                        orderId: event.data.object.id,
+                        customerEmail: event.data.object.customer_details.email,
+                        timestamp: new Date().toISOString(),
+                    });
                     // Don't return error response here as the payment was successful
                     // Just log the error and continue
                 }
@@ -150,7 +159,10 @@ export async function POST(req, res) {
                 console.log('Unhandled event type:', event.type);
         }
 
-        return Response.json({ received: true }, { status: 200 });
+        return Response.json(
+            { received: true, email: event.data.object.customer_details.email },
+            { status: 200 },
+        );
     } catch (error) {
         console.error('Error processing webhook:', error);
         return Response.json(
