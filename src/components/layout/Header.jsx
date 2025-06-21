@@ -11,6 +11,7 @@ import { useRouter } from 'next/navigation';
 import { Logs } from 'lucide-react';
 import { MdClose } from 'react-icons/md';
 import useClickOutside from '@/hooks/ClickOutside';
+import useBaseurl from '@/utils/baseurl';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,8 @@ function Header() {
 
     const ref = useRef();
     const angleRef = useRef();
+
+    const baseurl = useBaseurl();
 
     // function handleOutide(event) {
     //     if (angleRef.current == angleRef.current.contains(event.target)) return;
@@ -55,10 +58,11 @@ function Header() {
 
     // route to the login page
     const handleLogin = () => {
-        router.push('/auth/login');
+        router.push(baseurl + '/auth/login');
     };
-    const handleRegister = () => {
-        router.push('/auth/register');
+
+    const handleDonate = () => {
+        router.push('https://buy.stripe.com/fZebMI29Ze2s1TG146');
     };
 
     return (
@@ -78,7 +82,7 @@ function Header() {
                     } transition-all  duration-300 ease-linear h-full`}
                 >
                     <div className="w-auto h-full">
-                        <Link href="/">
+                        <Link href={baseurl}>
                             <img
                                 src="/images/USFJ-DARK-Logo.png"
                                 fill
@@ -160,7 +164,10 @@ function Header() {
                                                             className="relative left-0 top-0 cursor-pointer"
                                                         >
                                                             <Link
-                                                                href={item.link}
+                                                                href={
+                                                                    baseurl +
+                                                                    item.link
+                                                                }
                                                                 className={`!text-blueColor  hover:opacity-50 font-300`}
                                                             >
                                                                 {item.label}
@@ -177,7 +184,7 @@ function Header() {
                                             className="text-white lg:px-[10px] hover:opacity-50"
                                         >
                                             <Link
-                                                href={item.link}
+                                                href={baseurl + item.link}
                                                 className="!text-white "
                                             >
                                                 {item.label}
@@ -188,19 +195,21 @@ function Header() {
                             </ul>
                             <div
                                 className={
-                                    'lg:hidden flex justify-center flex-col mt-16 gap-7 ml-5 md-landscape:mt-10 mobile-landscape:mt-10 md-landscape:gap-7 mobile-landscape:gap-7 '
+                                    'lg:hidden flex justify-center flex-col mt-10 gap-7 ml-5 md-landscape:mt-10 mobile-landscape:mt-10 md-landscape:gap-7 mobile-landscape:gap-7 '
                                 }
                             >
-                                <div className="">
+                                {/* sign In btn */}
+                                {/* <div className="">
                                     <TransparentButton
                                         handler={handleLogin}
                                         label={'Sign In'}
                                     />
-                                </div>
+                                </div> */}
+
                                 <div className="">
                                     <SecondaryButton
                                         label="Donate Now"
-                                        handler={handleRegister}
+                                        handler={handleDonate}
                                     />
                                 </div>
                             </div>
@@ -217,15 +226,19 @@ function Header() {
                     {/* authentication button */}
 
                     <div className="flex justify-center items-center lg:gap-2 xl:gap-5 ">
-                        <div className="2xl:flex xl:flex lg:flex 4k:flex 3k:flex 5k:flex hidden">
+                        {/* login btn */}
+                        {/* <div className="2xl:flex xl:flex lg:flex 4k:flex 3k:flex 5k:flex hidden">
                             <TransparentButton
                                 label="Sign In"
                                 handler={handleLogin}
                             />
-                        </div>
+                        </div> */}
 
                         <div className="2xl:flex xl:flex lg:flex 4k:flex 3k:flex 5k:flex hidden">
-                            <SecondaryButton label="Donate Now" />
+                            <SecondaryButton
+                                label="Donate Now"
+                                handler={handleDonate}
+                            />
                         </div>
 
                         <button

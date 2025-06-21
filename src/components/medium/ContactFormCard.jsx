@@ -41,13 +41,13 @@ function ContactFormCard() {
             </div>
 
             <div className="flex gap-3 absolute bottom-10 left-5">
-                <div className="mediumCircle  bg-blue-500 rounded-full hover:bg-white group transition-all duration-100">
+                <div className="mediumCircle  bg-bgOrange rounded-full hover:bg-white group transition-all duration-100">
                     <FaFacebook className="text-white text-xl 3k:text-2xl group-hover:text-black" />
                 </div>
-                <div className="mediumCircle bg-blue-500 rounded-full hover:bg-white  group transition-all duration-100">
+                <div className="mediumCircle bg-bgOrange rounded-full hover:bg-white  group transition-all duration-100">
                     <FaTwitter className="text-white text-xl 3k:text-2xl group-hover:text-black" />
                 </div>
-                <div className="mediumCircle bg-blue-500 rounded-full hover:bg-white group transition-all duration-100">
+                <div className="mediumCircle bg-bgOrange rounded-full hover:bg-white group transition-all duration-100">
                     <FaInstagram className="text-white text-xl 3k:text-2xl group-hover:text-black" />
                 </div>
             </div>
