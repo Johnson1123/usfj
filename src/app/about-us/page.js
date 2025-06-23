@@ -7,6 +7,7 @@ import AboutHelpOthers from '@/components/medium/AboutHelpOthers';
 import AboutMissionBanner from '@/components/medium/AboutMissionBanner';
 import AboutWhoWeAre from '@/components/medium/AboutWhoWeAre';
 import AboutMission from '@/components/medium/AboutMission';
+import AboutWhatWeDo from '@/components/medium/AboutWhatWeDo';
 
 const AboutusPage = () => {
     return (
@@ -16,7 +17,7 @@ const AboutusPage = () => {
             <AboutMission />
             <AboutWhoWeAre />
             <AboutMissionBanner />
-            <AboutHelpOthers />
+            <AboutWhatWeDo />
             <AboutExecutive />
             <AboutDifference />
             <Footer />

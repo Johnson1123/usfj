@@ -275,18 +275,140 @@ export const images = [
 // pages data
 
 export const mission = [
-    {
-        title: 'Christ’s Love in Action',
-        text: 'Our vision is to be a beacon of Christ’s love, uniting believers through compassionate service and transformative action, making a lasting impact in our community and beyond.',
-    },
-    {
-        title: 'Opportunities for All',
-        text: 'We envision a world where every young adult in our community and in the state of Kentucky has the opportunity to thrive in a safe and supportive environment, equipped with the skills and faith needed for a fulfilling and independent life.',
-    },
-    {
-        title: 'Inspiring Transformation',
-        text: 'By combining practical lifeskills, and education with spiritual guidance, we aspire to inspire and transform lives, fostering a community where everyone can achieve their full potential and find salvation through a strong foundation of faith and personal growth.',
-    },
+    [
+        {
+            title: '',
+            text: 'Our mission is to foster a community where our shared faith drives action. Together, we extend Christ’s love by serving others, and strengthening our bonds as we work hand in hand to make a difference in our local community, the state of Kentucky, and throughout the world.',
+        },
+        {
+            title: '',
+            text: 'We are also committed to providing a nurturing and secure shelter for young adults aging out of foster care, where they can learn essential life skills and cultivate independence..',
+        },
+        {
+            title: '',
+            text: 'Through our holistic approach, we aim to guide the young adults on their journey towards personal growth and self-sufficiency while offering spiritual support and leading them towards salvation.',
+        },
+        {
+            title: '',
+            text: 'We also aim to empower young adults and individuals in our community to overcome challenges, embrace their potential, and build a future grounded in faith and self-reliance.',
+        },
+    ],
+    [
+        {
+            title: 'Christ’s Love in Action',
+            text: 'Our vision is to be a beacon of Christ’s love, uniting believers through compassionate service and transformative action, making a lasting impact in our community and beyond.',
+        },
+        {
+            title: 'Opportunities for All',
+            text: 'We envision a world where every young adult in our community and in the state of Kentucky has the opportunity to thrive in a safe and supportive environment, equipped with the skills and faith needed for a fulfilling and independent life.',
+        },
+        {
+            title: 'Inspiring Transformation',
+            text: 'By combining practical lifeskills, and education with spiritual guidance, we aspire to inspire and transform lives, fostering a community where everyone can achieve their full potential and find salvation through a strong foundation of faith and personal growth.',
+        },
+    ],
+];
+
+export const whatwedo = [
+    [
+        {
+            text: 'Regular group sessions to explore and understand God’s word',
+            title: 'Bible Studies',
+        },
+        {
+            text: 'Personal, faith-based mentorship to help young adults grow spiritually and navigate life’s challenges.',
+            title: 'Mentorship',
+        },
+        {
+            text: 'A supportive environment where individuals can share prayer requests and seek encouragement.',
+            title: 'Prayer Groups',
+        },
+    ],
+    [
+        {
+            text: 'Learn how to budget, save, and manage finances responsibly.',
+            title: 'Financial Management',
+        },
+        {
+            text: 'Resume building, interview skills, and job search assistance to help you achieve your career goals',
+            title: 'Career Development',
+        },
+        {
+            text: 'Focus on self-discipline, time management, and goal setting to succeed in personal and professional life.',
+            title: 'Personal Responsibility',
+        },
+    ],
+    [
+        {
+            text: 'A nurturing, faith-based atmosphere where individuals can focus on their personal and spiritual growth.',
+            title: 'Safe & Stable Environment',
+        },
+        {
+            text: 'Regular meetings with life coaches to set goals and create action plans for success.',
+            title: 'Life Coaching',
+        },
+        {
+            text: 'Opportunities to engage with others in a supportive community of like-minded individuals.',
+            title: 'Community Building',
+        },
+    ],
+    [
+        {
+            text: 'One-on-one or group tutoring to help with schoolwork or exam preparation.',
+            title: 'Tutoring',
+        },
+        {
+            text: 'Guidance on college applications, scholarships, and financial aid.',
+            title: 'College Preparation',
+        },
+        {
+            text: 'Support for those looking to complete high school diplomas, GEDs, or pursue vocational training.',
+            title: 'Adult Education',
+        },
+    ],
+    [
+        {
+            text: 'Hands-on opportunities to serve local churches, non-profits, and community organizations.',
+            title: 'Volunteer Programs',
+        },
+        {
+            text: 'Participate in food drives, clothing donations, and other outreach efforts to support those in need.',
+            title: 'Outreach Projects',
+        },
+
+        {
+            text: 'Leadership roles in community projects to help participants build confidence and experience.',
+            title: 'Leadership Development',
+        },
+    ],
+    [
+        {
+            text: 'Counseling services and support groups to address mental health challenges and promote emotional well-being.',
+            title: 'Emotional Support',
+        },
+        {
+            text: 'Workshops on nutrition, physical fitness, and healthy living habits.',
+            title: 'Health Education',
+        },
+        {
+            text: 'Assistance for those struggling with substance abuse, providing them with the support they need to overcome addiction and rebuild their lives.',
+            title: 'Substance Abuse Recovery',
+        },
+    ],
+    [
+        {
+            text: 'Workshops on job searching, networking, and career advancement.',
+            title: 'Job Readiness Training',
+        },
+        {
+            text: 'Personalized support to craft professional resumes and practice interview skills.',
+            title: 'Resume Building & Interview Preparation',
+        },
+        {
+            text: 'Helping connect participants with job opportunities in their field of interest.',
+            title: 'Job Placement Assistance',
+        },
+    ],
 ];
 
 export const helpOthers = [

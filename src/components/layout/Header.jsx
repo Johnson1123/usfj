@@ -98,8 +98,8 @@ function Header() {
                         className={`${
                             isOpen
                                 ? 'fixed left-0 top-0 h-[100vh] w-full bg-white mobile-landscape:overflow-y-scroll md-landscape:overflow-y-scroll no-scrollbar'
-                                : ' md:portrait:hidden hidden'
-                        } 2xl:flex xl:flex lg:flex lg:landscape:flex 4k:flex 3k:flex 5k:flex`}
+                                : 'hidden'
+                        }  lg:flex`}
                     >
                         <nav
                             className={`bg-bgBlue ${
