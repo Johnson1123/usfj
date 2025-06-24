@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 
@@ -40,10 +41,16 @@ const AccordionItem = ({ title, content, isOpen, index, onClick, image }) => {
                     {title}
                 </h3>
                 <div className="col-span-2 lg:col-span-1 justify-items-end">
-                    <button className="   bg-bgBlue flex-shrink-0 rounded-full w-[45px] h-[45px] lg:w-[45px] lg:h-[45px]  flex justify-center items-center ">
-                        <IoIosArrowRoundForward
-                            className={`text-white text-2xl lg:text-3xl transition-all duration-500 ${
-                                isOpen ? 'rotate-45' : 'rotate-0'
+                    <button
+                        className={` flex-shrink-0 rounded-full w-[45px] h-[45px] lg:w-[45px] lg:h-[45px]  flex justify-center items-center ${
+                            isOpen ? 'bg-white' : 'bg-bgBlue'
+                        }`}
+                    >
+                        <ArrowRight
+                            className={` text-2xl lg:text-3xl transition-all duration-500 ${
+                                isOpen
+                                    ? 'rotate-0 text-bgBlue'
+                                    : '-rotate-45 text-white'
                             }`}
                         />
                     </button>

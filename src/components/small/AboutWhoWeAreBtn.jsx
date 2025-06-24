@@ -18,8 +18,8 @@ function AboutWhoWeAreBtn({ label, active, steps, setSteps }) {
             <IoIosArrowRoundForward
                 className={`${
                     active == steps
-                        ? 'text-primary rotate-[45deg]'
-                        : 'text-textColor'
+                        ? 'text-primary'
+                        : 'text-textColor -rotate-[45deg]'
                 } text-[30px] 3k:text-[55px] transition-all duration-500`}
             />
         </button>

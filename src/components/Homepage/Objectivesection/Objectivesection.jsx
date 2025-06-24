@@ -140,11 +140,11 @@ export const Objectivesection = () => {
                             Championing Causes that{' '}
                             <span className="text-primary">Matter</span>
                         </h2>
-                        <div className="col-span-2 justify-items-end">
+                        {/* <div className="col-span-2 justify-items-end">
                             <button className="bg-bgBlue mediumCircle">
                                 <ArrowIconWhite />
                             </button>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="w-[100%] grid grid-cols-1  mobile-landscape:grid-cols-2 md-landscape:grid-cols-2 md:grid-cols-2 lg:grid-cols-7 gap-6 3k:gap-16">
@@ -188,8 +188,8 @@ export const Objectivesection = () => {
                                 </h3>
 
                                 <div className="col-span-2 justify-items-end">
-                                    <button className="flex justify-center text-bgBlue items-center mediumCircle bg-white hover:text-white hover:bg-bgBlue transition-all duration-200 ease-linear">
-                                        <ArrowRight className=" -rotate-45" />
+                                    <button className="group flex justify-center text-bgBlue items-center mediumCircle bg-white hover:text-white hover:bg-bgBlue ease-linear transition-all duration-500">
+                                        <ArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform duration-500" />
                                     </button>
                                 </div>
                             </div>

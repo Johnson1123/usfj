@@ -17,9 +17,9 @@ export default function WhatWeOfferSlider({ swiperRef }) {
                     clickable: true,
                 }}
                 speed={500}
-                loop={true}
+                loop={false}
                 observer={true}
-                centeredSlides
+                // centeredSlides
                 observeParents={true}
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;
@@ -36,10 +36,12 @@ export default function WhatWeOfferSlider({ swiperRef }) {
                     1280: {
                         slidesPerView: 3,
                         spaceBetween: 30,
+                        slidesPerGroup: 3,
                     },
                     2200: {
                         slidesPerView: 3,
                         spaceBetween: 20,
+                        slidesPerGroup: 3,
                     },
                 }}
             >
@@ -54,7 +56,7 @@ export default function WhatWeOfferSlider({ swiperRef }) {
                                     {item?.icon}
                                 </div>
                                 <div>
-                                    <h3 className="text-[#323232] font-6700] h3HeadingStyle">
+                                    <h3 className="text-[#323232]  h3HeadingStyle  text-center">
                                         {item?.title}
                                     </h3>
                                 </div>

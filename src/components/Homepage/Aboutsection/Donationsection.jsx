@@ -6,6 +6,7 @@ import { ArrowIconWhite } from '../../../../public/SVGs/AllSvgs';
 import Link from 'next/link';
 import { headingStyle, pTextStyle } from '@/style/common';
 import PrimaryButton from '@/components/small/PrimaryBtn';
+import useBaseurl from '@/utils/baseurl';
 
 const fakeData = [
     {
@@ -37,6 +38,7 @@ const fakeData = [
 ];
 
 export const Donationsection = () => {
+    const baseUrl = useBaseurl();
     return (
         <div className="py-24 flex justify-center items-center 2xl:py-44 3k:py-64 2xl:min-h-[60dvh] 3k:min-h-[55dvh]">
             <div className="absolute top-0 left-0 w-full h-full opacity-30">
@@ -72,7 +74,7 @@ export const Donationsection = () => {
                                 providing spiritual guidance, life skills, and
                                 educational opportunities........{' '}
                                 <Link
-                                    href="/"
+                                    href={baseUrl + 'about-us'}
                                     className="pTextStyle !text-primary"
                                 >
                                     More Information
@@ -84,7 +86,7 @@ export const Donationsection = () => {
 
                         <div className="mt-3">
                             <PrimaryButton
-                                label={'Start Now'}
+                                label={'Join now'}
                                 handler={() => {}}
                             />
                         </div>

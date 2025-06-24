@@ -8,6 +8,7 @@ import { insightData } from '@/constant/data';
 import Image from 'next/image';
 import { pTextStyle } from '@/style/common';
 import { ArrowIconWhite } from '../../../../public/SVGs/AllSvgs';
+import { ArrowRight } from 'lucide-react';
 
 export default function Slider({ swiperRef }) {
     return (
@@ -65,8 +66,8 @@ export default function Slider({ swiperRef }) {
                                                 {item.team}
                                             </span>
                                         </span>
-                                        <button className="bg-bgBlue flex-shrink-0 rounded-full w-[45px] h-[45px] lg:w-[40px] lg:h-[40px]  flex justify-center items-center">
-                                            <ArrowIconWhite className="text-white" />
+                                        <button className="group bg-bgBlue flex-shrink-0 rounded-full w-[45px] h-[45px] lg:w-[40px] lg:h-[40px] -rotate-45 hover:bg-white hover:rotate-0  flex justify-center items-center transition-all duration-500">
+                                            <ArrowRight className="text-white hover:text-bgBlue" />
                                         </button>
                                     </div>
                                 </div>

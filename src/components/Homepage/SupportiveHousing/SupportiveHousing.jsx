@@ -109,7 +109,7 @@ export const SupportiveHousing = () => {
                                         className="object-cover rounded-lg"
                                         alt={`${item.images}`}
                                     />
-                                    <button className="bg-bgBlue text-bgWhite mediumCircle flex justify-center items-center rounded-full border-none outline-none hover:text-bgBlue hover:bg-white -rotate-45 transition-all duration-300 ease-linear absolute 2xl:-right-5 xl:-right-5 lg:-right-5 md:portrait:-right-5 4k:-right-5 3k:-right-5 -right-4 top-[35%]">
+                                    <button className="bg-bgBlue text-bgWhite mediumCircle flex justify-center items-center rounded-full border-none outline-none hover:text-bgBlue hover:bg-white -rotate-45 hover:rotate-0 transition-all duration-300 ease-linear absolute 2xl:-right-5 xl:-right-5 lg:-right-5 md:portrait:-right-5 4k:-right-5 3k:-right-5 -right-4 top-[35%]">
                                         <ArrowRight />
                                     </button>
                                 </div>

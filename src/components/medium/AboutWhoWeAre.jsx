@@ -17,7 +17,8 @@ function AboutWhoWeAre() {
                     <h3
                         className={`headingStyle font-bold mobile-landscape:text-[5vw] `}
                     >
-                        What we <span className={`text-primary`}>believe</span>
+                        Our believe
+                        <span className={`text-primary`}>statement</span>
                     </h3>
                     <div className="">
                         <AboutWhoWeAreBtn
@@ -44,6 +45,18 @@ function AboutWhoWeAre() {
                                 hide={true}
                             />
                         )}
+                        <AboutWhoWeAreBtn
+                            label={'What We Believe'}
+                            steps={steps}
+                            setSteps={setSteps}
+                            active={3}
+                        />
+                        {steps == 3 && (
+                            <AboutMissionContainer
+                                content={mission[2]}
+                                hide={true}
+                            />
+                        )}
                     </div>
                 </div>
                 <div className="col-start-2 col-end-3 w-full hidden md:block">
@@ -52,6 +65,9 @@ function AboutWhoWeAre() {
                     )}
                     {steps == 2 && (
                         <AboutMissionContainer content={mission[1]} />
+                    )}
+                    {steps == 3 && (
+                        <AboutMissionContainer content={mission[2]} />
                     )}
                 </div>
             </div>

@@ -207,10 +207,13 @@ function Header() {
                                 </div> */}
 
                                 <div className="">
-                                    <SecondaryButton
-                                        label="Donate Now"
-                                        handler={handleDonate}
-                                    />
+                                    <Link
+                                        className="text-center 2xl:rounded-3xl xl:rounded-3xl lg:rounded-3xl lg:landscape:rounded-3xl 4k:rounded-3xl 3k:rounded-3xl md:portrait:rounded-3xl rounded-full px-4 py-2 text-white bg-bgOrange cursor-pointer font-manFont !font-medium transition-all duration-300 ease-in-out hover:bg-transparent border hover:border-bgOrange hover:text-bgOrange"
+                                        href="https://buy.stripe.com/fZebMI29Ze2s1TG146"
+                                        target="_blank"
+                                    >
+                                        Donate Now
+                                    </Link>
                                 </div>
                             </div>
                         </nav>
@@ -235,10 +238,13 @@ function Header() {
                         </div> */}
 
                         <div className="2xl:flex xl:flex lg:flex 4k:flex 3k:flex 5k:flex hidden">
-                            <SecondaryButton
-                                label="Donate Now"
-                                handler={handleDonate}
-                            />
+                            <Link
+                                className="text-center 2xl:rounded-3xl xl:rounded-3xl lg:rounded-3xl lg:landscape:rounded-3xl 4k:rounded-3xl 3k:rounded-3xl md:portrait:rounded-3xl rounded-full px-4 py-2 text-white bg-bgOrange cursor-pointer font-manFont !font-medium transition-all duration-300 ease-in-out hover:bg-transparent border hover:border-bgOrange hover:text-bgOrange"
+                                href="https://buy.stripe.com/fZebMI29Ze2s1TG146"
+                                target="_blank"
+                            >
+                                Donate Now
+                            </Link>
                         </div>
 
                         <button
@@ -255,3 +261,10 @@ function Header() {
 }
 
 export default Header;
+
+// ('our believe statement');
+// Join now
+// remove arrow btn
+// arrow point up
+// more info to about page
+// Join us change lifes

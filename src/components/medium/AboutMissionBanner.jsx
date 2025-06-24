@@ -17,7 +17,7 @@ function AboutMissionBanner() {
             <div className="absolute grid grid-cols-10 2xl:w-[75%]  4k:w-[70%] w-[90%] mx-auto">
                 <div className="col-start-2 col-end-10 md:col-start-1 md:col-end-9 xl:col-start-1 xl:col-end-6 flex flex-col gap-7">
                     <h3 className={`font-bold  headingStyle !text-white`}>
-                        Our Mission
+                        Join us change lifes
                     </h3>
                     <p className={`pTextStyle  !text-white`}>
                         We provide a safe, nurturing environment where they can

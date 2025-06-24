@@ -307,6 +307,32 @@ export const mission = [
             text: 'By combining practical lifeskills, and education with spiritual guidance, we aspire to inspire and transform lives, fostering a community where everyone can achieve their full potential and find salvation through a strong foundation of faith and personal growth.',
         },
     ],
+    [
+        {
+            title: '',
+            text: 'We believe the Bible is inspired by the Holy Spirit of God and that it is God’s only infallible, authoritative Word. We believe there is one God, eternally existent in three persons: God the Father, Jesus Christ the Son, and the Holy Spirit.',
+        },
+        {
+            title: '',
+            text: 'We believe in the deity of our Lord Jesus Christ, in His virgin birth, in His sinless life, in His miracles, in His vicarious and atoning death through His shed blood, in His bodily resurrection, in His ascension to the right hand of the Father, in his current roles as intercessor and advocate, and in His personal return in power and glory.',
+        },
+        {
+            title: '',
+            text: 'We believe that all people are sinful and separated from God and need to be born again by the Spirit; that this regeneration by the Holy Spirit is essential, and that this salvation is received through faith in Jesus Christ as Savior and Lord and not as a result of our good works.',
+        },
+        {
+            title: '',
+            text: 'We believe in the present ministry of the Holy Spirit by whose indwelling the Christian is enabled to live a godly life and empowers believers to perform good works.',
+        },
+        {
+            title: '',
+            text: 'We believe in the resurrection of life for those who are saved by Jesus and of the resurrection of the lost unto damnation.',
+        },
+        {
+            title: '',
+            text: 'We believe in the spiritual unity of believers in our Lord Jesus Christ. We are united in Faith as one body in Christ.',
+        },
+    ],
 ];
 
 export const whatwedo = [
@@ -556,28 +582,132 @@ export const offerDummyData = [
         smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
         path: '/',
     },
+
     {
         icon: BibleStudiesIcon(),
-        title: 'Bible Studies',
-        smallInfo: `Regular group sessions to explore and understand God’s word.`,
+        smallInfo:
+            'Learn how to budget, save, and manage finances responsibly.',
+        title: 'Financial Management',
         path: '/',
     },
     {
         icon: PrayerGroupsIcon(),
-        title: 'Prayer Groups',
-        smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
+        smallInfo:
+            'Resume building, interview skills, and job search assistance to help you achieve your career goals',
+        title: 'Career Development',
         path: '/',
     },
     {
         icon: BibleStudiesIcon(),
-        title: 'Bible Studies',
-        smallInfo: `Regular group sessions to explore and understand God’s word.`,
+        smallInfo:
+            'Focus on self-discipline, time management, and goal setting to succeed in personal and professional life.',
+        title: 'Personal Responsibility',
+        path: '/',
+    },
+
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'A nurturing, faith-based atmosphere where individuals can focus on their personal and spiritual growth.',
+        title: 'Safe & Stable Environment',
         path: '/',
     },
     {
         icon: PrayerGroupsIcon(),
-        title: 'Prayer Groups',
-        smallInfo: `A supportive environment where individuals can share prayer requests and seek encouragement.`,
+        smallInfo:
+            'Regular meetings with life coaches to set goals and create action plans for success',
+        title: 'Life Coaching',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Opportunities to engage with others in a supportive community of like-minded individuals.',
+        title: 'Community Building',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'One-on-one or group tutoring to help with schoolwork or exam preparation.',
+        title: 'Tutoring',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Guidance on college applications, scholarships, and financial aid.',
+        title: 'College Preparation',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Support for those looking to complete high school diplomas, GEDs, or pursue vocational training.',
+        title: 'Adult Education',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Hands-on opportunities to serve local churches, non-profits, and community organizations.',
+        title: 'Volunteer Programs',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Participate in food drives, clothing donations, and other outreach efforts to support those in need.',
+        title: 'Outreach Projects',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Leadership roles in community projects to help participants build confidence and experience.',
+        title: 'Leadership Development',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Counseling services and support groups to address mental health challenges and promote emotional well-being.',
+        title: 'Emotional Support',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Workshops on nutrition, physical fitness, and healthy living habits.',
+        title: 'Health Education',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Assistance for those struggling with substance abuse, providing them with the support they need to overcome addiction and rebuild their lives.',
+        title: 'Substance Abuse Recovery',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Workshops on job searching, networking, and career advancement.',
+        title: 'Job Readiness Training',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Personalized support to craft professional resumes and practice interview skills.',
+        title: 'Resume Building & Interview Preparation',
+        path: '/',
+    },
+    {
+        icon: PrayerGroupsIcon(),
+        smallInfo:
+            'Helping connect participants with job opportunities in their field of interest.',
+        title: 'Job Placement Assistance',
         path: '/',
     },
 ];
