@@ -12,25 +12,77 @@ export const navItems = [
         link: 'shop',
     },
     {
-        label: 'Projects',
-        link: 'projects',
+        label: 'Our Causes',
+        // link: 'projects',
         items: [
             {
-                label: 'Community',
-                link: 'community',
+                label: 'Vission Statement',
+                content: [
+                    {
+                        text: 'Regular group sessions to explore and understand God’s word',
+                        title: 'Bible Studies',
+                    },
+                    {
+                        text: 'Personal, faith-based mentorship to help young adults grow spiritually and navigate life’s challenges.',
+                        title: 'Mentorship',
+                    },
+                    {
+                        text: 'A supportive environment where individuals can share prayer requests and seek encouragement.',
+                        title: 'Prayer Groups',
+                    },
+                ],
             },
 
             {
-                label: 'Our Causes',
-                link: 'causes',
+                label: 'Vission Statement',
+                content: [
+                    {
+                        text: 'Learn how to budget, save, and manage finances responsibly.',
+                        title: 'Financial Management',
+                    },
+                    {
+                        text: 'Resume building, interview skills, and job search assistance to help you achieve your career goals',
+                        title: 'Career Development',
+                    },
+                    {
+                        text: 'Focus on self-discipline, time management, and goal setting to succeed in personal and professional life.',
+                        title: 'Personal Responsibility',
+                    },
+                ],
             },
             {
-                label: 'Prayer Group',
-                link: 'prayer',
+                label: 'Mission Statement',
+                content: [
+                    {
+                        text: 'Learn how to budget, save, and manage finances responsibly.',
+                        title: 'Financial Management',
+                    },
+                    {
+                        text: 'Resume building, interview skills, and job search assistance to help you achieve your career goals',
+                        title: 'Career Development',
+                    },
+                    {
+                        text: 'Focus on self-discipline, time management, and goal setting to succeed in personal and professional life.',
+                        title: 'Personal Responsibility',
+                    },
+                ],
             },
             {
-                label: 'Counselling',
-                link: 'counselling',
+                label: 'What we believe',
+                content: [
+                    {
+                        text: 'Learn how to budget, save, and manage finances responsibly.',
+                        title: 'Financial Management',
+                    },
+                    {
+                        text: 'Resume building, interview skills, and job search assistance to help you achieve your career goals',
+                        title: 'Career Development',
+                    },
+                    {
+                        text: 'Focus on self-discipline, time management, and goal setting to succeed in personal and professional life.',
+                        title: 'Personal Responsibility',
+                    },
+                ],
             },
         ],
     },

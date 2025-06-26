@@ -12,6 +12,7 @@ import { Logs } from 'lucide-react';
 import { MdClose } from 'react-icons/md';
 import useClickOutside from '@/hooks/ClickOutside';
 import useBaseurl from '@/utils/baseurl';
+import AboutWhoWeAreMissonBox from '../small/AboutWhoWeAreBox';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -151,30 +152,67 @@ function Header() {
                                             </div>
 
                                             <ul
-                                                className={`absolute left-0 top-8 3k:top-14 flex-col gap-5 mt-1 w-max py-5 px-10 bg-gray-100 rounded-md transition-all duration-300 h-4 ${
+                                                className={`absolute left-0 top-8 3k:top-14 flex-col gap-5 mt-1 w-max py-5 px-10 bg-gray-100 rounded-md transition-all duration-300 ${
                                                     dropdown
                                                         ? 'flex h-max'
                                                         : 'hidden'
                                                 }`}
                                             >
-                                                {item.items.map((item, i) => {
-                                                    return (
-                                                        <li
-                                                            key={i}
-                                                            className="relative left-0 top-0 cursor-pointer"
-                                                        >
-                                                            <Link
-                                                                href={
-                                                                    baseurl +
-                                                                    item.link
-                                                                }
-                                                                className={`!text-blueColor  hover:opacity-50 font-300`}
+                                                {item.items.map(
+                                                    (subItem, i) => {
+                                                        return (
+                                                            <li
+                                                                key={i}
+                                                                className="relative left-0 top-0 cursor-pointer group"
                                                             >
-                                                                {item.label}
-                                                            </Link>
-                                                        </li>
-                                                    );
-                                                })}
+                                                                <div
+                                                                    className={`!text-blueColor font-300 relative`}
+                                                                >
+                                                                    {
+                                                                        subItem.label
+                                                                    }
+
+                                                                    <div className="absolute left-full top-0 ml-2 w-max hidden group-hover:block bg-white">
+                                                                        <div
+                                                                            className={`flex-col gap-7 my-7`}
+                                                                        >
+                                                                            {subItem.content?.map(
+                                                                                (
+                                                                                    contentItem,
+                                                                                    index,
+                                                                                ) => {
+                                                                                    return (
+                                                                                        <div
+                                                                                            key={
+                                                                                                index
+                                                                                            }
+                                                                                            className="bg-[#F7F9FF] rounded-[20px] px-5 flex flex-col gap-5 py-7"
+                                                                                        >
+                                                                                            <h3
+                                                                                                className={`h3HeadingStyle`}
+                                                                                            >
+                                                                                                {
+                                                                                                    contentItem.title
+                                                                                                }
+                                                                                            </h3>
+                                                                                            <p
+                                                                                                className={`pTextStyle`}
+                                                                                            >
+                                                                                                {
+                                                                                                    contentItem.text
+                                                                                                }
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    );
+                                                                                },
+                                                                            )}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        );
+                                                    },
+                                                )}
                                             </ul>
                                         </div>
                                     ) : (

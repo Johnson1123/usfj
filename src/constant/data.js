@@ -597,33 +597,12 @@ export const offerDummyData = [
         title: 'Career Development',
         path: '/',
     },
-    {
-        icon: BibleStudiesIcon(),
-        smallInfo:
-            'Focus on self-discipline, time management, and goal setting to succeed in personal and professional life.',
-        title: 'Personal Responsibility',
-        path: '/',
-    },
 
-    {
-        icon: PrayerGroupsIcon(),
-        smallInfo:
-            'A nurturing, faith-based atmosphere where individuals can focus on their personal and spiritual growth.',
-        title: 'Safe & Stable Environment',
-        path: '/',
-    },
     {
         icon: PrayerGroupsIcon(),
         smallInfo:
             'Regular meetings with life coaches to set goals and create action plans for success',
         title: 'Life Coaching',
-        path: '/',
-    },
-    {
-        icon: PrayerGroupsIcon(),
-        smallInfo:
-            'Opportunities to engage with others in a supportive community of like-minded individuals.',
-        title: 'Community Building',
         path: '/',
     },
     {
