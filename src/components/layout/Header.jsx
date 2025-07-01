@@ -12,7 +12,7 @@ import useClickOutside from '@/hooks/ClickOutside';
 import useBaseurl from '@/utils/baseurl';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import AboutMissionContainer from '../medium/AboutMissionContainer';
-import { mission, whatwedo } from '@/constant/data';
+import { mission, whatwedo, whatWeDoTitle } from '@/constant/data';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -142,9 +142,9 @@ function Header() {
                                                 </i>
                                             </div>
                                             <ul
-                                                className={`fixed left-0 top-0 z-20 w-[100vw] lg:w-[93vw] lg:left-[3.5vw] h-[100vh] lg:h-[75vh] lg:absolute rounded-none lg:top-[4.3rem] 3k:top-14 gap-5 py-3 lg:rounded-none px-10 bg-bgBlue  lg:bg-transparent transition-all duration-300 overflow-y-scroll no-scrollbar ${
+                                                className={`fixed left-0 top-0 z-20 w-[100vw] lg:w-[93vw] 3k:w-[90vw] 3k:left-[4.5vw] lg:left-[3.5vw] 3k:top-[5rem] h-[100vh]  lg:h-[75vh] lg:absolute rounded-none lg:top-[4.3rem]  gap-5 py-3 lg:rounded-none px-10 bg-bgBlue  lg:bg-transparent transition-all duration-300 overflow-y-scroll no-scrollbar ${
                                                     dropdown
-                                                        ? 'flex flex-col items-center justify-center'
+                                                        ? 'flex flex-col'
                                                         : 'hidden'
                                                 }`}
                                             >
@@ -164,8 +164,8 @@ function Header() {
                                                     </div>
                                                 </div>
                                                 <div className="flex w-full lg:py-4 lg:px-10 lg:rounded-[15px] lg:h-full mx-auto lg:justify-around lg:bg-bgBlue">
-                                                    <div className="w-full lg:w-[20%]">
-                                                        {item.items.map(
+                                                    <div className="w-full lg:w-[30%]">
+                                                        {whatWeDoTitle.map(
                                                             (subItem, j) => (
                                                                 <li
                                                                     key={j}
@@ -188,7 +188,7 @@ function Header() {
                                                                             }`}
                                                                         >
                                                                             {
-                                                                                subItem.label
+                                                                                subItem
                                                                             }
                                                                         </p>
                                                                         <i>

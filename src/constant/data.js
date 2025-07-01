@@ -335,6 +335,16 @@ export const mission = [
     ],
 ];
 
+export const whatWeDoTitle = [
+    'Spiritual Guidance & Mentorship',
+    'Life Skills',
+    'Supportive Housing',
+    'Educational Support',
+    'Community Support& Volunteerism',
+    'Health and Wellness Support',
+    'Employment Assistance',
+];
+
 export const whatwedo = [
     [
         {
