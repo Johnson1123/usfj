@@ -8,7 +8,7 @@ function CategoriesOverlay({ name, link }) {
             <h3 className="!text-white h3HeadingStyle">{name}</h3>
 
             <Link href={link} className="heroCircle bg-bgOrange">
-                <IoIosArrowRoundForward className="text-white" />
+                <IoIosArrowRoundForward className="text-white -rotate-[45deg] hover:rotate-0" />
             </Link>
         </div>
     );

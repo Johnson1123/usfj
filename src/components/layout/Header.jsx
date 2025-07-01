@@ -34,9 +34,9 @@ function Header() {
 
     // Close dropdown when clicking outside
     useClickOutside(ref, () => {
+        setIsOpen(false);
         setDropdown(false);
         setSubDropdown(-1);
-        setIsOpen(false);
     });
 
     // Toggle dropdown
@@ -110,18 +110,15 @@ function Header() {
                             <ul
                                 className={`${
                                     isOpen
-                                        ? 'flex-col mt-10 w-[80%] pt-10 md-landscape:mt-4 landscape:md-landscape:pt-4 landscape:mobile-landscape:mt-4 mobile-landscape:pt-4 lg:px-3 px-5 '
+                                        ? ' mt-10 w-[80%] pt-10 md-landscape:mt-4 landscape:md-landscape:pt-4 landscape:mobile-landscape:mt-4 mobile-landscape:pt-4 lg:px-3 px-5 '
                                         : ''
-                                } flex lg:justify-center lg:items-center gap-8 lg:gap-1 xl:gap-8`}
+                                } flex flex-col lg:flex-row lg:justify-center lg:items-center gap-8 lg:gap-1 xl:gap-8`}
+                                ref={ref}
                             >
                                 {navItems.map((item, i) =>
                                     item.items ? (
                                         // Dropdown container link
-                                        <div
-                                            key={i}
-                                            className="flex flex-col"
-                                            ref={ref}
-                                        >
+                                        <div key={i} className="flex">
                                             <div
                                                 className="flex items-center justify-between gap-3  lg:gap-3"
                                                 onClick={(e) => {
@@ -145,9 +142,9 @@ function Header() {
                                                 </i>
                                             </div>
                                             <ul
-                                                className={`fixed left-0 top-0 z-20 w-[100vw] h-[100vh] lg:h-[75vh] lg:absolute rounded-none lg:left-0 lg:top-[4.3rem] 3k:top-14 gap-5 py-3 lg:rounded-none px-10 bg-bgBlue  lg:bg-transparent transition-all duration-300 ${
+                                                className={`fixed left-0 top-0 z-20 w-[100vw] lg:w-[93vw] lg:left-[3.5vw] h-[100vh] lg:h-[75vh] lg:absolute rounded-none lg:top-[4.3rem] 3k:top-14 gap-5 py-3 lg:rounded-none px-10 bg-bgBlue  lg:bg-transparent transition-all duration-300 overflow-y-scroll no-scrollbar ${
                                                     dropdown
-                                                        ? 'flex flex-col'
+                                                        ? 'flex flex-col items-center justify-center'
                                                         : 'hidden'
                                                 }`}
                                             >
@@ -166,7 +163,7 @@ function Header() {
                                                         <MdClose className="text-2xl text-white font-bold" />
                                                     </div>
                                                 </div>
-                                                <div className="flex w-full lg:w-[92%] lg:py-4 lg:px-10 lg:rounded-[15px] lg:h-full mx-auto lg:justify-around lg:bg-bgBlue">
+                                                <div className="flex w-full lg:py-4 lg:px-10 lg:rounded-[15px] lg:h-full mx-auto lg:justify-around lg:bg-bgBlue">
                                                     <div className="w-full lg:w-[20%]">
                                                         {item.items.map(
                                                             (subItem, j) => (
@@ -252,7 +249,7 @@ function Header() {
                                         >
                                             <Link
                                                 href={baseurl + item.link}
-                                                className="!text-white"
+                                                className=""
                                             >
                                                 {item.label}
                                             </Link>
