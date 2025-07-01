@@ -10,7 +10,7 @@ function FooterBox({ data }) {
                 <h3 className="sub__heading text-white text-center md:text-left lg:text-left">
                     {data.title}
                 </h3>
-                <div className="sm:w-1/6 sm:mx-auto md:mx-0 md:w-1/4 h-[2px] bg-bgOrange mt-2 3k:sm:w-[10%]"></div>
+                <div className="w-1/5 sm:w-1/6 mx-auto sm:mx-auto md:mx-0 md:w-1/4 h-[2px] bg-bgOrange mt-2 3k::w-[10%]"></div>
             </div>
             <ul className="footer__box_ul flex flex-col items-center md:items-start md:mt-5 gap-2 mt-7">
                 {data.items.map((item, i) => {

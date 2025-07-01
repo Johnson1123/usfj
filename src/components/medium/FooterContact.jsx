@@ -10,7 +10,7 @@ function FooterContact({ data }) {
                     <h3 className="sub__heading text-white text-center md:text-left lg:text-left">
                         {data.title}
                     </h3>
-                    <div className="sm:w-1/6 sm:mx-auto md:mx-0 md:w-1/4 h-[2px] 3k:sm:w-[10%] bg-bgOrange mt-2"></div>
+                    <div className="w-1/6 sm:w-1/6 sm:mx-auto mx-auto md:mx-0 md:w-1/4 h-[2px] 3k:sm:w-[10%] bg-bgOrange mt-2"></div>
                 </div>
                 <div className="contact_item_wrapper flex flex-col items-center md:items-start lg:items-start md:mt-5 gap-2 mt-7">
                     <p className="text-white text-center md:text-left lg:text-left">

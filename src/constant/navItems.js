@@ -16,7 +16,7 @@ export const navItems = [
         // link: 'projects',
         items: [
             {
-                label: 'Vission Statement',
+                label: 'Vission',
                 content: [
                     {
                         text: 'Regular group sessions to explore and understand God’s word',
@@ -34,7 +34,7 @@ export const navItems = [
             },
 
             {
-                label: 'Vission Statement',
+                label: 'Vission',
                 content: [
                     {
                         text: 'Learn how to budget, save, and manage finances responsibly.',
@@ -51,7 +51,7 @@ export const navItems = [
                 ],
             },
             {
-                label: 'Mission Statement',
+                label: 'Mission ',
                 content: [
                     {
                         text: 'Learn how to budget, save, and manage finances responsibly.',
@@ -68,7 +68,7 @@ export const navItems = [
                 ],
             },
             {
-                label: 'What we believe',
+                label: 'Believe',
                 content: [
                     {
                         text: 'Learn how to budget, save, and manage finances responsibly.',
